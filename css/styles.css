@@ -1,0 +1,97 @@
+@import "../lib/bootstrap/css/bootstrap.min.css"; 
+@import "../lib/font-awesome/css/font-awesome.min.css"; 
+@import "ie10mobile.css"; 
+@import "../lib/durandal/css/durandal.css"; 
+@import "starterkit.css";
+a{
+ cursor: pointer;
+}
+.input-xs {
+	height: 20px;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+div.modal-content.messageBox div.modal-body p.message{
+    max-height:200px;
+    overflow:auto;
+}
+.icon-pdf{
+    background-image: url("../images/icon/pdf-icon.png") !important;
+}
+#ElectricTable td {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:10px;
+	padding-right:30px;
+
+}
+.toolbarButton .textButton .about{
+display:none ;
+}
+.table-AlarmSummary {
+	margin-bottom: 5px;	
+}
+.table-AlarmSummary>tbody>tr>th {
+	background-color: #f5f5f5;
+}
+.table-AlarmSummary>tbody>tr>th, .table-AlarmSummary>tbody>tr>td {
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+.table-parameter {
+	margin-bottom: 5px;
+	font-size:12px;
+	
+}
+.table-parameter>tbody>tr>th {
+	background-color: #f5f5f5;
+}
+.table-parameter>tbody>tr>th, .table-parameter>tbody>tr>td {
+	padding-top:2px;
+	padding-bottom:2px;
+	text-align: right;
+}
+
+.btn-ack {
+	padding: 1px 5px;
+	font-size: 12px;
+	line-height: 1;
+	border-radius: 3px;
+}
+
+
+
+.scroll-hover {
+	overflow:hidden;
+}
+.scroll-hover:hover {
+	overflow-y:scroll
+}
+
+.scroll-show {
+	overflow-y:scroll
+}
+
+.header-0px  {
+	margin-top: 0px;
+}
+
+.footer-condensed  {
+	margin-bottom: 0px;
+}
+
+.footer-5px  {
+	margin-bottom: 5px;
+}
+
+.panel-heading-sm {
+	padding: 5px 15px;
+}
+
+.form-group-sm  {
+	margin-bottom: 2px;
+	line-height: 1;
+}

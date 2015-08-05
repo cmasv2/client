@@ -1,0 +1,530 @@
+﻿<div>
+    <!-- ko foreach: cf-->
+    <!-- Page Heading -->
+    <h3 class="header-0px footer-5px">
+        <span data-bind="text: name">CRAC 1</span>
+        <small data-bind="text: description"> CyberAir 3</small>
+    </h3>
+    <!-- /ko -->
+    <!-- Tab -->
+    <ul id="myTab" role="tablist" class="nav nav-tabs">
+        <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="Status" href="#Status" aria-expanded="false">Status</a></li>
+        <!-- ko if: controls().length-->
+        <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="Control" href="#Control" aria-expanded="false">Control</a></li>
+        <!-- /ko -->
+        <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="Configuration" href="#Configuration" aria-expanded="false">Configuration</a></li>
+        <li role="presentation" class=""><a data-toggle="tab" role="tab" aria-controls="Manual" href="#Manual" aria-expanded="false">Manual</a></li>
+    </ul>
+    <div class="tab-content">
+        <!-- ko foreach: cf-->
+        <div id="Status" class="tab-pane active" role="tabpanel">
+            <!-- status -->
+            <div style="height:350px;" class="row">
+                <div style="margin-top:10px" class="col-md-5">
+                    <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
+                </div>
+                <div class="col-md-7" style="height: 350px; overflow: auto;">
+                    <div class="row">
+                <!-- ko foreach: status-->
+                <div class="col-md-6">
+                    <!-- ko if: name-->
+                    <label data-bind="text: name">System On () <i class="fa fa-spinner fa-spin"></i></label>
+                    <!-- /ko -->
+                    <!-- ko if: datas-->
+                    <label ></label>
+                    <!-- /ko -->
+                    <ul class="fa-ul">
+                        <!-- ko foreach: datas-->
+                        <li>
+                            <!-- ko if: !value-->
+                            <i class="" data-bind="css: icon,myStatus: status.value()"></i> 
+                            <span data-bind="text: name"></span>
+                            <!-- /ko -->
+                            <!-- ko if: value-->
+                            <!-- ko if: icon--><i class="" data-bind="css: icon"></i><!-- /ko -->
+                            <span data-bind="text: name"></span>
+                            <span style="display:none" data-bind="text : value.channelName"></span>
+                            : <span data-bind="text: value.value()+'&nbsp;'+ unit"> 22 kVA</span>
+                            <!-- /ko -->
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                    <!-- ko if:0-->
+                    <!-- ko foreach: Parameter-->
+
+                    <table style="" class="table table-parameter">
+                        <tbody>
+                            <tr>
+                                <th width="15%" data-bind="text: name">name</th>
+                                <th>L1</th>
+                                <th>L2</th>
+                                <th>L3</th>
+                            </tr>
+
+                        </tbody>
+                        <tbody>
+                            <!-- ko foreach: datapar-->
+                            <tr>
+                                <td style="text-align:left" data-bind="text: name + (unit?'(' + unit + ')':''+':')">Vd (V):</td>
+                                <!-- ko foreach: valuespar-->
+                                <td width="20%" data-bind="text: value">0</td>
+                                <!-- /ko -->
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                    <table style="margin-top: 15px;" class="table table-parameter">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left">pf:</td>
+                                <td width="20%" data-bind="text: pf.value()">123123</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">kWh:</td>
+                                <td width="20%" data-bind="text: kWh.value()">123123</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Running Time (h):</td>
+                                <td width="20%" data-bind="text: Time.value()">1232411</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </div>
+
+                <!-- /ko -->
+                 </div>
+                 <div class="row">
+                    <!-- ko if: Parameters-->
+                    <div id="" class="tab-pane" role="tabpanel">
+                        <!-- Parameters -->
+
+                        <div style="height:280px" class="row">
+                            <!-- ko foreach: Parameters-->
+                            <div class="col-md-6">
+                                <table style="margin-top: 5px;" class="table table-parameter">
+                                    <tbody>
+                                        <tr>
+                                            <th width="15%" data-bind="text: name">name</th>
+                                            <th>L1</th>
+                                            <th>L2</th>
+                                            <th>L3</th>
+                                        </tr>
+
+                                    </tbody>
+                                    <tbody>
+                                        <!-- ko foreach: data-->
+                                        <tr>
+                                            <td style="text-align:left" data-bind="text: name + (unit?'(' + unit + ')':''+':')">Vd (V):</td>
+                                            <!-- ko foreach: values-->
+                                            <td width="20%" data-bind="text: value()">0</td>
+                                            <!-- /ko -->
+                                        </tr>
+                                        <!-- /ko -->
+                                    </tbody>
+                                </table>
+
+                                <table style="margin-top: 15px;" class="table table-parameter">
+                                    <tbody>
+                                        <!-- ko foreach: values-->
+                                        <tr>
+                                            <td style="text-align:left">
+                                                <span data-bind="text: name"></span>
+                                                <!-- ko if: unit-->
+                                                <span data-bind="text:'(' +  unit + ')'"></span>
+                                                <!-- /ko -->
+                                                :
+                                            </td>
+                                            <td width="20%" data-bind="text: value()">123123</td>
+                                        </tr>
+                                        <!-- /ko -->
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko if: Battery-->
+                            <div class="col-md-3">
+                                <table style="margin-top: 5px;" class="table table-parameter">
+                                    <tbody>
+                                        <tr>
+                                            <th width="70%">Battery</th>
+                                            <th width="30%"></th>
+                                        </tr>
+                                        <!-- ko foreach: Battery.values-->
+                                        <tr>
+                                            <td style="text-align:left" data-bind="text: name + (unit?'(' + unit + ')':'')">name (unit)</td>
+                                            <td data-bind="text: value()">0</td>
+                                        </tr>
+                                        <!-- /ko -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+
+                    </div>	<!-- /.Parameters -->
+                    <!-- /ko -->
+                 </div>
+                </div>
+            </div>
+        </div>	<!-- /.status -->
+        <!-- /ko -->
+        <div id="Control" class="tab-pane" role="tabpanel">
+            <!-- Control -->
+            <div style="height:350px;" class="row">
+                <div style="height:350px;" class="row">
+                    <!-- ko foreach: cf-->
+                    <div style="margin-top:10px" class="col-md-5">
+                        <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
+                    </div>
+                    <!-- /ko -->
+                    <div style="margin-top:10px" class="col-md-7">
+                        <div style="overflow: auto; max-height: 350px;width:98%">
+                            <!-- ko foreach: controls-->
+                            <div class="row" style="width: 98%;">
+                                <div class="col-md-7" style="line-height: 35px;">
+                                    <span data-bind="text:name+'('+ code + ')'">Channel </span>
+                                </div>
+                                <div class="col-md-5">
+                                    <!-- ko if: type == 'Analogue' -->
+                                    <input type="number" required="" class="form-control" data-bind="value:value,attr: {min:min,max,max}" style="width:120px;display: inline;border-bottom-right-radius: 0px;border-top-right-radius: 0px;"><button class="btn btn-primary btn-sm" type="submit" data-bind="click: $root.saveControl" style="margin-left: 0px;height: 34px;margin-bottom: 3px;border-bottom-left-radius: 0px;border-top-left-radius: 0px;">Save</button>
+                                    <!-- /ko -->
+                                    <!-- ko if: type == 'Digital' -->
+
+                                    <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-animate" style="width: 170px;">
+                                        <div class="bootstrap-switch-container" style="width: 252px; margin-left: 0px;">
+                                            <!-- ko if:data.value() -->
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 84px;">ON</span>
+                                            <!-- /ko -->
+                                            <span class="bootstrap-switch-label" style="width: 84px;" data-bind="click: $root.saveControl">&nbsp;</span>
+                                            <!-- ko if:!data.value() -->
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-warning" style="width: 84px;">OFF</span>
+                                            <!-- /ko -->
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                            <hr style="margin:0;padding:0;"/>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Configuration" class="tab-pane" role="tabpanel">
+            <!-- Configuration -->
+            <div style="height:350px;" class="row">
+                <div style="height:350px" class="col-md-3 scroll-show">
+                    <div class="demo jstree jstree-1 jstree-default" id="jstree1">
+                    <ul class="jstree-container-ul jstree-children">
+                            <!-- ko foreach: channels-->
+                            <li class="jstree-open">
+                                <i class="jstree-icon jstree-ocl"></i>
+                                <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+                                    <i class="jstree-icon jstree-themeicon jstree-themeicon-custom jstree-folder"></i><span data-bind="text: name"></span>
+                                </a>
+                                <!-- ko if: $data.sub -->
+                                <ul class="jstree-children">
+                                   
+                                    <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
+                                    <!-- /ko -->
+                                    
+                                </ul>
+                                <!-- /ko -->
+                            </li>
+                            <!-- /ko -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9  scroll-show" style="height:350px;">
+                    <!-- ko foreach: channelSelect-->
+                    <form style="font-size:12px;" class="form-horizontal">
+                        <div class="form-group form-group-sm ">
+                            <label class="col-sm-2 control-label">Name:</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: name">V1</p></div>
+                        </div>
+                        <div class="form-group form-group-sm ">
+                            <label class="col-sm-2 control-label">Code :</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: code">V1</p></div>
+                        </div>
+                        <div class="form-group form-group-sm" style="display:none">
+                            <label class="col-sm-2 control-label">ID :</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: id">id</p></div>
+                        </div>
+                        <div class="form-group form-group-sm" style="display:none">
+                            <label class="col-sm-2 control-label">controllable :</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: controllable">V1</p></div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Type :</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: type">type</p></div>
+                        </div>
+                        <div class="form-group form-group-sm ">
+                            <label class="col-sm-2 control-label">Description:</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: description">Line Voltage</p></div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Unit:</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: unit">V</p></div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Value:</label>
+                            <div class="col-sm-10"><p class="form-control-static" data-bind="text: data.value()">223</p></div>
+                        </div>
+                        <!-- ko if: 0 -->
+                        <!-- ko if: type == 'Analogue' -->
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Control:</label>
+                            <div class="col-sm-4">
+                                <input type="number" required="" class="form-control" data-bind="value:value,attr: {min:min,max,max}">
+                            </div>
+                            <div class="col-sm-6" style="padding: 0;">
+                                <button class="btn btn-primary btn-sm" type="submit" data-bind="click: $root.saveControl">Save</button>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                        <!-- ko if: type == 'Digital' -->
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Control:</label>
+                            <div class="col-sm-10">
+                                <input type="checkbox" name="my-checkbox" checked="0" data-bind="value:data.value(),bootstrapSwitch:id">
+                            </div>
+                        </div>
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                        <!-- ko if:  type == 'Analogue' -->
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Enable:</label>
+                            <div class="col-sm-2">
+                                <select class="form-control" data-bind="value: alarmWatcher.enable">
+                                    <option value="0">Disable</option>
+                                    <option value="1">Enalbe</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Type :</label>
+                            <div class="col-sm-2">
+                                <select class="form-control" data-bind="value: alarmWatcher.type">
+                                    <option value="critical">Critical</option>
+                                    <option value="warning">Warning</option>
+                                    <option value="advisory">Advisory</option>
+                                    <option value="log">Log</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Condition:</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value: alarmWatcher.alarmCondition">
+                                    <option value="greaterthan">Greater than</option>
+                                    <option value="lessthan">Less than</option>
+                                    <option value="equalto">Equal to</option>
+                                    <option value="notequalto">Not Equal To</option>
+                                    <option value="greaterthanorequalto">Greater than orequal to</option>
+                                    <option value="lessthanorequalto">Less than orequal to</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" required="" id="Phone" class="form-control" data-bind="value:alarmWatcher.alarmThreshold,attr: {min:min,max,max}">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Reset Condition:</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value : alarmWatcher.resetCondition">
+                                    <option value="greaterthan">Greater than</option>
+                                    <option value="lessthan">Less than</option>
+                                    <option value="equalto">Equal to</option>
+                                    <option value="notequalto">Not Equal To</option>
+                                    <option value="greaterthanorequalto">Greater than orequal to</option>
+                                    <option value="lessthanorequalto">Less than orequal to</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" required="" id="Phone" class="form-control" data-bind="value:alarmWatcher.resetThreshold,attr: {min:min,max,max}">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Notification:</label>
+                            <div class="col-sm-1">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" data-bind="checked:alarmWatcher.notificationMethod.sms"> SMS</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" data-bind="checked:alarmWatcher.notificationMethod.email"> Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <p>
+                                    <button class="btn btn-primary btn-sm" type="submit" data-bind="click: $root.saveAlarm">Save</button>
+                                    <button class="btn btn-default btn-sm" type="reset" data-bind="">Cancel</button>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                        <!-- ko if: type == 'Digital' -->
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Enable:</label>
+                            <div class="col-sm-2">
+                                <select class="form-control" data-bind="value: alarmWatcher.enable">
+                                    <option value="0">Disable</option>
+                                    <option value="1">Enalbe</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Type :</label>
+                            <div class="col-sm-2">
+                                <select class="form-control" data-bind="value: alarmWatcher.type">
+                                    <option value="critical">Critical</option>
+                                    <option value="warning">Warning</option>
+                                    <option value="advisory">Advisory</option>
+                                    <option value="log">Log</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Alarm Condition:</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value: alarmWatcher.alarmCondition">
+                                    <option value="equalto">Equal to</option>
+                                    <option value="notequalto">Not Equal To</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value: alarmWatcher.alarmThreshold">
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Reset Condition:</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value : alarmWatcher.resetCondition">
+                                    <option value="equalto">Equal to</option>
+                                    <option value="notequalto">Not Equal To</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" data-bind="value: alarmWatcher.resetThreshold">
+                                    <option value="1">On</option>
+                                    <option value="0">Off</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2 control-label">Notification:</label>
+                            <div class="col-sm-1">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" data-bind="checked:alarmWatcher.notificationMethod.sms"> SMS</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" data-bind="checked:alarmWatcher.notificationMethod.email"> Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <p>
+                                    <button class="btn btn-primary btn-sm" type="submit" data-bind="click: $root.saveAlarm">Save</button>
+                                    <button class="btn btn-default btn-sm" type="reset" data-bind="">Cancel</button>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                    </form>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+        <div id="Manual" class="tab-pane" role="tabpanel">
+            <!-- Manual -->
+            <div style="height:350px;" class="row">
+                <div class="col-md-3">
+                    <div class="row" style="d">
+                        <div class="bs-glyphicons">
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="height: 300px; overflow: auto;border: 1px solid #CCCCCC;">
+                        <ul class="jstree-container-ul jstree-children">
+                            <!-- ko template: { name: 'ElementNodeTemplate', foreach: documents} -->
+                            <!-- /ko -->
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <!-- ko foreach: document-->
+                    <iframe src = "" width='100%' height='340' data-bind="attr: { src: 'ViewerJS/#../File/' + path }" allowfullscreen webkitallowfullscreen></iframe>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="formElementNodeTemplate" type="text/html">
+    <!-- ko if: $data.sub -->
+    <li class="jstree-node jstree-open">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+        </a>
+        <ul class="jstree-children">
+
+            <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
+            <!-- /ko -->
+
+        </ul>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: !$data.sub -->
+    <li class="jstree-node  jstree-leaf">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+        </a>
+    </li>
+    <!-- /ko -->
+</script>
+<script id="ElementNodeTemplate" type="text/html">
+    <!-- ko if: $data.sub -->
+    <li class="jstree-node jstree-open">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdocument">
+            <i class="jstree-icon jstree-themeicon jstree-themeicon-custom" role="presentation" data-bind="css:icon"></i>
+            <span data-bind="text: name"></span>
+        </a>
+        <ul class="jstree-children">
+
+            <!-- ko template: { name: 'ElementNodeTemplate', foreach: $data.sub } -->
+            <!-- /ko -->
+
+        </ul>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: !$data.sub -->
+    <li class="jstree-node  jstree-leaf">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdocument">
+            <i class="jstree-icon jstree-themeicon jstree-themeicon-custom" role="presentation" data-bind="css:icon"></i>
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+    <!-- /ko -->
+</script>

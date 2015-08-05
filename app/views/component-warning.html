@@ -1,0 +1,15 @@
+﻿<div class="panel panel-default">
+    <div class="list-group">
+        <!-- ko foreach: warningSystem-->
+        <a class="list-group-item" href="#" data-bind="click: $root.view">    <!-- HSSD -->
+            <label class="col-sm-4" data-bind="text: name">HSSD</label>
+            <!-- ko foreach: element-->
+                <span class="" data-bind="css: status?'text-success':'text-danger'">
+            <i class="" data-bind="css: icon"></i>
+            <!-- ko if: value--><span data-bind="text: value.value+'&nbsp;'+ unit"></span><!-- /ko -->
+            <span data-bind="text: name">Fire</span></span>
+            <!-- /ko -->
+        </a>
+        <!-- /ko -->
+    </div>
+</div> 

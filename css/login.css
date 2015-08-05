@@ -1,0 +1,141 @@
+﻿#login {
+    background: none repeat scroll 0 0 #252525;
+}
+.ls-group-input {
+    margin-bottom: 15px;
+}
+.login-content {
+    text-align: center;
+}
+.login-content h3 {
+    color: #FFFFFF;
+}
+.login-box {
+    background: none repeat scroll 0 0 #444;
+    color: #999;
+    margin: 5% auto;
+    padding: 20px;
+    position: relative;
+    width: 300px;
+    z-index: 1;
+}
+.login-box .login-user-icon {
+    border: 5px solid #FFFFFF;
+    border-radius: 75px;
+    color: #FFFFFF;
+    font-size: 70px;
+    height: 150px;
+    line-height: 160px;
+    margin: auto;
+    text-align: center;
+    width: 150px;
+}
+.login-box .login-user-icon img {
+    width: 75px;
+}
+.login-box .login-user-icon.user {
+    line-height: 100px;
+    overflow: hidden;
+}
+.login-box .login-user-icon.user img {
+    width: 100%;
+}
+.login-box .forgot-pass-box {
+    display: none;
+}
+.login-box .login-form, .login-box .forgot-pass-box {
+    padding: 15px 0;
+}
+.login-box .login-form .bootstrap-switch, .login-box .forgot-pass-box .bootstrap-switch {
+    border-color: #FFFFFF;
+    border-radius: 1px;
+}
+.login-box .login-form .bootstrap-switch-label, .login-box .forgot-pass-box .bootstrap-switch-label {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.login-box .login-form .bootstrap-switch.bootstrap-switch-focused, .login-box .forgot-pass-box .bootstrap-switch.bootstrap-switch-focused {
+    box-shadow: none;
+}
+.login-box .login-form .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .login-box .login-form .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary, .login-box .forgot-pass-box .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .login-box .forgot-pass-box .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+    background: none repeat scroll 0 0 #444;
+    color: #269abc;
+}
+.login-box .login-form .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default, .login-box .login-form .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default, .login-box .forgot-pass-box .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default, .login-box .forgot-pass-box .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+    background: none repeat scroll 0 0 #444;
+    color: #ff7878;
+}
+.login-box .login-form .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, .login-box .login-form .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, .login-box .login-form .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label, .login-box .forgot-pass-box .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, .login-box .forgot-pass-box .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, .login-box .forgot-pass-box .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+    font-size: 14px;
+    line-height: 15px;
+}
+.login-box .login-form input:focus, .login-box .login-form input:active, .login-box .forgot-pass-box input:focus, .login-box .forgot-pass-box input:active {
+    box-shadow: none;
+}
+.login-box .login-form input, .login-box .forgot-pass-box input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    color: #000;
+}
+.login-box .login-form .input-group-addon, .login-box .forgot-pass-box .input-group-addon {
+    background: none repeat scroll 0 0 #ddd;
+    color: #000;
+}
+.login-box .login-form .remember-me, .login-box .forgot-pass-box .remember-me {
+    margin-bottom: 15px;
+}
+.login-box .login-form .login-btn-box, .login-box .forgot-pass-box .login-btn-box {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+.login-box .login-form .login-btn-box a.login-view::after, .login-box .forgot-pass-box .login-btn-box a.login-view::after {
+    color: #999;
+}
+.login-box .login-form .login-btn-box a, .login-box .forgot-pass-box .login-btn-box a {
+    color: #999;
+}
+.login-box .login-form .login-btn-box a:hover, .login-box .forgot-pass-box .login-btn-box a:hover {
+    color: #1fb5ad;
+}
+.login-box .login-form .login-btn-box i, .login-box .forgot-pass-box .login-btn-box i {
+    font-size: 20px;
+}
+.login-box .login-form .login-btn-box button, .login-box .forgot-pass-box .login-btn-box button {
+    margin-bottom: 15px;
+}
+.login-box .login-form input:focus, .login-box .forgot-pass-box input:focus {
+    border-color: #FFFFFF;
+}
+.login-box .login-form *:-moz-placeholder, .login-box .forgot-pass-box *:-moz-placeholder {
+    color: #999;
+    font-size: 12px;
+}
+.login-box .login-form *::-moz-placeholder, .login-box .forgot-pass-box *::-moz-placeholder {
+    color: #999;
+    font-size: 12px;
+}
+.login-box .login-user-icon.user img {
+    width: 100%;
+}
+.social-btn-login {
+    text-align: center;
+    color:red;
+}
+.social-btn-login ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.social-btn-login ul li {
+    display: inline;
+    padding: 0 7px;
+}
+.social-btn-login ul li a {
+    color: #999;
+    font-size: 14px;
+    transition: all 600ms linear 0s;
+}
+.social-btn-login ul li a:hover {
+    color: dimgrey;
+    transition: all 600ms linear 0s;
+}

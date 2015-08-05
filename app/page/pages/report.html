@@ -1,0 +1,78 @@
+﻿<div class="row">
+    <div class="col-md-3" style="">
+        Report template
+        <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="overflow: auto; height: 150px; border: 1px solid #CCCCCC;">
+            <ul class="jstree-container-ul jstree-children">
+                <!-- ko foreach: reports-->
+                    <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
+                    <!-- /ko -->
+                <!-- /ko -->
+            </ul>
+        </div>
+        <div>Auto report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" data-bind="click: $root.viewManual">Manual</button></div>
+        <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="height: 350px; overflow: auto;border: 1px solid #CCCCCC;">
+            <ul class="jstree-container-ul jstree-children">
+                <!-- ko template: { name: 'ElementNodeTemplate', foreach: autoreports} -->
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9" style="">
+        <!-- ko foreach: report-->
+            <iframe src = "" width='100%' height='550' data-bind="attr: { src: 'ViewerJS/#../File/' + path }" allowfullscreen webkitallowfullscreen></iframe>
+        <!-- /ko -->
+        <div data-bind="compose: compoment1">
+
+        </div>
+    </div>
+</div>
+<script id="formElementNodeTemplate" type="text/html">
+    <!-- ko if: $data.sub -->
+    <li class="jstree-node jstree-open">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+        </a>
+        <ul class="jstree-children">
+
+            <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
+            <!-- /ko -->
+
+        </ul>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: !$data.sub -->
+    <li class="jstree-node  jstree-leaf">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+        </a>
+    </li>
+    <!-- /ko -->
+</script>
+<script id="ElementNodeTemplate" type="text/html">
+    <!-- ko if: $data.sub -->
+    <li class="jstree-node jstree-open">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewreport">
+            <i class="jstree-icon jstree-themeicon jstree-themeicon-custom" role="presentation" style="background-image: url('/images/icon/pdf-icon.png'); background-position: center center; background-size: auto auto;"></i>
+            <span data-bind="text: name"></span>
+        </a>
+        <ul class="jstree-children">
+
+            <!-- ko template: { name: 'ElementNodeTemplate', foreach: $data.sub } -->
+            <!-- /ko -->
+
+        </ul>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: !$data.sub -->
+    <li class="jstree-node  jstree-leaf">
+        <i class="jstree-icon jstree-ocl"></i>
+        <a class="jstree-anchor" href="#" data-bind="click: $root.viewreport">
+            <i class="jstree-icon jstree-themeicon jstree-themeicon-custom" role="presentation" style="background-image: url('/images/icon/pdf-icon.png'); background-position: center center; background-size: auto auto;"></i>
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+    <!-- /ko -->
+</script>

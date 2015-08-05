@@ -1,0 +1,55 @@
+﻿<div class="panel panel-default footer-5px">
+    <div class="panel-heading panel-heading-sm">Alarm Summary</div>
+    <div class="panel-body"  style="font-size:12px; padding-top:5px">
+        <form class="form-inline footer-5px" style="display:none">
+            <div class="form-group pull-left">
+                <div class="form-group">
+                    <label for="datetimepicker1">From</label>
+                    <input  id='datetimepicker1' type="text" class="form-control input-xs"/>
+                </div>
+                <div class="form-group">
+                    <label for="datetimepicker2">To</label>
+                    <input  id='datetimepicker2' type="text" class="form-control input-xs"/>
+                </div>
+            </div>
+            <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary " data-bind="click: $root.FilterAlarmLast7days">Last 7 days</button>
+                <button type="button" class="btn btn-primary " data-bind="click: $root.FilterAlarmYesterday">Yesterday</button>
+                <button type="button" class="btn btn-primary " data-bind="click: $root.FilterAlarmToday">Today</button>
+            </div>
+            <div class="clearfix"></div>
+        </form>
+        <table class="table table-AlarmSummary  table-hover">
+            <head>
+                <tr>
+                    <th width="2%">#</th>
+                    <th>Channel Name</th>
+                    <th width="15%">Alarm Time</th>
+                    <th width="15%">Reset Time</th>
+                    <th width="15%">Ack Time</th>                    
+                    <th >Status</th>
+                    <th width="10%">Priority</th>
+                    <th width="6%">Ack</th>
+                </tr>
+            </head>
+        </table>
+        <div class="scroll-hover" style="height:80px">
+            <table class="table table-AlarmSummary  table-hover">
+                <tbody style="">
+                    <!-- ko foreach: dataComponent-->
+                    <tr class="" data-bind="css: status() === 'inactive'?'text-success':'text-danger'">
+                        <td width="2%"><i class="fa fa-exclamation-circle"></i></td>
+                        <td data-bind="text: $root.channelname(channelID())"></td>
+                        <td width="15%" data-bind="text: alarmAt() ? $root.Moment(alarmAt()).format('DD/MM/YY hh:mm:ss') : ''">10/01/1</td>
+                        <td width="15%" data-bind="text: resetAt() ? $root.Moment(resetAt()).format('DD/MM/YY hh:mm:ss') : ''">10/01/1</td>
+                        <td width="15%" data-bind="text: acknowledgeAt() ? $root.Moment(acknowledgeAt()).format('DD/MM/YY hh:mm:ss') : ''">10/01/1</td>
+                        <td data-bind="text: status"></td>
+                        <td width="10%" data-bind="text: type">Alarm</td>
+                        <td width="6%"><button type="button" class="btn btn-ack btn-warning" data-bind="click: $root.AlarmAck">Ack</button></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

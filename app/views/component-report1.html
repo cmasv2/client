@@ -1,0 +1,86 @@
+﻿<div class="row">
+    <div class="form-group" style="margin-bottom:0px">
+        <label>Time from</label>
+        <input type='text' class="" data-bind="datetimepicker: fromTime" style="padding: 0px 5px 0px;"/>
+        <label>to</label>
+        <input type='text' class="" data-bind="datetimepicker: toTime" style="padding: 0px 5px 0px;"/>
+    </div>
+    <div style="padding: 10px;height: 550px; overflow: auto; width: 98%;border:1px solid #CCC">
+        <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;background:#D9D9D9;border-collapse:collapse;border:none" >
+            <tbody>
+            <tr>
+                <td><p>IV.1 Năng lượng tiêu thụ và mức nhu cầu năng lượng</p></td>
+                <td><p>(Mẫu 1)</p></td>
+            </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom:3.0pt;" >1.Dữ liệu báo cáo: <span data-bind="text:fromTime().format('DD/MM/YYYY');">dd/mm/yyyy</span> ÷ <span  data-bind="text:toTime().format('DD/MM/YYYY');">dd/mm/yyyy</span></p>
+        <p style="margin-bottom:3.0pt;">2.Loại đối tượng: <span data-bind="text:object">PM-710</span>.</p>
+        <p style="margin-bottom:3.0pt;display:none;">3.Tần suất lấy mẫu (min): <span data-bind="text:frequency">1</span> ÷ 60</p>
+        <p style="margin-bottom:3.0pt;">4.Định danh thiết bị: <span data-bind="text:unit">tủ xyz</span>.</p>
+        <p style="margin-bottom:3.0pt;">5.Dữ liệu kỹ thuật chi tiết:</p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.0in;">a.Energy</p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">i.Active energy total (kWh): <span data-bind="text:kWh">###,###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">ii.Reactive energy total (kVARh): <span data-bind="text:kVARh">###,###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">iii.Apparent energy total (kVAh): <span data-bind="text:kVAh">###,###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">iv.Operating time: <span data-bind="text:OperatingTime">#y ###d ##h ##m</span></p>
+        <table cellspacing="0" cellpadding="0" border="1" style=" width: 100%;border-collapse:collapse;border:none" >
+            <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td><p>Demand</p></td>
+                <td><p>Maximum demand</p></td>
+                <td><p>Time</p></td>
+            </tr>
+            <tr>
+                <td><p>Current on L1 (A)</p></td>
+                <td><p><span data-bind="text:Currentl1">###,###.#</span></p></td>
+                <td><p><span data-bind="text:Currentl2">###,###.#</span></p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            <tr>
+                <td><p>Current on L2 (A)</p></td>
+                <td><p data-bind="text:Currentl2">###,###.#</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            <tr>
+                <td><p>Current on L3 (A)</p></td>
+                <td><p data-bind="text:Currentl3">###,###.#</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            <tr>
+                <td><p>Active power (kW)</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            <tr>
+                <td><p>Reactive power (kVAR)</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            <tr>
+                <td><p>Apparent power (kVA)</p>
+                </td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:Currentl1">###,###.#</p></td>
+                <td><p data-bind="text:fromTime().format('DD/MM/YYYY HH:MM:ss');">dd/mm/yy hh:mm:ss</p></td>
+            </tr>
+            </tbody>
+        </table>
+        <p style="margin-bottom:3.0pt">&nbsp;</p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.0in;" >b.Total Harmonic Distortion as average</p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">i. Current L1 (%): <span data-bind="text:Currentl1">###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">ii. Current L2 (%): <span data-bind="text:Currentl2">###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">iii. Current L3 (%): <span data-bind="text:Currentl3">###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">iv. Voltage L1-L2 (%): <span data-bind="text:Voltage12">###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;">v. Voltage L2-L3 (%): <span data-bind="text:Voltage23">###.#</span></p>
+        <p style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:1.5in;" >vi. Voltage L3-L1 (%): <span data-bind="text:Voltage31">###.#</span></p>
+        <p style="margin-bottom:3.0pt">&nbsp;</p>
+        <p align="center" style="margin-bottom:3.0pt;text-align:center">------------------------------End report ------------------------------</p>
+        <p style="margin-bottom:3.0pt;text-align:justify">&nbsp;</p>
+    </div>
+</div>
