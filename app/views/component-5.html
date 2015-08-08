@@ -19,88 +19,23 @@
         <!-- ko foreach: cf-->
         <div id="Status" class="tab-pane active" role="tabpanel">
             <!-- status -->
-            <div style="height:350px;" class="row">
-                <div style="margin-top:10px" class="col-md-5">
-                    <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
+            <div style="height:379px; min-height:379px;" class="row">
+                <div style="margin-top:10px" class="col-md-7">
+                    <img style="max-width:100%;max-height:379px; width:85%" src="images.png" data-bind="attr: {src:images}">
                 </div>
-                <div class="col-md-7" style="height: 350px; overflow: auto;">
-                    <div class="row">
+                <div class="col-md-5" style="height: 379px; overflow: hidden;">
+                    <!--<div class="row col-md-12"> -->
                 <!-- ko foreach: status-->
-                <div class="col-md-6">
-                    <!-- ko if: name-->
-                    <label data-bind="text: name">System On () <i class="fa fa-spinner fa-spin"></i></label>
-                    <!-- /ko -->
-                    <!-- ko if: datas-->
-                    <label ></label>
-                    <!-- /ko -->
-                    <ul class="fa-ul">
-                        <!-- ko foreach: datas-->
-                        <li>
-                            <!-- ko if: !value-->
-                            <i class="" data-bind="css: icon,myStatus: status.value()"></i> 
-                            <span data-bind="text: name"></span>
-                            <!-- /ko -->
-                            <!-- ko if: value-->
-                            <!-- ko if: icon--><i class="" data-bind="css: icon"></i><!-- /ko -->
-                            <span data-bind="text: name"></span>
-                            <span style="display:none" data-bind="text : value.channelName"></span>
-                            : <span data-bind="text: value.value()+'&nbsp;'+ unit"> 22 kVA</span>
-                            <!-- /ko -->
-                        </li>
-                        <!-- /ko -->
-                    </ul>
-                    <!-- ko if:0-->
-                    <!-- ko foreach: Parameter-->
-
-                    <table style="" class="table table-parameter">
-                        <tbody>
-                            <tr>
-                                <th width="15%" data-bind="text: name">name</th>
-                                <th>L1</th>
-                                <th>L2</th>
-                                <th>L3</th>
-                            </tr>
-
-                        </tbody>
-                        <tbody>
-                            <!-- ko foreach: datapar-->
-                            <tr>
-                                <td style="text-align:left" data-bind="text: name + (unit?'(' + unit + ')':''+':')">Vd (V):</td>
-                                <!-- ko foreach: valuespar-->
-                                <td width="20%" data-bind="text: value">0</td>
-                                <!-- /ko -->
-                            </tr>
-                            <!-- /ko -->
-                        </tbody>
-                    </table>
-                    <table style="margin-top: 15px;" class="table table-parameter">
-                        <tbody>
-                            <tr>
-                                <td style="text-align:left">pf:</td>
-                                <td width="20%" data-bind="text: pf.value()">123123</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:left">kWh:</td>
-                                <td width="20%" data-bind="text: kWh.value()">123123</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:left">Running Time (h):</td>
-                                <td width="20%" data-bind="text: Time.value()">1232411</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- /ko -->
-                    <!-- /ko -->
-                </div>
+                
 
                 <!-- /ko -->
-                 </div>
+                <!-- </div> -->
                  <div class="row">
                     <!-- ko if: Parameters-->
-                    <div id="" class="tab-pane" role="tabpanel">
+                    <div id="" class="tab-pane row" role="tabpanel">
                         <!-- Parameters -->
 
-                        <div style="height:280px" class="row">
+                        <div style="height:280px" class="row col-md-12">
                             <!-- ko foreach: Parameters-->
                             <div class="col-md-6">
                                 <table style="margin-top: 5px;" class="table table-parameter">
@@ -124,8 +59,7 @@
                                         <!-- /ko -->
                                     </tbody>
                                 </table>
-
-                                <table style="margin-top: 15px;" class="table table-parameter">
+								<table style="/*margin-top: 15px;*/" class="table table-parameter">
                                     <tbody>
                                         <!-- ko foreach: values-->
                                         <tr>
@@ -173,15 +107,15 @@
         <!-- /ko -->
         <div id="Control" class="tab-pane" role="tabpanel">
             <!-- Control -->
-            <div style="height:350px;" class="row">
-                <div style="height:350px;" class="row">
+            <div style="height:379px;" class="row">
+                <div style="height:379px;" class="row">
                     <!-- ko foreach: cf-->
                     <div style="margin-top:10px" class="col-md-5">
                         <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
                     </div>
                     <!-- /ko -->
                     <div style="margin-top:10px" class="col-md-7">
-                        <div style="overflow: auto; max-height: 350px;width:98%">
+                        <div style="overflow: auto; max-height: 379px;width:98%">
                             <!-- ko foreach: controls-->
                             <div class="row" style="width: 98%;">
                                 <div class="col-md-7" style="line-height: 35px;">
@@ -216,8 +150,8 @@
         </div>
         <div id="Configuration" class="tab-pane" role="tabpanel">
             <!-- Configuration -->
-            <div style="height:350px;" class="row">
-                <div style="height:350px" class="col-md-3 scroll-show">
+            <div style="height:379px;" class="row">
+                <div style="height:379px" class="col-md-3 scroll-show">
                     <div class="demo jstree jstree-1 jstree-default" id="jstree1">
                     <ul class="jstree-container-ul jstree-children">
                             <!-- ko foreach: channels-->
@@ -239,7 +173,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-9  scroll-show" style="height:350px;">
+                <div class="col-md-9  scroll-show" style="height:379px;">
                     <!-- ko foreach: channelSelect-->
                     <form style="font-size:12px;" class="form-horizontal">
                         <div class="form-group form-group-sm ">
@@ -451,7 +385,7 @@
         </div>
         <div id="Manual" class="tab-pane" role="tabpanel">
             <!-- Manual -->
-            <div style="height:350px;" class="row">
+            <div style="height:379px;" class="row">
                 <div class="col-md-3">
                     <div class="row" style="d">
                         <div class="bs-glyphicons">

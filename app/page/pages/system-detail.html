@@ -1,8 +1,11 @@
 <div class="row">
-	<div class="col-md-3" style="">
-    	<div data-bind="compose: compoment1"></div>
+	<div id="sys_detail_left" class="col-md-3" style="">
+    	<div id="sys_detail_compoment1" data-bind="compose: compoment1" style="width: 85%;float: left;"></div>
+		<div class="sys_icon_close" style="width: 15%;float: right;">
+			<a class="sys_open" id="sys_left_close" href="" data-bind="click: $root.test" ><i id="i-icon" class="fa fa-chevron-circle-left"></i></a>
+		</div>
     </div>
-    <div class="col-md-9" style="">
+    <div id="sys_detail_right" class="col-md-9" style="">
         <div class="col-md-12" style="" data-bind="compose: compoment2">
         </div>
         <div class="clearfix"></div>
