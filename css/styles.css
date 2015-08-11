@@ -6,6 +6,21 @@
 a{
  cursor: pointer;
 }
+.nameclass1 {
+    left: 93px;
+    position: absolute;
+    text-align: center;
+    top: 85px;
+}
+.nameclass2{
+    position: absolute;
+    background-color: #2d2d2d;
+    border: 1px solid rgb(249, 249, 249);
+    color: yellow;
+    left: 130px;
+    top: 250px;
+}
+}
 .input-xs {
 	height: 20px;
 	padding: 5px 10px;

@@ -59,8 +59,8 @@
         },
         {
             route: 'smoke(/:sys)', 
-            title: getT("DAR_HS").name + ' - ' + getT("DAR_LL").name,
-            description: getT("DAR_HS").description + ' - ' + getT("DAR_LL").description,
+            title: "demo",
+            description: "demo",
             icon: 'fa-fire', 
             moduleId: 'pages/system-detail-notsub',
             nav: true,

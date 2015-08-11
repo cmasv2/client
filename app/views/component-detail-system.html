@@ -7,7 +7,11 @@
     </h3>
     <div style=" " class="row">
         <div style="padding-top: 20px; padding-left: 50px; min-height: 410px; height:410px;" class="col-md-12">
-            <img style="max-width:90%;max-height:90%;" src="images.png" data-bind="attr: {src:images}">
+            <!-- ko foreach: divs-->
+            <div data-bind="css : class1,html: value()">
+            </div>
+            <!-- /ko -->
+            <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
         </div>
               
     </div>

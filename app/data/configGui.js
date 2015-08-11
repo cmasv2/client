@@ -1,6 +1,12 @@
 ﻿define([], function () {
     return function () {
         return {
+            "DAR_PW_DB1_DETAIL" : [{
+                "divs":[
+                    {"class1": "nameclass1","channelName":"DAR_PW_DB1_OTB24_I00"},
+                    {"class1": "nameclass2","channelName":"DAR_PW_DB1_OTB24_I01"}
+                ]
+            }],
             "DAR_UP" : [
                 {
                     "status": {"value": 0},"url": "detail/DAR_UP","code": "DAR_UP_T31",

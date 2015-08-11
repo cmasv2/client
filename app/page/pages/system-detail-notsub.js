@@ -25,12 +25,8 @@ define(['durandal/app', "knockout", "bootstrap", "viewmodels/component-detail-sy
             return d;
         }
         SystemDetailNotsubViewModel.activate = function (sys) {
-            me.compoment1(new ComponentDetailSystem(initbuff(sys,"_DETAIL")));
-            var Alarms = [];
-            me.compoment2(new Component4(Alarms));
-            me.compoment3(new ComponentWarning(getBuffer('WARNING_SYSTEM')));
-            
-                
+            var conf = initbuff(sys,"_DETAIL");
+            me.compoment1(new ComponentDetailSystem(conf));
         };
 
     };
