@@ -4,7 +4,7 @@
             "DAR_PW_DB1_DETAIL" : [{
                 "divs":[
                     {"class1": "nameclass1","channelName":"DAR_PW_DB1_OTB24_I00"},
-                    {"class1": "nameclass2","channelName":"DAR_PW_DB1_OTB24_I01"}
+                    {"class1": "nameclass2","channelName":"DAR_PW_DB1_OTB24_I01",'caption':"Volt: "}
                 ]
             }],
             "DAR_UP" : [

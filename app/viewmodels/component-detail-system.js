@@ -16,7 +16,7 @@
                         c.value("<img src='images/icon/on.png' style='height: 56px'/>");
                     }
                     else{
-                        c.value((Math.round(value * 10) / 10) + " V");
+                        c.value(c.caption + (Math.round(value * 10) / 10) + " V");
                     }
                 }
             }
