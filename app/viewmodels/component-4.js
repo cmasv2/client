@@ -15,11 +15,16 @@
         function FilterAlarmToday() {
             alert("Alarm Today");
         }
+		function Alarmtoggle() {
+           jQuery(".panel-body").toggle("blind");
+		   jQuery(".i-icon").toggleClass("fa-chevron-circle-down");
+        }
         me.Moment = Moment;
         me.AlarmAck = AlarmAck;
         me.FilterAlarmLast7days = FilterAlarmLast7days;
         me.FilterAlarmYesterday = FilterAlarmYesterday;
         me.FilterAlarmToday = FilterAlarmToday;
+		me.Alarmtoggle = Alarmtoggle;
         me.channelname = function (c){
             var a = buff.find(buff.getByKey('ChannelsAll'), 'id', c);
             return a[0].name != undefined?a[0].name:"NaN";

@@ -28,7 +28,8 @@ define(['durandal/app','knockout','plugins/router'],
                             {text:"Component: ",a: count('LocationAll','type', 'component'),b:inf.co},
                             {text:"Channels: ",a: app.buff.getByKey('ChannelsAll').length,b:inf.ch}]);
                 if(me.st()){
-                    me.msg(msg);
+                    //me.msg(msg);
+					router.navigate('page/dashboard');
                 }
                 else{
                     router.navigate('page/dashboard');

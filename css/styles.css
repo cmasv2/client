@@ -6,6 +6,36 @@
 a{
  cursor: pointer;
 }
+.DB1Class1 {
+	left: 67px;
+    position: absolute;
+    text-align: center;
+    top: 81px;
+}
+.DB1Class2 {
+	left: 158px;
+    position: absolute;
+    text-align: center;
+    top: 81px;
+}
+.DB1Class3 {
+	left: 248px;
+    position: absolute;
+    text-align: center;
+    top: 81px;
+}
+.DB1Class4 {
+	left: 339px;
+    position: absolute;
+    text-align: center;
+    top: 81px;
+}
+.DB1Class5 {
+	left: 429px;
+    position: absolute;
+    text-align: center;
+    top: 81px;
+}
 .nameclass1 {
     left: 93px;
     position: absolute;

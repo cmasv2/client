@@ -19,11 +19,16 @@
         <!-- ko foreach: cf-->
         <div id="Status" class="tab-pane active" role="tabpanel">
             <!-- status -->
-            <div style="height:379px; min-height:379px;" class="row">
-                <div style="margin-top:10px" class="col-md-7">
-                    <img style="max-width:100%;max-height:379px; width:85%" src="images.png" data-bind="attr: {src:images}">
+			
+            <div style="" class="row">
+                <div style="margin-top:10px" class="col-md-12">
+					 <!-- ko foreach: divs-->
+					<div data-bind="css : class1,html: value()">
+					</div>
+					<!-- /ko -->
+                    <img style="max-width:100%;max-height:450px;" src="images.png" data-bind="attr: {src:images}">
                 </div>
-                <div class="col-md-5" style="height: 379px; overflow: hidden;">
+                <div class="col-md-0" style="overflow: hidden;">
                     <!--<div class="row col-md-12"> -->
                 <!-- ko foreach: status-->
                 
@@ -107,15 +112,15 @@
         <!-- /ko -->
         <div id="Control" class="tab-pane" role="tabpanel">
             <!-- Control -->
-            <div style="height:379px;" class="row">
-                <div style="height:379px;" class="row">
+            <div style="height:450px;" class="row">
+                <div style="height:450px;" class="row">
                     <!-- ko foreach: cf-->
                     <div style="margin-top:10px" class="col-md-5">
                         <img style="max-width:100%;max-height:100%;" src="images.png" data-bind="attr: {src:images}">
                     </div>
                     <!-- /ko -->
                     <div style="margin-top:10px" class="col-md-7">
-                        <div style="overflow: auto; max-height: 379px;width:98%">
+                        <div style="overflow: auto; max-height: 450px;width:98%">
                             <!-- ko foreach: controls-->
                             <div class="row" style="width: 98%;">
                                 <div class="col-md-7" style="line-height: 35px;">
@@ -150,8 +155,8 @@
         </div>
         <div id="Configuration" class="tab-pane" role="tabpanel">
             <!-- Configuration -->
-            <div style="height:379px;" class="row">
-                <div style="height:379px" class="col-md-3 scroll-show">
+            <div style="height:450px;" class="row">
+                <div style="height:450px" class="col-md-3 scroll-show">
                     <div class="demo jstree jstree-1 jstree-default" id="jstree1">
                     <ul class="jstree-container-ul jstree-children">
                             <!-- ko foreach: channels-->
@@ -173,7 +178,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-9  scroll-show" style="height:379px;">
+                <div class="col-md-9  scroll-show" style="height:450px;">
                     <!-- ko foreach: channelSelect-->
                     <form style="font-size:12px;" class="form-horizontal">
                         <div class="form-group form-group-sm ">
@@ -385,7 +390,7 @@
         </div>
         <div id="Manual" class="tab-pane" role="tabpanel">
             <!-- Manual -->
-            <div style="height:379px;" class="row">
+            <div style="height:450px;" class="row">
                 <div class="col-md-3">
                     <div class="row" style="d">
                         <div class="bs-glyphicons">
@@ -395,7 +400,7 @@
                         </div>
                     </div>
                     <div class="row">
-                    <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="height: 300px; overflow: auto;border: 1px solid #CCCCCC;">
+                    <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="height: 430px; overflow: auto;border: 1px solid #CCCCCC;">
                         <ul class="jstree-container-ul jstree-children">
                             <!-- ko template: { name: 'ElementNodeTemplate', foreach: documents} -->
                             <!-- /ko -->
@@ -405,7 +410,7 @@
                 </div>
                 <div class="col-md-9">
                     <!-- ko foreach: document-->
-                    <iframe src = "" width='100%' height='340' data-bind="attr: { src: 'ViewerJS/#../File/' + path }" allowfullscreen webkitallowfullscreen></iframe>
+                    <iframe src = "" width='100%' height='465px' data-bind="attr: { src: 'ViewerJS/#../File/' + path }" allowfullscreen webkitallowfullscreen></iframe>
                     <!-- /ko -->
                 </div>
             </div>

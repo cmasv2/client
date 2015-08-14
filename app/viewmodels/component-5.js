@@ -1,11 +1,43 @@
-﻿define(['durandal/app', "knockout", "bootstrap-switch", "./../bindings/bootstrapSwitch","./../bindings/status-binding","css!../../lib/jstree/dist/themes/default/style.min.css","css!../../lib/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css"],function (app, ko) {
+﻿define(['durandal/app', "knockout", "bootstrap-switch", "./../bindings/bootstrapSwitch","./../bindings/status-binding","css!../../lib/jstree/dist/themes/default/style.min.css","css!../../lib/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css","./../bindings/status-binding"],function (app, ko) {
     return function (cf) {
+		
         var me = this,apis = app.services.getService("apis"),buff = app.buff;
         var Soc = app.services.getService("socket");
         var channels = [{name: "channels",id: 0,sub: infid(cf[0].id)}];
         me.channelSelect = [];
         me.controls = [];
-         function getBuffer(key) {
+		
+		/*
+		//status-binding start
+		var dataComponent = cf;
+		function LisS(c) {
+            c.value = ko.observable('NaN');
+            var cv = function (value) {
+                if (value != undefined){
+                    if(value == 0){
+                        c.value("<img src='images/icon/off.png' style='height: 56px'/>");
+                    }
+                    else if(value == 1){
+                        c.value("<img src='images/icon/on.png' style='height: 56px'/>");
+                    }
+                    else{
+                        c.value((Math.round(value * 10) / 10) + " V");
+                    }
+                }
+            }
+            if (Soc.connected())
+                if (c.channelName != 'xxx')
+                    Soc.LisS(c.channelName, cv);
+        }
+		for(var i = 0 ; i < cf[0]['divs'].length ; i++ ){
+            LisS(cf[0]['divs'][i]);
+        }
+		
+		me.dataComponent = ko.observableArray(dataComponent);
+		//status-binding end
+		*/
+		
+        function getBuffer(key) {
             if (!bufferApp) {
                 return false;
             }
@@ -16,13 +48,29 @@
         function Lis(c) {
             c.value = ko.observable('NaN');
             var cv = function (value) {
-                if (value != undefined)
-                    c.value(Math.round(value * 10) / 10);
+                //if (value != undefined)
+                //    c.value(Math.round(value * 10) / 10);
+				if (value != undefined){
+                    if(value == 0){
+                        c.value("<img src='images/icon/off.png' style='height: 56px'/>");
+                    }
+                    else if(value == 1){
+                        c.value("<img src='images/icon/on.png' style='height: 56px'/>");
+                    }
+                    else{
+                        c.value(c.caption + (Math.round(value * 10) / 10) + " V");
+                    }
+                }
             }
             if (Soc.connected())
                 if (c.channelName != 'xxx')
                     Soc.Lis(c.channelName, cv);
         }
+		//
+		for(var i = 0 ; i < cf[0]['divs'].length ; i++ ){
+            Lis(cf[0]['divs'][i]);
+        }
+		//
         function binds(s) {
             var _s = s;
             s = ko.observable(_s);

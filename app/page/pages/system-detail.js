@@ -3,10 +3,16 @@ define(['durandal/app', "knockout", "bootstrap", "viewmodels/component-2",
     function (app, ko, bootstrap, Component2, Component5, Component4, ComponentDetailSystem) {
     return function () {
         var me = this,
+			SystemDetailNotsubViewModel = this,
             buff = app.buff;
         me.compoment1 = ko.observable();
         me.compoment2 = ko.observable();
         me.compoment3 = ko.observable();
+		
+		SystemDetailNotsubViewModel.compoment1 = ko.observable();
+        SystemDetailNotsubViewModel.compoment2 = ko.observable();
+        SystemDetailNotsubViewModel.compoment3 = ko.observable();
+		
         function getBuffer(key) {
             if (!buff) {
                 return false;
@@ -25,6 +31,11 @@ define(['durandal/app', "knockout", "bootstrap", "viewmodels/component-2",
             d[0].id = l?l[0].id:d[0].id;
             return d;
         }
+		
+		SystemDetailNotsubViewModel.activate = function (sys) {
+            var conf = initbuff(sys,"_DETAIL");
+            me.compoment1(new ComponentDetailSystem(conf));
+        };
 		
         me.activate = function (sys, id) {
             var config = [

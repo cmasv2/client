@@ -4,7 +4,7 @@
             "DAR_PW_DB1_DETAIL" : [{
                 "divs":[
                     {"class1": "nameclass1","channelName":"DAR_PW_DB1_OTB24_I00"},
-                    {"class1": "nameclass2","channelName":"DAR_PW_DB1_OTB24_I01",'caption':"Volt: "}
+					{"class1": "nameclass2","channelName":"DAR_PW_DB1_OTB24_I01",'caption':"Volt: "}
                 ]
             }],
             "DAR_UP" : [
@@ -3305,6 +3305,13 @@
             ],
             DAR_PW_DB1: [
                 {
+					"divs":[
+						{"class1": "DB1Class1","channelName":"DAR_PW_DB1_OTB24_I00"},
+						{"class1": "DB1Class2","channelName":"DAR_PW_DB1_OTB24_I01",'caption':"Volt: "},
+						{"class1": "DB1Class3","channelName":"DAR_PW_DB1_OTB24_I02"},
+						{"class1": "DB1Class4","channelName":"DAR_PW_DB1_OTB24_I03"},
+						{"class1": "DB1Class5","channelName":"DAR_PW_DB1_OTB24_I04"}
+					],
                     "name": "DCDB 1",/* -- @@value name DCDB 1 ----*/
                     "code": "DAR_PW_DB1",
                     "description": "DCDB 1 switchboard",/* -- @@value description DCDB 1 ----*/
@@ -4074,6 +4081,13 @@
             ],
             DAR_PW_AC1: [
                 {
+					"divs":[
+						{"class1": "ACDB1Class1","channelName":"DAR_PW_DB1_OTB24_I00"},
+						{"class1": "ACDB1Class2","channelName":"DAR_PW_DB1_OTB24_I01",'caption':"Volt: "},
+						{"class1": "ACDB1Class3","channelName":"DAR_PW_DB1_OTB24_I02"},
+						{"class1": "ACDB1Class4","channelName":"DAR_PW_DB1_OTB24_I03"},
+						{"class1": "ACDB1Class5","channelName":"DAR_PW_DB1_OTB24_I04"},
+					],
                     "name": "ACDB 1",/* -- @@value ----*/
                     "code": "DAR_PW_AC1",
                     "description": "Switchboard",/* -- @@value ----*/

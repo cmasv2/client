@@ -13,6 +13,7 @@
             return Math.floor((Math.random() * 100));
         }
         me.compositionComplete = function () {
+			jQuery(".panel-body").toggle("blind");
             setTimeout(function(){$('#initcmasld').hide(); },5000);
         };
         me.activate = function () {
