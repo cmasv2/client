@@ -11,7 +11,7 @@
     color: #FFFFFF;
 }
 .login-box {
-    background: none repeat scroll 0 0 #444;
+    background: #22475E;
     color: #999;
     margin: 5% auto;
     padding: 20px;
@@ -21,7 +21,7 @@
 }
 .login-box .login-user-icon {
     border: 5px solid #FFFFFF;
-    border-radius: 75px;
+    border-radius:50%;
     color: #FFFFFF;
     font-size: 70px;
     height: 150px;
@@ -72,13 +72,17 @@
     box-shadow: none;
 }
 .login-box .login-form input, .login-box .forgot-pass-box input {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #FFFFFF;
-    color: #000;
+    background: #ffffff none repeat scroll 0 0;
+        border: 1px solid #ffffff;
+        border-radius: 0 !important;
+        box-shadow: none;
+        color: #34495e;
 }
 .login-box .login-form .input-group-addon, .login-box .forgot-pass-box .input-group-addon {
-    background: none repeat scroll 0 0 #ddd;
-    color: #000;
+   background: #16a085;
+       border: 0 none;
+       border-radius: 0;
+       color: #34495e;
 }
 .login-box .login-form .remember-me, .login-box .forgot-pass-box .remember-me {
     margin-bottom: 15px;
@@ -101,7 +105,10 @@
     font-size: 20px;
 }
 .login-box .login-form .login-btn-box button, .login-box .forgot-pass-box .login-btn-box button {
-    margin-bottom: 15px;
+   background: #16a085;
+       border-radius: 0;
+       color: #34495e;
+       margin-bottom: 15px;
 }
 .login-box .login-form input:focus, .login-box .forgot-pass-box input:focus {
     border-color: #FFFFFF;

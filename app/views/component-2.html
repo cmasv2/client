@@ -1,27 +1,38 @@
-﻿
-    <div class="panel panel-default">
-        <!-- ko foreach: cf-->
-        <!-- ko if: name-->
-            <div class="panel-heading">
-                <h3 class="panel-title"><i class="" data-bind="css: icon"></i> <span data-bind="text: name"></span></h3>
-            </div>
-        <!-- /ko -->
-        <div class="list-group" style="max-height:500px;overflow:auto">
-            <!-- ko foreach: channels-->
-            <!-- ko if: $data-->
-            <a href="#" class="list-group-item" data-bind="click: $root.viewdetail">
-                <span class="pull-left" data-bind="myStatus: status"><i class="fa fa-check-circle"></i></span>
-                &nbsp;<span data-bind="text: name">name</span>
-                <span class="pull-right small text-muted"><span data-bind="text: value1.value()+'&nbsp;'+value1.unit">A</span>,<!-- ko if: value2--><span data-bind="text: value2.value()+'&nbsp;'+value2.unit">kVA</span><!-- /ko --></span>
-                <div class="clearfix"></div>
-                <!-- ko if: progress-->
-                <div class="progress footer-condensed" style="margin-bottom:0;">
-                    <div data-bind="style: {width: progress.value()+'%',color: '#333'},attr: {'aria-valuenow': progress.value()},text: progress.value()+'%'" aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress-bar progress-bar-success progress-bar-striped "><span>50</span>%</div>
-                </div>
+﻿<div class="panel panel-default">
+    <!-- ko foreach: cf-->
+    <!-- ko if: name-->
+    <div class="panel-heading">
+        <h3 class="panel-title" data-bind="click: $root.viewdetail" style="cursor: pointer;"><i class="" data-bind="css: icon"></i>
+            <span data-bind="text: name"></span></h3>
+    </div>
+    <!-- /ko -->
+    <div class="list-group" style="max-height:500px;overflow:auto">
+        <!-- ko foreach: channels-->
+        <!-- ko if: $data-->
+        <a href="#" class="list-group-item" data-bind="click: $root.viewdetail">
+            <span class="pull-left" data-bind="myStatus: status"></span>
+            <!-- ko if: logo-->
+                <i class="" data-bind="css : logo"></i>
+            <!-- /ko -->
+            <span data-bind="text: name">name</span>
+            <span class="pull-right text-success consoleh">
+                <!-- ko if: value-->
+                    <!-- ko foreach: value--><span data-bind="attr:{'title':$root.channelname(channelName),'alt':$root.channelname(channelName)},html: value()+'&nbsp;'+unit">kVA</span>, <!-- /ko -->
                 <!-- /ko -->
-            </a>
+			</span>
+
+            <div class="clearfix"></div>
+            <!-- ko if: progress-->
+            <div class="progress footer-condensed" style="margin-bottom:0;">
+                <div data-bind="style: {width: progress.value()+'%',color: '#333'},attr: {'aria-valuenow': progress.value()},text: progress.value()+'%'"
+                     aria-valuemax="100" aria-valuemin="0" role="progressbar"
+                     class="progress-bar progress-bar-success progress-bar-striped "><span>50</span>%
+                </div>
+            </div>
             <!-- /ko -->
-            <!-- /ko -->
-        </div>
+        </a>
+        <!-- /ko -->
         <!-- /ko -->
     </div>
+    <!-- /ko -->
+</div>

@@ -8,36 +8,36 @@
             </a>
             <!-- ko if: $data.sub -->
             <ul class="jstree-children">
-               
+
                 <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
                 <!-- /ko -->
-                
+
             </ul>
             <!-- /ko -->
         </li>
     </ul>
     <!-- /ko -->
-<script id="formElementNodeTemplate" type="text/html">
-    <!-- ko if: $data.sub -->
-    <li class="jstree-node jstree-open">
-        <i class="jstree-icon jstree-ocl"></i>
-        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
-            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
-        </a>
-        <ul class="jstree-children">
+    <script id="formElementNodeTemplate" type="text/html">
+        <!-- ko if: $data.sub -->
+        <li class="jstree-node jstree-open">
+            <i class="jstree-icon jstree-ocl"></i>
+            <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+                <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+            </a>
+            <ul class="jstree-children">
 
-            <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
-            <!-- /ko -->
+                <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
+                <!-- /ko -->
 
-        </ul>
-    </li>
-    <!-- /ko -->
-    <!-- ko if: !$data.sub -->
-    <li class="jstree-node  jstree-leaf">
-        <i class="jstree-icon jstree-ocl"></i>
-        <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
-            <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
-        </a>
-    </li>
-    <!-- /ko -->
-</script>
+            </ul>
+        </li>
+        <!-- /ko -->
+        <!-- ko if: !$data.sub -->
+        <li class="jstree-node  jstree-leaf">
+            <i class="jstree-icon jstree-ocl"></i>
+            <a class="jstree-anchor" href="#" data-bind="click: $root.viewdetail">
+                <i class="jstree-icon jstree-themeicon"></i><span data-bind="text: name"></span>
+            </a>
+        </li>
+        <!-- /ko -->
+    </script>

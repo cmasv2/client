@@ -1,17 +1,18 @@
 ﻿<div class="form-horizontal well">
-    <h3>Display</h3>
+    <h3 style="padding: 0px; margin: 0px;">Display</h3>
     <hr style="padding: 0px; margin: 0px;"/>
     <div class="form-group">
         <label class="col-sm-5 control-label">Alarm numbers displayed :</label>
+
         <div class="col-sm-4">
-            <input type="text" placeholder="Username" class="form-control">
+            <input type="text" placeholder="numbers" class="form-control">
         </div>
     </div>
-    <h3>Escalation Profile</h3>
+    <h3 style="padding: 0px; margin: 0px;">Escalation Profile</h3>
     <table class="table table-striped" cellspacing="0 ">
         <thead>
         <tr data-bind="foreach: columns">
-            <th data-bind="text: headerText"></th>
+            <th data-bind="text: ht"></th>
         </tr>
         </thead>
         <tbody class="table table-hover" data-bind="foreach: items">
@@ -19,7 +20,8 @@
             <td data-bind="text: name">data</td>
             <!-- ko foreach: values-->
             <td>
-                <select class="form-control" data-bind="value: value,options: $root.options, optionsText: 'name',optionsValue:'value'">
+                <select class="form-control"
+                        data-bind="value: value,options: $root.options, optionsText: 'name',optionsValue:'value'">
                 </select>
             </td>
             <!-- /ko -->
