@@ -49,14 +49,14 @@ define(['durandal/app', "knockout", "bootstrap", "viewmodels/component-5", "view
                 d[0].images = l ? "images/" + l[0].images : d[0].images;
                 d[0].id = l ? l[0].id : d[0].id;
                 d[0].parentID = l ? l[0].parentID : d[0].parentID;
-                d[0].onpage = d ? d[0].onpage: [];
+                d[0].onpage = d ? d[0].onpage : [];
                 return d;
             }
 
             me.activate = function (sys, id, idc) {
                 me.config1 = SelectTree(config1, sys, id);
                 if (sys != undefined) {
-                    id != undefined ? me.compoment2(new Component5(initbuff(id, ""),id,idc)) : me.compoment2(new ComponentDetailSystem(initbuff(sys, "_DETAIL")));
+                    id != undefined ? me.compoment2(new Component5(initbuff(id, ""), id, idc)) : me.compoment2(new ComponentDetailSystem(initbuff(sys, "_DETAIL")));
                 }
                 else {
                     me.compoment2(new ComponentDetailSystem(initbuff("DAR", "_DETAIL")));

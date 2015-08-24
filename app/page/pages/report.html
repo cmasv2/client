@@ -1,6 +1,7 @@
 ﻿<div class="row">
     <div class="col-md-3" style="">Report template
-        <div class="demo jstree jstree-1 jstree-default" id="jstree1" style="overflow: auto; height: 350px; border: 1px solid #CCCCCC;">
+        <div class="demo jstree jstree-1 jstree-default" id="jstree1"
+             style="overflow: auto; height: 350px; border: 1px solid #CCCCCC;">
             <ul class="jstree-container-ul jstree-children">
                 <!-- ko foreach: reports-->
                 <!-- ko template: { name: 'formElementNodeTemplate', foreach: $data.sub } -->
@@ -9,10 +10,8 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-9" style="">
-        <div data-bind="compose: compoment1">
-
-        </div>
+    <div class="col-md-9" style="overflow: auto; height: 586px; border: 1px solid #ccc;">
+        <div data-bind="compose: compoment1"></div>
     </div>
 </div>
 <script id="formElementNodeTemplate" type="text/html">

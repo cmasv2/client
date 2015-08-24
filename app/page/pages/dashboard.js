@@ -2,7 +2,7 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!../../../../css/dashboard.css"], function (app, ko, bootstrap, $, router) {
+define(['durandal/app', "knockout", "bootstrap", "jquery", "plugins/router", "css!../../../../css/dashboard.css"], function (app, ko, bootstrap, $, router) {
     return function () {
         var me = this,
             apis = app.services.getService("apis"),
@@ -10,15 +10,14 @@ define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!
             buff = app.buff;
         me.comp1 = ko.observable();
         function Lis(c) {
-            if(c.type == 5){
+            if (c.type == 5) {
                 c.value = ko.observable('NaN');
-                Q.when(apis.ChannelDataByCode(c.channelName)).then(function(r){
-                    c.value(r?r.value:0);
-                    c.id = r? r.id:0;
+                Q.when(apis.ChannelDataByCode(c.channelName)).then(function (r) {
+                    c.value(r ? r.value : 0);
+                    c.id = r ? r.id : 0;
                 });
             }
-            else
-            {
+            else {
                 c.value = ko.observable('NaN');
                 var cv = function (value) {
                     if (c.type != undefined) {
@@ -28,18 +27,18 @@ define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!
                         else if (c.type == "4") {
                             var t = value % 3600;
                             var h = (value - t) / 3600;
-                            var m = (t - (t % 60))/ 60;
+                            var m = (t - (t % 60)) / 60;
                             c.value(Math.round(h) + ":" + Math.round(m));
                         }
                         else if (c.type == "6") {
                             c.value(c["_" + (Math.round(value * 10) / 10)]);
                         }
-                        else{
+                        else {
                             c.type = 0;
                             c.value(Math.round(value * 10) / 10);
                         }
                     }
-                    else{
+                    else {
                         c.type = 0;
                         c.value(Math.round(value * 10) / 10);
                     }
@@ -49,9 +48,11 @@ define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!
                         Soc.Lis(c.channelName, cv);
             }
         }
+
         function inf(c) {
             return buff.find(buff.getByKey('ChannelsAll'), 'code', c);
         }
+
         me.compositionComplete = function () {
             setTimeout(function () {
                 $('#initcmasld').hide();
@@ -65,6 +66,7 @@ define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!
                 return buff.getByKey(key);
             }
         }
+
         function initbuff(id, sub) {
             if (sub == undefined) sub = "";
             var d = getBuffer(id + sub) ? getBuffer(id + sub) : [{name: '', description: '', images: ''}];
@@ -76,6 +78,7 @@ define(['durandal/app', "knockout", "bootstrap", "jquery","plugins/router","css!
             d[0].unit = d ? d[0].unit : 0;
             return d;
         }
+
         me.activate = function () {
             router.navigate('/page/explorer');
         };

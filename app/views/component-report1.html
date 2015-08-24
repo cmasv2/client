@@ -7,7 +7,8 @@
         <button type="submit" data-bind="click : Show">Show</button>
     </div>
     <div style="padding: 10px;height: 550px; overflow: auto; width: 98%;border:1px solid #CCC">
-        <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;background:#D9D9D9;border-collapse:collapse;border:none">
+        <table cellspacing="0" cellpadding="0" border="0"
+               style="width: 100%;background:#D9D9D9;border-collapse:collapse;border:none">
             <tbody>
             <tr>
                 <td><p data-bind="click: $root.show">TỔNG HỢP CẢNH BÁO TRONG THÁNG</p></td>
@@ -15,16 +16,31 @@
             </tr>
             </tbody>
         </table>
-        <p style="margin-bottom:3.0pt;">- Dữ liệu báo cáo: <span data-bind="text:fromTime().format('DD/MM/YYYY');">dd/mm/yyyy</span> ÷ <span data-bind="text:toTime().format('DD/MM/YYYY');">dd/mm/yyyy</span></p>
+        <p style="margin-bottom:3.0pt;">- Dữ liệu báo cáo: <span data-bind="text:fromTime().format('DD/MM/YYYY');">dd/mm/yyyy</span>
+            ÷ <span data-bind="text:toTime().format('DD/MM/YYYY');">dd/mm/yyyy</span></p>
+
         <p style="margin-bottom:3.0pt;">- Tổng số cảnh báo: <span data-bind="text: count">102</span></p>
+
         <div style="clear: none">
             <ul>
-                <li><p>Hệ thống Tủ điện phân phối: <span data-bind="text: dbit">102</span><p></li>
-                <li><p>Hệ thống UPS: <span data-bind="text: ups">102</span><p></li>
-                <li><p>Hệ thống Điều hòa: <span data-bind="text: ai">102</span><p></li>
-                <li><p>Hệ thống Phát hiện nước rò rỉ: <span data-bind="text: rrn">102</span><p></li>
-                <li><p>Hệ thống Báo-dập cháy: <span data-bind="text: fire">102</span><p></li>
-                <li><p>Hệ thống Môi trường: <span data-bind="text: env">102</span><p></li>
+                <li><p>Hệ thống Tủ điện phân phối: <span data-bind="text: dbit">102</span>
+
+                    <p></li>
+                <li><p>Hệ thống UPS: <span data-bind="text: ups">102</span>
+
+                    <p></li>
+                <li><p>Hệ thống Điều hòa: <span data-bind="text: ai">102</span>
+
+                    <p></li>
+                <li><p>Hệ thống Phát hiện nước rò rỉ: <span data-bind="text: rrn">102</span>
+
+                    <p></li>
+                <li><p>Hệ thống Báo-dập cháy: <span data-bind="text: fire">102</span>
+
+                    <p></li>
+                <li><p>Hệ thống Môi trường: <span data-bind="text: env">102</span>
+
+                    <p></li>
             </ul>
         </div>
         <p style="margin-bottom:3.0pt;">- Chi tiết cảnh báo</p>
@@ -41,19 +57,27 @@
             <tr>
                 <td><p style="margin: 0;text-align: center" data-bind="text : ($index() + 1)">1</p></td>
                 <td><p style="margin: 0" data-bind="text : $root.getText(alarmWatcherId)">Channel name</p></td>
-                <td><p style="margin: 0" data-bind="text : alarmAt ? $root.Moment(alarmAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">25/07/2015 10:07:54</p></td>
-                <td><p style="margin: 0" data-bind="text : resetAt ? $root.Moment(resetAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">25/07/2015 10:07:54</p></td>
-                <td><p style="margin: 0" data-bind="text : acknowledgeAt ? $root.Moment(acknowledgeAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">25/07/2015 10:07:54</p></td>
+                <td><p style="margin: 0"
+                       data-bind="text : alarmAt ? $root.Moment(alarmAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">
+                    25/07/2015 10:07:54</p></td>
+                <td><p style="margin: 0"
+                       data-bind="text : resetAt ? $root.Moment(resetAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">
+                    25/07/2015 10:07:54</p></td>
+                <td><p style="margin: 0"
+                       data-bind="text : acknowledgeAt ? $root.Moment(acknowledgeAt).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'">
+                    25/07/2015 10:07:54</p></td>
             </tr>
             <!-- /ko -->
             </tbody>
         </table>
         <p style="margin-bottom:3.0pt">&nbsp;</p>
+
         <div>
             <div id="chart1" style="height:300px; width:700px;margin: 0 auto;"></div>
         </div>
         <div style="clear:both;"></div>
-        <p align="center" style="margin-bottom:3.0pt;text-align:center">------------------------------End report------------------------------</p>
+        <p align="center" style="margin-bottom:3.0pt;text-align:center">------------------------------End
+            report------------------------------</p>
 
         <p style="margin-bottom:3.0pt;text-align:justify">&nbsp;</p>
     </div>

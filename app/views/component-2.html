@@ -2,7 +2,8 @@
     <!-- ko foreach: cf-->
     <!-- ko if: name-->
     <div class="panel-heading">
-        <h3 class="panel-title" data-bind="click: $root.viewdetail" style="cursor: pointer;"><i class="" data-bind="css: icon"></i>
+        <h3 class="panel-title" data-bind="click: $root.viewdetail" style="cursor: pointer;"><i class=""
+                                                                                                data-bind="css: icon"></i>
             <span data-bind="text: name"></span></h3>
     </div>
     <!-- /ko -->
@@ -12,12 +13,13 @@
         <a href="#" class="list-group-item" data-bind="click: $root.viewdetail">
             <span class="pull-left" data-bind="myStatus: status"></span>
             <!-- ko if: logo-->
-                <i class="" data-bind="css : logo"></i>
+            <i class="" data-bind="css : logo"></i>
             <!-- /ko -->
             <span data-bind="text: name">name</span>
             <span class="pull-right text-success consoleh">
                 <!-- ko if: value-->
-                    <!-- ko foreach: value--><span data-bind="attr:{'title':$root.channelname(channelName),'alt':$root.channelname(channelName)},html: value()+'&nbsp;'+unit">kVA</span>, <!-- /ko -->
+                    <!-- ko foreach: value--><span
+                    data-bind="attr:{'title':$root.channelname(channelName),'alt':$root.channelname(channelName)},html: value()+'&nbsp;'+unit">kVA</span>, <!-- /ko -->
                 <!-- /ko -->
 			</span>
 
