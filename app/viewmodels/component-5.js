@@ -23,6 +23,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             }
 
             function Lis(c) {
+				
                 if(c.type == 5){
                     c.value = ko.observable('NaN');
                     Q.when(apis.ChannelDataByCode(c.channelName)).then(function(r){
@@ -50,8 +51,19 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                         }
                         else if (value != undefined) {
                             c.type = 0;
-                            c.value(Math.round(value * 10) / 10);
-                        }
+                            //c.value(Math.round(value * 10) / 10);
+							if(value == 0){
+								c.value("<img src='images/icon/off.png' style='height: 56px'/>");
+							}
+							else if(value == 1){
+								c.value("<img src='images/icon/on.png' style='height: 56px'/>");
+							}
+							else{
+								c.value((Math.round(value * 10) / 10));
+							}
+                        } else {
+							c.value("<img src='images/icon/trip.png' style='height: 56px'/>");
+						}
                     }
                     if (Soc.connected())
                         if (c.channelName != 'xxx')
@@ -268,6 +280,29 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 }
             }
             me.activate = function () {
+				
+				if (cf[0]['divs'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divs'].length ; i++ ){
+						 Lis(cf[0]['divs'][i]);
+					}
+				} else {
+					cf[0]['divs'] = 0;
+				}	
+				if (cf[0]['divc'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divc'].length ; i++ ){
+						Lis(cf[0]['divc'][i]);
+						for(var j = 0; j < cf[0]['divc'][i].values.length; j++){
+							
+							var info = inf(cf[0]['divc'][i].values[j].channelName);
+								
+								cf[0]['divc'][i].values[j].unit = info?info[0].unit:"NaN";
+								Lis(cf[0]['divc'][i].values[j]);
+						}
+					}
+				} else {
+					cf[0]['divc'] = 0;
+				}
+		
                 if (cf[0].Parameters != undefined) {
                     for (i = 0; i < cf[0].Parameters.length; i++) {
                         for (j = 0; j < cf[0].Parameters[i].data.length; j++) {
@@ -358,6 +393,12 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     setalarmWatcher(channels);
                 }
             }
+			
+			function pmclick(channel){
+				jQuery("#"+channel.name).toggle();
+				console.log(channel);
+			}	
+			
             var up = buff.find(buff.getByKey('DOCUMENT_ALL'), 'code', id);
             var documents = up ? up[0]._ : 0;
             var document = [];
@@ -418,6 +459,10 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     //setalarmWatcher(me.channels().sub);
                 });
             });
+			me.pmclick = function (channel){
+				jQuery("#"+channel.name).toggle();
+				console.log(channel);
+			};
         };
     }
 );

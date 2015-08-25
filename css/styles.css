@@ -6,6 +6,152 @@
 a{
  cursor: pointer;
 }
+.table-PM1_7{
+	top: 45px;
+	left: 445px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.PM1_7 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 395px;
+  position: absolute;
+  text-align: center;
+  top: 55px;
+}
+.ACDB1Class1 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 104px;
+}
+.ACDB1Class2 {
+	left: 264px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class3 {
+	left: 344px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class4 {
+	left: 425px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class5 {
+	left: 506px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class6 {
+	left: 587px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class7 {
+	left: 667px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.DB1Class1 {
+	left: 100px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class2 {
+	left: 173px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class3 {
+	left: 246px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class4 {
+	left: 319px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class5 {
+	left: 391px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class6 {
+	left: 503px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class7 {
+	left: 576px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class8 {
+	left: 664px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class9 {
+	left: 754px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class10 {
+	left: 846px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+
+.DB1Classc1 {
+	left: 125px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.DB1Classc3 {
+	left: 265px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.DB1Classc5 {
+	left: 405px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+
 .formcontrol1{
     background-color: #fff;
     background-image: none;

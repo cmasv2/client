@@ -25,11 +25,67 @@
         <!-- ko foreach: cf-->
         <div id="Status" class="tab-pane" data-bind="css: $root.idc() ? '' : 'active'" role="tabpanel">
             <!-- status -->
-            <div style="height:333px;" class="row">
-                <div style="margin-top:10px" class="col-md-4">
-                    <img style="max-width:300px;max-height:280px;" src="images.png" data-bind="attr: {src:images}">
+            <div style="" class="row">
+                <div style="" class="col-md-12">
+					<!-- ko foreach: divs-->
+					<div data-bind="css : class1,html: value()">
+					</div>
+					<!-- /ko -->
+					
+					<!-- ko foreach: divc-->
+					<div data-bind="css : classc" style="width:126px">
+						<table style="/*margin-top: 15px;*/" class="table table-parameter">
+							<tbody>
+							<!-- ko foreach: values -->
+							<tr>
+								<td style="text-align:left; width:1%" data-bind="text:name "></td>
+								<td width="99%">
+                                   <span data-bind="text: value()" style ="  float: left;"></span>
+                                   <!-- ko if: unit-->
+                                   <span data-bind="text:'(' +  unit + ')'"></span>
+                                   <!-- /ko --> 
+								</td>
+							</tr>
+							<!-- /ko -->
+							</tbody>
+						</table>		
+					</div>		
+					<!-- /ko -->
+					
+					<!-- ko if: Parameters-->
+					 <!-- ko foreach: Parameters-->
+					 <a data-bind="click: $root.pmclick" >
+					 <div data-bind="css:name">						
+					 </div>
+					 </a>
+					 
+					 <table data-bind="attr: {id:name,class:'table-'+name}" style="margin-top: 5px;width: 180px;display: none;position: absolute;" class="table table-parameter">
+                      <tbody>
+                         <tr>
+                            <th width="15%" data-bind="text: name">name</th>
+                            <th>L1</th>
+                            <th>L2</th>
+                            <th>L3</th>
+                        </tr>
+
+                      </tbody>
+                     <tbody>
+                      <!-- ko foreach: data-->
+                       <tr>
+                            <td style="text-align:left" data-bind="text: name + (unit?'(' + unit + ')':''+':')">Vd (V):</td>
+                            <!-- ko foreach: values-->
+                            <td width="20%" data-bind="text: value()">0</td>
+                            <!-- /ko -->
+                            </tr>
+                      <!-- /ko -->
+                      </tbody>
+                     </table>
+					 <!-- /ko -->
+					<!-- /ko -->	
+					
+                    <img style="" src="images.png" data-bind="attr: {src:images}">
                 </div>
-                <div class="col-md-8" style="height: 333px; overflow: auto;">
+                <div class="col-md-0" style="height: 333px; overflow: auto;display:none">
                     <div class="row" style="width:97%;">
                         <!-- ko foreach: status-->
                         <div class="" data-bind="css: $root.colmd()">
