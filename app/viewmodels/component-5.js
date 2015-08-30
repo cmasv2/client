@@ -52,17 +52,19 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                         else if (value != undefined) {
                             c.type = 0;
                             //c.value(Math.round(value * 10) / 10);
+							
 							if(value == 0){
-								c.value("<img src='images/icon/off.png' style='height: 56px'/>");
+								//c.value("<img src='images/icon/off.png' style='height: 56px'/>");
 							}
 							else if(value == 1){
-								c.value("<img src='images/icon/on.png' style='height: 56px'/>");
+								//c.value("<img src='images/icon/on.png' style='height: 56px'/>");
 							}
 							else{
 								c.value((Math.round(value * 10) / 10));
 							}
+							
                         } else {
-							c.value("<img src='images/icon/trip.png' style='height: 56px'/>");
+							//c.value("<img src='images/icon/trip.png' style='height: 56px'/>");
 						}
                     }
                     if (Soc.connected())
@@ -399,6 +401,11 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 				console.log(channel);
 			}	
 			
+			function Alarmtoggle() {
+			   jQuery(".panel-body").toggle("blind");
+			   jQuery(".i-icon").toggleClass("fa-chevron-circle-down");
+			}
+			
             var up = buff.find(buff.getByKey('DOCUMENT_ALL'), 'code', id);
             var documents = up ? up[0]._ : 0;
             var document = [];
@@ -414,6 +421,9 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             me.controls = ko.observableArray(controls);
             me.channels = ko.observableArray([{name: "channels", id: 0, sub: channels}]);
             me.cf = ko.observableArray(cf);
+			
+			me.Alarmtoggle = Alarmtoggle;
+			
             me.colmd = function(){
                 return cf[0].status.length > 1 ? 'col-md-6':'col-md-12';
             };
