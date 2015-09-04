@@ -17,9 +17,18 @@ define([], function () {
 						{"class1": "ACDB1Class4","channelName":"OTB5_I6",'caption':"Volt: ","value": 0},
 						{"class1": "ACDB1Class5","channelName":"OTB5_I8",'caption':"Volt: ","value": 0},
 						{"class1": "ACDB1Class6","channelName":"OTB5_I10",'caption':"Volt: ","value": 0},
-						{"class1": "ACDB1Class7","channelName":"OTB5_I0",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB1Class7","channelName":"OTB6_I0",'caption':"Volt: ","value": 0},
+						
 					],
-					
+					"divt":[
+						{"class2": "ACDB1Trip1","channelName":"OTB5_I1","value": 'NaN'},
+						{"class2": "ACDB1Trip2","channelName":"OTB5_I3","value": 'NaN'},
+						{"class2": "ACDB1Trip3","channelName":"OTB5_I5","value": 'NaN'},
+						{"class2": "ACDB1Trip4","channelName":"OTB5_I7","value": 'NaN'},
+						{"class2": "ACDB1Trip5","channelName":"OTB5_I9","value": 'NaN'},
+						{"class2": "ACDB1Trip6","channelName":"OTB5_I11","value": 'NaN'},
+						{"class2": "ACDB1Trip7","channelName":"OTB6_I1","value": 'NaN'},
+					],
 					"name": "ACDB 1",/* -- @@value ----*/
                     "code": "DAR_PW_AC1",
                     "description": "Switchboard",/* -- @@value ----*/
@@ -199,6 +208,9 @@ define([], function () {
 						{"class1": "LV1Class1","channelName":"OTB21_I0","value": 0},
 						
 					],
+					"divt":[
+						{"class2": "LV1Trip1","channelName":"OTB21_I1","value": 'NaN'},
+					],
 					
 					"name": "LV 1",
                     "code": "DAR_PW_LV1",
@@ -250,7 +262,9 @@ define([], function () {
 					"divs":[
 						{"class1": "LV2Class1","channelName":"OTB21_I2","value": 0},
 					],
-					
+					"divt":[
+						{"class2": "LV2Trip1","channelName":"OTB21_I3","value": 'NaN'},
+					],
 					"name": "LV 2",
                     "code": "DAR_PW_LV2",
                     "description": "",                    
@@ -301,7 +315,9 @@ define([], function () {
 					"divs":[
 						{"class1": "BU1Class1","channelName":"OTB15_I0","value": 0},
 					],
-					
+					"divt":[
+						{"class2": "BU1Trip1","channelName":"OTB15_I0","value": 'NaN'},
+					],
 					"name": "TBU 1",
                     "code": "DAR_PW_BU1",
                     "description": "",                    
@@ -391,7 +407,9 @@ define([], function () {
 					"divs":[
 						{"class1": "BU2Class1","channelName":"OTB17_I0","value": 0},
 					],
-					
+					"divt":[
+						{"class2": "BU2Trip1","channelName":"OTB17_I1","value": 'NaN'},
+					],
 					"name": "TBU 2",
                     "code": "DAR_PW_BU2",
                     "description": "",                    
@@ -482,13 +500,19 @@ define([], function () {
 					"divs":[
 						{"class1": "AT1Class1","channelName":"OTB13_I0","value": 0},
 						{"class1": "AT1Class2","channelName":"OTB13_I2","value": 0},
-						{"class1": "AT1Class3","channelName":"OTB13_I10","value": 0},
-						{"class1": "AT1Class4","channelName":"OTB13_I4","value": 0},
-						{"class1": "AT1Class5","channelName":"OTB13_I6","value": 0},
+						{"class1": "AT1Class3","channelName":"OTB13_I4","value": 0},
+						{"class1": "AT1Class4","channelName":"OTB13_I6","value": 0},
+						{"class1": "AT1Class5","channelName":"OTB13_I10","value": 0},
 						{"class1": "AT1Class6","channelName":"OTB13_I8","value": 0},
-						
 					],
-					
+					"divt":[
+						{"class2": "AT1Trip1","channelName":"OTB13_I1","value": 'NaN'},
+						{"class2": "AT1Trip2","channelName":"OTB13_I3","value": 'NaN'},
+						{"class2": "AT1Trip3","channelName":"OTB13_I5","value": 'NaN'},
+						{"class2": "AT1Trip4","channelName":"OTB13_I7","value": 'NaN'},
+						{"class2": "AT1Trip5","channelName":"OTB13_I11","value": 'NaN'},
+						{"class2": "AT1Trip6","channelName":"OTB13_I9","value": 'NaN'},
+					],
 					"name": "ATS 1",
                     "code": "DAR_PW_AT1",
                     "description": "",                    
@@ -654,15 +678,22 @@ define([], function () {
 				}],
 				"DAR_PW_AT2": [	{
 					"divs":[
-						{"class1": "AT2Class1","channelName":"OTB18_I2","value": 0},
-						{"class1": "AT2Class2","channelName":"OTB18_I0","value": 0},
-						{"class1": "AT2Class3","channelName":"OTB18_I8","value": 0},
+						{"class1": "AT2Class1","channelName":"OTB18_I0","value": 0},
+						{"class1": "AT2Class2","channelName":"OTB18_I2","value": 0},
+						{"class1": "AT2Class3","channelName":"OTB18_I4","value": 0},
 						{"class1": "AT2Class4","channelName":"OTB18_I6","value": 0},
-						{"class1": "AT2Class5","channelName":"OTB18_I4","value": 0},
-						{"class1": "AT2Class6","channelName":"OTB18_I10","value": 0},
+						{"class1": "AT2Class5","channelName":"OTB18_I10","value": 0},
+						{"class1": "AT2Class6","channelName":"OTB18_I8","value": 0},
 						
 					],
-					
+					"divt":[
+						{"class2": "AT2Trip1","channelName":"OTB18_I1","value": 'NaN'},
+						{"class2": "AT2Trip2","channelName":"OTB18_I3","value": 'NaN'},
+						{"class2": "AT2Trip3","channelName":"OTB18_I5","value": 'NaN'},
+						{"class2": "AT2Trip4","channelName":"OTB18_I7","value": 'NaN'},
+						{"class2": "AT2Trip5","channelName":"OTB18_I11","value": 'NaN'},
+						{"class2": "AT2Trip6","channelName":"OTB18_I9","value": 'NaN'},
+					],
 					"name": "ATS 2",
                     "code": "DAR_PW_AT2",
                     "description": "",                    
@@ -829,8 +860,29 @@ define([], function () {
 				
 				"DAR_PW_TC1": [	{
 					"divs":[
+						{"class1": "TC1Class1","channelName":"OTB19_I0","value": 0},
+						{"class1": "TC1Class2","channelName":"OTB19_I2","value": 0},
+						{"class1": "TC1Class3","channelName":"OTB20_I4","value": 0},
+						{"class1": "TC1Class4","channelName":"OTB20_I2","value": 0},
+						{"class1": "TC1Class5","channelName":"OTB20_I0","value": 0},
+						{"class1": "TC1Class6","channelName":"OTB19_I10","value": 0},
+						{"class1": "TC1Class7","channelName":"OTB19_I8","value": 0},
+						{"class1": "TC1Class8","channelName":"OTB19_I6","value": 0},
+						{"class1": "TC1Class9","channelName":"OTB19_I4","value": 0},
+						{"class1": "TC1Class10","channelName":"OTB20_I6","value": 0},
 						
-						
+					],
+					"divt":[
+						{"class2": "TC1Trip1","channelName":"OTB19_I1","value": 'NaN'},
+						{"class2": "TC1Trip2","channelName":"OTB19_I3","value": 'NaN'},
+						{"class2": "TC1Trip3","channelName":"OTB20_I5","value": 'NaN'},
+						{"class2": "TC1Trip4","channelName":"OTB20_I3","value": 'NaN'},
+						{"class2": "TC1Trip5","channelName":"OTB20_I1","value": 'NaN'},
+						{"class2": "TC1Trip6","channelName":"OTB19_I11","value": 'NaN'},
+						{"class2": "TC1Trip7","channelName":"OTB19_I9","value": 'NaN'},
+						{"class2": "TC1Trip8","channelName":"OTB19_I7","value": 'NaN'},
+						{"class2": "TC1Trip9","channelName":"OTB19_I5","value": 'NaN'},
+						{"class2": "TC1Trip10","channelName":"OTB20_I7","value": 'NaN'},
 					],
 					
 					"name": "TCM",
@@ -999,8 +1051,21 @@ define([], function () {
 				
 				"DAR_PW_EM1": [	{
 					"divs":[
-						
-						
+						{"class1": "EM1Class1","channelName":"OTB8_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class2","channelName":"OTB9_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class3","channelName":"OTB8_I2",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class4","channelName":"OTB8_I9",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class5","channelName":"OTB9_I2",'caption':"Volt: ","value": 0},
+
+					],
+					"divt":[
+						{"class2": "EM1Trip1","channelName":"OTB8_I1","value": 'NaN'},
+						{"class2": "EM1Trip2","channelName":"OTB9_I1","value": 'NaN'},
+						{"class2": "EM1Trip3","channelName":"OTB8_I3","value": 'NaN'},
+						{"class2": "EM1Trip4","channelName":"OTB8_I10","value": 'NaN'},
+						{"class2": "EM1Trip5","channelName":"OTB9_I3","value": 'NaN'},
+						{"class2": "EM1Trip6","channelName":"OTB8_I4","value": 'NaN'},
+						{"class2": "EM1Trip7","channelName":"OTB9_I4","value": 'NaN'},
 					],
 					
 					"name": "ESDB 1",
@@ -1168,9 +1233,23 @@ define([], function () {
 				}],
 				"DAR_PW_EM2": [	{
 					"divs":[
-						
-						
+						{"class1": "EM1Class1","channelName":"OTB8_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class2","channelName":"OTB9_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class3","channelName":"OTB8_I2",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class4","channelName":"OTB8_I9",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class5","channelName":"OTB9_I2",'caption':"Volt: ","value": 0},
+
 					],
+					"divt":[
+						{"class2": "EM1Trip1","channelName":"OTB8_I1","value": 'NaN'},
+						{"class2": "EM1Trip2","channelName":"OTB9_I1","value": 'NaN'},
+						{"class2": "EM1Trip3","channelName":"OTB8_I3","value": 'NaN'},
+						{"class2": "EM1Trip4","channelName":"OTB8_I10","value": 'NaN'},
+						{"class2": "EM1Trip5","channelName":"OTB9_I3","value": 'NaN'},
+						{"class2": "EM1Trip6","channelName":"OTB8_I4","value": 'NaN'},
+						{"class2": "EM1Trip7","channelName":"OTB9_I4","value": 'NaN'},
+					],
+					
 					
 					"name": "ESDB 2",
                     "code": "DAR_PW_EM2",
@@ -1336,12 +1415,218 @@ define([], function () {
                             ],
 				}],
 				
-				"DAR_PW_UD2": [	{
+				"DAR_PW_UD1": [	{
 					"divs":[
+						{"class1": "UD1Class1","channelName":"OTB2_I6","value": 0},
+						{"class1": "UD1Class2","channelName":"OTB2_I2","value": 0},
+						{"class1": "UD1Class3","channelName":"OTB2_I4","value": 0},
+						{"class1": "UD1Class4","channelName":"OTB2_I0","value": 0},
+						{"class1": "UD1Class5","channelName":"OTB2_I8","value": 0},
+						{"class1": "UD1Class6","channelName":"OTB4_I2","value": 0},
+						{"class1": "UD1Class7","channelName":"OTB4_I0","value": 0},
+						{"class1": "UD1Class8","channelName":"OTB4_I4","value": 0},
 						
 						
 					],
-					
+					"divt":[
+						{"class2": "UD1Trip1","channelName":"OTB2_I7","value": 'NaN'},
+						{"class2": "UD1Trip2","channelName":"OTB2_I3","value": 'NaN'},
+						{"class2": "UD1Trip3","channelName":"OTB2_I5","value": 'NaN'},
+						{"class2": "UD1Trip4","channelName":"OTB2_I1","value": 'NaN'},
+						{"class2": "UD1Trip5","channelName":"OTB2_I9","value": 'NaN'},
+						{"class2": "UD1Trip6","channelName":"OTB4_I3","value": 'NaN'},
+						{"class2": "UD1Trip7","channelName":"OTB4_I1","value": 'NaN'},
+						{"class2": "UD1Trip8","channelName":"OTB4_I5","value": 'NaN'},
+						
+					],
+					"name": "UDB 1",
+                    "code": "DAR_PW_UD1",
+                    "description": "",                    
+                    "System" : "",
+					"Parameters": [
+                                {
+                                    "name": "PM1_1",
+									"classinfo":"UD1PM1_1Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_1_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_1_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_1_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_1_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_1_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_1_V12", "value": 0 },
+                                                { "channelName": "PM1_1_V23", "value": 0 },
+                                                { "channelName": "PM1_1_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_1_V1", "value": 0 },
+                                                { "channelName": "PM1_1_V1", "value": 0 },
+                                                { "channelName": "PM1_1_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_1_I1", "value": 0 },
+                                                { "channelName": "PM1_1_I2", "value": 0 },
+                                                { "channelName": "PM1_1_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_1_kW1", "value": 0 },
+                                                { "channelName": "PM1_1_kW2", "value": 0 },
+                                                { "channelName": "PM1_1_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_kVA1", "value": 0 },
+                                                { "channelName": "PM1_1_kVA2", "value": 0 },
+                                                { "channelName": "PM1_1_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_1_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_1_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_1_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_1_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                },
+								{
+                                    "name": "PM1_2",
+									"classinfo":"UD1PM1_2Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_2_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_2_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_2_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_2_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_2_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_2_V12", "value": 0 },
+                                                { "channelName": "PM1_2_V23", "value": 0 },
+                                                { "channelName": "PM1_2_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_2_V1", "value": 0 },
+                                                { "channelName": "PM1_2_V1", "value": 0 },
+                                                { "channelName": "PM1_2_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_2_I1", "value": 0 },
+                                                { "channelName": "PM1_2_I2", "value": 0 },
+                                                { "channelName": "PM1_2_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_2_kW1", "value": 0 },
+                                                { "channelName": "PM1_2_kW2", "value": 0 },
+                                                { "channelName": "PM1_2_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_kVA1", "value": 0 },
+                                                { "channelName": "PM1_2_kVA2", "value": 0 },
+                                                { "channelName": "PM1_2_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_2_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_2_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_2_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_2_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                }
+                            ],
+				}],
+				
+				"DAR_PW_UD2": [	{
+					"divs":[
+						{"class1": "UD2Class1","channelName":"OTB3_I0","value": 0},
+						{"class1": "UD2Class2","channelName":"OTB3_I2","value": 0},
+						{"class1": "UD2Class3","channelName":"OTB3_I4","value": 0},
+						{"class1": "UD2Class4","channelName":"OTB3_I6","value": 0},
+						{"class1": "UD2Class5","channelName":"OTB3_I8","value": 0},
+						{"class1": "UD2Class6","channelName":"OTB4_I10","value": 0},
+						{"class1": "UD2Class7","channelName":"OTB4_I6","value": 0},
+						{"class1": "UD2Class8","channelName":"OTB4_I8","value": 0},
+						
+						
+					],
+					"divt":[
+						{"class2": "UD2Trip1","channelName":"OTB3_I1","value": 'NaN'},
+						{"class2": "UD2Trip2","channelName":"OTB3_I3","value": 'NaN'},
+						{"class2": "UD2Trip3","channelName":"OTB3_I5","value": 'NaN'},
+						{"class2": "UD2Trip4","channelName":"OTB3_I7","value": 'NaN'},
+						{"class2": "UD2Trip5","channelName":"OTB3_I9","value": 'NaN'},
+						{"class2": "UD2Trip6","channelName":"OTB4_I11","value": 'NaN'},
+						{"class2": "UD2Trip7","channelName":"OTB4_I7","value": 'NaN'},
+						{"class2": "UD2Trip8","channelName":"OTB4_I9","value": 'NaN'},
+						
+					],
 					"name": "UDB 2",
                     "code": "DAR_PW_UD2",
                     "description": "",                    
@@ -1506,6 +1791,381 @@ define([], function () {
                             ],
 				}],
 				
+				"DAR_PW_DB1": [	{
+					"divs":[
+						{"class1": "UD1Class1","channelName":"OTB2_I6","value": 0},
+						{"class1": "UD1Class2","channelName":"OTB2_I2","value": 0},
+						{"class1": "UD1Class3","channelName":"OTB2_I4","value": 0},
+						{"class1": "UD1Class4","channelName":"OTB2_I0","value": 0},
+						{"class1": "UD1Class5","channelName":"OTB2_I8","value": 0},
+						{"class1": "UD1Class6","channelName":"OTB4_I2","value": 0},
+						{"class1": "UD1Class7","channelName":"OTB4_I0","value": 0},
+						{"class1": "UD1Class8","channelName":"OTB4_I4","value": 0},
+						
+						
+					],
+					"divt":[
+						{"class2": "UD1Trip1","channelName":"OTB2_I7","value": 'NaN'},
+						{"class2": "UD1Trip2","channelName":"OTB2_I3","value": 'NaN'},
+						{"class2": "UD1Trip3","channelName":"OTB2_I5","value": 'NaN'},
+						{"class2": "UD1Trip4","channelName":"OTB2_I1","value": 'NaN'},
+						{"class2": "UD1Trip5","channelName":"OTB2_I9","value": 'NaN'},
+						{"class2": "UD1Trip6","channelName":"OTB4_I3","value": 'NaN'},
+						{"class2": "UD1Trip7","channelName":"OTB4_I1","value": 'NaN'},
+						{"class2": "UD1Trip8","channelName":"OTB4_I5","value": 'NaN'},
+						
+					],
+					"name": "DCDB 1",
+                    "code": "DAR_PW_DB1",
+                    "description": "",                    
+                    "System" : "",
+					"Parameters": [
+                                {
+                                    "name": "PM1_1",
+									"classinfo":"UD1PM1_1Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_1_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_1_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_1_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_1_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_1_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_1_V12", "value": 0 },
+                                                { "channelName": "PM1_1_V23", "value": 0 },
+                                                { "channelName": "PM1_1_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_1_V1", "value": 0 },
+                                                { "channelName": "PM1_1_V1", "value": 0 },
+                                                { "channelName": "PM1_1_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_1_I1", "value": 0 },
+                                                { "channelName": "PM1_1_I2", "value": 0 },
+                                                { "channelName": "PM1_1_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_1_kW1", "value": 0 },
+                                                { "channelName": "PM1_1_kW2", "value": 0 },
+                                                { "channelName": "PM1_1_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_kVA1", "value": 0 },
+                                                { "channelName": "PM1_1_kVA2", "value": 0 },
+                                                { "channelName": "PM1_1_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_1_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_1_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_1_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_1_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_1_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                },
+								{
+                                    "name": "PM1_2",
+									"classinfo":"UD1PM1_2Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_2_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_2_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_2_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_2_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_2_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_2_V12", "value": 0 },
+                                                { "channelName": "PM1_2_V23", "value": 0 },
+                                                { "channelName": "PM1_2_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_2_V1", "value": 0 },
+                                                { "channelName": "PM1_2_V1", "value": 0 },
+                                                { "channelName": "PM1_2_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_2_I1", "value": 0 },
+                                                { "channelName": "PM1_2_I2", "value": 0 },
+                                                { "channelName": "PM1_2_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_2_kW1", "value": 0 },
+                                                { "channelName": "PM1_2_kW2", "value": 0 },
+                                                { "channelName": "PM1_2_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_kVA1", "value": 0 },
+                                                { "channelName": "PM1_2_kVA2", "value": 0 },
+                                                { "channelName": "PM1_2_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_2_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_2_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_2_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_2_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_2_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                }
+                            ],
+				}],
+				
+				"DAR_PW_UP2": [	{
+					"divs":[
+						{"class1": "UD2Class1","channelName":"OTB3_I0","value": 0},
+						{"class1": "UD2Class2","channelName":"OTB3_I2","value": 0},
+						{"class1": "UD2Class3","channelName":"OTB3_I4","value": 0},
+						{"class1": "UD2Class4","channelName":"OTB3_I6","value": 0},
+						{"class1": "UD2Class5","channelName":"OTB3_I8","value": 0},
+						{"class1": "UD2Class6","channelName":"OTB4_I10","value": 0},
+						{"class1": "UD2Class7","channelName":"OTB4_I6","value": 0},
+						{"class1": "UD2Class8","channelName":"OTB4_I8","value": 0},
+						
+						
+					],
+					"divt":[
+						{"class2": "UD2Trip1","channelName":"OTB3_I1","value": 'NaN'},
+						{"class2": "UD2Trip2","channelName":"OTB3_I3","value": 'NaN'},
+						{"class2": "UD2Trip3","channelName":"OTB3_I5","value": 'NaN'},
+						{"class2": "UD2Trip4","channelName":"OTB3_I7","value": 'NaN'},
+						{"class2": "UD2Trip5","channelName":"OTB3_I9","value": 'NaN'},
+						{"class2": "UD2Trip6","channelName":"OTB4_I11","value": 'NaN'},
+						{"class2": "UD2Trip7","channelName":"OTB4_I7","value": 'NaN'},
+						{"class2": "UD2Trip8","channelName":"OTB4_I9","value": 'NaN'},
+						
+					],
+					"name": "UPSDB 2",
+                    "code": "DAR_PW_UP2",
+                    "description": "",                    
+                    "System" : "",
+					"Parameters": [
+                                {
+                                    "name": "PM1_3",
+									"classinfo":"UD2PM1_3Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_3_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_3_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_3_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_3_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_3_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_3_V12", "value": 0 },
+                                                { "channelName": "PM1_3_V23", "value": 0 },
+                                                { "channelName": "PM1_3_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_3_V1", "value": 0 },
+                                                { "channelName": "PM1_3_V1", "value": 0 },
+                                                { "channelName": "PM1_3_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_3_I1", "value": 0 },
+                                                { "channelName": "PM1_3_I2", "value": 0 },
+                                                { "channelName": "PM1_3_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_3_kW1", "value": 0 },
+                                                { "channelName": "PM1_3_kW2", "value": 0 },
+                                                { "channelName": "PM1_3_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_3_kVA1", "value": 0 },
+                                                { "channelName": "PM1_3_kVA2", "value": 0 },
+                                                { "channelName": "PM1_3_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_3_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_3_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_3_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_3_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_3_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_3_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                },
+								{
+                                    "name": "PM1_4",
+									"classinfo":"UD2PM1_4Info",
+                                    "values":[
+										{"name":"Freq", "channelName": "PM1_4_F", "value": 0, "unit": "Hz"},
+                                        {"name":"pf", "channelName": "PM1_4_pf", "value": 0, "unit": ""},
+										{"name":"kW", "channelName": "PM1_4_kW", "value": 0, "unit": "kW"},
+										{"name":"kVA", "channelName": "PM1_4_kVA", "value": 0, "unit": "kVA"},
+                                        {"name":"kWh", "channelName": "PM1_4_kWh", "value": 0, "unit": "kWh"},
+                                        
+                                    ],
+                                    "data": [
+                                        {
+                                            "name": "Vd",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_4_V12", "value": 0 },
+                                                { "channelName": "PM1_4_V23", "value": 0 },
+                                                { "channelName": "PM1_4_V31", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Vp",
+                                            "unit": "V",
+                                            "values": [
+                                                { "channelName": "PM1_4_V1", "value": 0 },
+                                                { "channelName": "PM1_4_V1", "value": 0 },
+                                                { "channelName": "PM1_4_V1", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I",
+                                            "unit": "A",
+                                            "values": [
+                                                { "channelName": "PM1_4_I1", "value": 0 },
+                                                { "channelName": "PM1_4_I2", "value": 0 },
+                                                { "channelName": "PM1_4_I3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kW",
+                                            "unit": "kW",
+                                            "values": [
+                                                { "channelName": "PM1_4_kW1", "value": 0 },
+                                                { "channelName": "PM1_4_kW2", "value": 0 },
+                                                { "channelName": "PM1_4_kW3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "kVA",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_4_kVA1", "value": 0 },
+                                                { "channelName": "PM1_4_kVA2", "value": 0 },
+                                                { "channelName": "PM1_4_kVA3", "value": 0 }
+                                            ]
+                                        },
+										{
+                                            "name": "V THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_4_THD_V1", "value": 0 },
+                                                { "channelName": "PM1_4_THD_V2", "value": 0 },
+                                                { "channelName": "PM1_4_THD_V3", "value": 0 }
+                                            ]
+                                        },
+                                        {
+                                            "name": "I THD(%)",
+                                            "unit": "",
+                                            "values": [
+                                                { "channelName": "PM1_4_THD_I1", "value": 0 },
+                                                { "channelName": "PM1_4_THD_I2", "value": 0 },
+                                                { "channelName": "PM1_4_THD_I3", "value": 0 }
+                                            ]
+                                        },
+                                        
+                                    ]
+                                }
+                            ],
+				}],
 				"DAR_PW_TLL": [	{
 					"divs":[
 						

@@ -290,6 +290,15 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 				} else {
 					cf[0]['divs'] = 0;
 				}	
+				
+				if (cf[0]['divt'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divt'].length ; i++ ){
+						 Lis(cf[0]['divt'][i]);
+					}
+				} else {
+					cf[0]['divt'] = 0;
+				}	
+				
 				if (cf[0]['divc'] != undefined) {
 					for(var i = 0 ; i < cf[0]['divc'].length ; i++ ){
 						Lis(cf[0]['divc'][i]);

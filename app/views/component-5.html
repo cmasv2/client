@@ -29,7 +29,6 @@
                 <div style="" class="col-md-12">
 					<!-- ko foreach: divs-->
 					<div data-bind="css : class1">
-						
 						<!-- ko if: value == 0 -->
 							<img src='images/icon/on.png' style='height: 56px'/>
 						<!-- /ko -->
@@ -42,6 +41,14 @@
 					</div>
 					<!-- /ko -->
 					
+					<!-- ko if: divt -->
+					<!-- ko foreach: divt -->
+					<div data-bind="css:class2">
+						<span data-bind="text:value">
+						</span>
+					</div>
+					<!-- /ko -->
+					<!-- /ko -->
 					
 					<!-- ko foreach: divc -->
 					<div data-bind="css : classc" style="width:126px">
