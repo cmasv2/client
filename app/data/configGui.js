@@ -122,84 +122,68 @@ define([], function () {
 						{"class1": "DB1Class1","channelName":"OTB6_I3",'caption':"Volt: ","value": 0},
 						{"class1": "DB1Class2","channelName":"OTB6_I9",'caption':"Volt: ","value": 0},
 						{"class1": "DB1Class3","channelName":"OTB6_I5",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class4","channelName":"OTB6_I7",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class5","channelName":"OTB7_I0",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class6","channelName":"OTB7_I2",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class7","channelName":"OTB7_I4",'caption':"Volt: ","value": 0},
+						{"class1": "DB1Class4","channelName":"OTB7_I0",'caption':"Volt: ","value": 0},
+						{"class1": "DB1Class5","channelName":"OTB6_I7",'caption':"Volt: ","value": 0},
+						{"class1": "DB1Class6","channelName":"OTB8_I5",'caption':"Volt: ","value": 0},
+						{"class1": "DB1Class7","channelName":"OTB7_I2",'caption':"Volt: ","value": 0},
 						{"class1": "DB1Class8","channelName":"OTB7_I6",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class9","channelName":"OTB7_I8",'caption':"Volt: ","value": 0},
-						{"class1": "DB1Class10","channelName":"OTB8_I7",'caption':"Volt: ","value": 0},
-						],
-						
-						"name": "DCDB 1",/* -- @@value name DCDB 1 ----*/
-						"code": "DAR_PW_DB1",
-						"description": "DCDB 1 switchboard",/* -- @@value description DCDB 1 ----*/
+						{"class1": "DB1Class9","channelName":"OTB8_I7",'caption':"Volt: ","value": 0},
+						{"class1": "DB1Class10","channelName":"OTB7_I8",'caption':"Volt: ","value": 0},
+					],
+					
+					"divt":[
+						{"class2": "DB1Trip1","channelName":"OTB6_I4","value": 'NaN'},
+						{"class2": "DB1Trip2","channelName":"OTB6_I10","value": 'NaN'},
+						{"class2": "DB1Trip3","channelName":"OTB6_I6","value": 'NaN'},
+						{"class2": "DB1Trip4","channelName":"OTB7_I1","value": 'NaN'},
+						{"class2": "DB1Trip5","channelName":"OTB6_I8","value": 'NaN'},
+						{"class2": "DB1Trip6","channelName":"OTB8_I6","value": 'NaN'},
+						{"class2": "DB1Trip7","channelName":"OTB7_I3","value": 'NaN'},
+						{"class2": "DB1Trip8","channelName":"OTB7_I7","value": 'NaN'},
+						{"class2": "DB1Trip9","channelName":"OTB8_I8","value": 'NaN'},
+						{"class2": "DB1Trip10","channelName":"OTB7_I9","value": 'NaN'},
+					],
+						"name": "UPSDB 1",/* -- @@value name DCDB 1 ----*/
+						"code": "DAR_PW_UP1",
+						"description": "UPSDB 1 switchboard",/* -- @@value description DCDB 1 ----*/
 						//"images": "images/dar_dcdb_1.png",/* -- @@value image DCDB 1 ----*/
 						"System" : "Power switchboard",
-						"status": [
-							/*--------- block Status ----------*/
-							{
-								"name": "",
-								Parameter: 0,
-								"datas": [
-									/* có thể lặp đi lặp lại để thêm nhiều status * /
-									 /* --------- stats Status ----------*/
-									{
-										"name": "status 1",/* -- @@@value ----*/
-										"icon": "fa-li fa fa-check-circle",
-										"status": { "channelName": "xxx", "value": 0 },/* -- @@@value ----*/
-										value : 0
-									},
-									/*--------- /end Status ----------*/
-								]
-							},
-							/*--------- /block Status ----------*/
-							/*--------- block Status ----------*/
-						]
+						
 					}
 				],
 				
 				"DAR_PW_DB2": [
                 {
 					"divs":[
-						{"class1": "DB2Class1","channelName":"OTB9_I7",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class2","channelName":"OTB9_I7",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class3","channelName":"OTB10_I2",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class4","channelName":"OTB10_I4",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class5","channelName":"OTB10_I6",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class6","channelName":"OTB10_I8",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class7","channelName":"OTB11_I3",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class8","channelName":"OTB11_I9",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class9","channelName":"OTB11_I5",'caption':"Volt: ","value": 0},
-						{"class1": "DB2Class10","channelName":"OTB11_I7",'caption':"Volt: ","value": 0},
-						
-						],
-						
-						"name": "DCDB 1",/* -- @@value name DCDB 1 ----*/
-						"code": "DAR_PW_DB1",
-						"description": "DCDB 1 switchboard",/* -- @@value description DCDB 1 ----*/
+						{"class1": "DB2Class1","channelName":"OTB11_I3",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class2","channelName":"OTB11_I9",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class3","channelName":"OTB11_I5",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class4","channelName":"OTB10_I0",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class5","channelName":"OTB11_I7",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class6","channelName":"OTB9_I7",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class7","channelName":"OTB10_I8",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class8","channelName":"OTB10_I2",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class9","channelName":"OTB9_I7",'caption':"Volt: ","value": 0},
+						{"class1": "DB2Class10","channelName":"OTB10_I4",'caption':"Volt: ","value": 0},
+					],
+					"divt":[
+						{"class2": "DB2Trip1","channelName":"OTB11_I4","value": 'NaN'},
+						{"class2": "DB2Trip2","channelName":"OTB11_I10","value": 'NaN'},
+						{"class2": "DB2Trip3","channelName":"OTB11_I6","value": 'NaN'},
+						{"class2": "DB2Trip4","channelName":"OTB10_I1","value": 'NaN'},
+						{"class2": "DB2Trip5","channelName":"OTB11_I8","value": 'NaN'},
+						{"class2": "DB2Trip6","channelName":"OTB9_I8","value": 'NaN'},
+						{"class2": "DB2Trip7","channelName":"OTB10_I9","value": 'NaN'},
+						{"class2": "DB2Trip8","channelName":"OTB10_I3","value": 'NaN'},
+						{"class2": "DB2Trip9","channelName":"OTB9_I8","value": 'NaN'},
+						{"class2": "DB2Trip10","channelName":"OTB10_I5","value": 'NaN'},
+					],	
+						"name": "DCDB 2",/* -- @@value name DCDB 1 ----*/
+						"code": "DAR_PW_DB2",
+						"description": "DCDB 2 switchboard",/* -- @@value description DCDB 1 ----*/
 						//"images": "images/dar_dcdb_1.png",/* -- @@value image DCDB 1 ----*/
 						"System" : "Power switchboard",
-						"status": [
-							/*--------- block Status ----------*/
-							{
-								"name": "",
-								Parameter: 0,
-								"datas": [
-									/* có thể lặp đi lặp lại để thêm nhiều status * /
-									 /* --------- stats Status ----------*/
-									{
-										"name": "status 1",/* -- @@@value ----*/
-										"icon": "fa-li fa fa-check-circle",
-										"status": { "channelName": "xxx", "value": 0 },/* -- @@@value ----*/
-										value : 0
-									},
-									/*--------- /end Status ----------*/
-								]
-							},
-							/*--------- /block Status ----------*/
-							/*--------- block Status ----------*/
-						]
+						
 					}
 				],
 				
@@ -2168,11 +2152,24 @@ define([], function () {
 				}],
 				"DAR_PW_TLL": [	{
 					"divs":[
-						
-						
+						{"class1": "EM1Class1","channelName":"OTB8_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class2","channelName":"OTB9_I0",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class3","channelName":"OTB8_I2",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class4","channelName":"OTB8_I9",'caption':"Volt: ","value": 0},
+						{"class1": "EM1Class5","channelName":"OTB9_I2",'caption':"Volt: ","value": 0},
+
+					],
+					"divt":[
+						{"class2": "EM1Trip1","channelName":"OTB8_I1","value": 'NaN'},
+						{"class2": "EM1Trip2","channelName":"OTB9_I1","value": 'NaN'},
+						{"class2": "EM1Trip3","channelName":"OTB8_I3","value": 'NaN'},
+						{"class2": "EM1Trip4","channelName":"OTB8_I10","value": 'NaN'},
+						{"class2": "EM1Trip5","channelName":"OTB9_I3","value": 'NaN'},
+						{"class2": "EM1Trip6","channelName":"OTB8_I4","value": 'NaN'},
+						{"class2": "EM1Trip7","channelName":"OTB9_I4","value": 'NaN'},
 					],
 					
-					"name": "ESDB 1",
+					"name": "TLL",
                     "code": "DAR_PW_TLL",
                     "description": "",                    
                     "System" : "",
@@ -2338,7 +2335,23 @@ define([], function () {
 				
 				"DAR_PW_AC2": [	{
 					"divs":[
+						{"class1": "ACDB2Class1","channelName":"OTB5_I0",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class2","channelName":"OTB5_I2",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class3","channelName":"OTB5_I4",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class4","channelName":"OTB5_I6",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class5","channelName":"OTB5_I8",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class6","channelName":"OTB5_I10",'caption':"Volt: ","value": 0},
+						{"class1": "ACDB2Class7","channelName":"OTB6_I0",'caption':"Volt: ","value": 0},
 						
+					],
+					"divt":[
+						{"class2": "ACDB2Trip1","channelName":"OTB5_I1","value": 'NaN'},
+						{"class2": "ACDB2Trip2","channelName":"OTB5_I3","value": 'NaN'},
+						{"class2": "ACDB2Trip3","channelName":"OTB5_I5","value": 'NaN'},
+						{"class2": "ACDB2Trip4","channelName":"OTB5_I7","value": 'NaN'},
+						{"class2": "ACDB2Trip5","channelName":"OTB5_I9","value": 'NaN'},
+						{"class2": "ACDB2Trip6","channelName":"OTB5_I11","value": 'NaN'},
+						{"class2": "ACDB2Trip7","channelName":"OTB6_I1","value": 'NaN'},
 					],
 					
 					"name": "ACDB 2",

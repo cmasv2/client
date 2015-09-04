@@ -6,6 +6,214 @@
 a{
  cursor: pointer;
 }
+
+.ACDB2Trip1 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 140px;
+}
+.ACDB2Trip2 {
+	left: 235px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip3 {
+	left: 320px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip4 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip5 {
+	left: 480px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip6 {
+	left: 560px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip7 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Class1 {
+	left: 368px;
+    position: absolute;
+    text-align: center;
+    top: 103px;
+}
+.ACDB2Class2 {
+	left: 268px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class3 {
+	left: 347px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class4 {
+	left: 426px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class5 {
+	left: 506px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class6 {
+	left: 585px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class7 {
+	left: 664px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+
+.DB1Trip1 {
+	left: 78px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip2 {
+	left: 148px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip3 {
+	left: 222px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip4 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip5 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip6 {
+	left: 476px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip7 {
+	left: 550px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip8 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip9 {
+	left: 725px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip10 {
+	left: 820px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+
+.DB2Trip1 {
+	left: 78px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip2 {
+	left: 148px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip3 {
+	left: 222px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip4 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip5 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip6 {
+	left: 476px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip7 {
+	left: 550px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip8 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip9 {
+	left: 725px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip10 {
+	left: 820px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+
 .EM1Trip1 {
 	left: 280px;
     position: absolute;
@@ -363,7 +571,7 @@ a{
 	left: 686px;
     position: absolute;
     text-align: center;
-    top: 205px;
+    top: 127px;
 }
 .UD1Class5 {
 	left: 322px;
@@ -378,16 +586,16 @@ a{
     top: 205px;
 }
 .UD1Class7 {
-	left: 619px;
+	left: 521px;
     position: absolute;
     text-align: center;
     top: 205px;
 }
 .UD1Class8 {
-	left: 612px;
+	left: 619px;
     position: absolute;
     text-align: center;
-    top: 199px;
+    top: 205px;
 }
 .UD1PM1_1Info{
 	top: 55px;

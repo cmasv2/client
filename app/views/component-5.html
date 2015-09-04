@@ -29,23 +29,22 @@
                 <div style="" class="col-md-12">
 					<!-- ko foreach: divs-->
 					<div data-bind="css : class1">
-						<!-- ko if: value == 0 -->
+						<!-- ko if: value() == 'NaN' || value() == '0' -->
+							<img src='images/icon/off.png' style='height: 56px'/>
+						<!-- /ko -->
+						<!-- ko if: value() == '1' -->
 							<img src='images/icon/on.png' style='height: 56px'/>
 						<!-- /ko -->
-						<!-- ko if: value == 1 -->
-							<img src='images/icon/on.png' style='height: 56px'/>
-						<!-- /ko -->
-						<!-- ko else :-->
-							<img src='images/icon/trip.png' style='height: 56px'/>
-						<!-- /ko -->
+						
 					</div>
 					<!-- /ko -->
 					
 					<!-- ko if: divt -->
 					<!-- ko foreach: divt -->
 					<div data-bind="css:class2">
-						<span data-bind="text:value">
-						</span>
+						<!-- ko if : value() == 1 -->
+							<span style="color:red">Trip</span>
+						<!-- /ko -->
 					</div>
 					<!-- /ko -->
 					<!-- /ko -->
