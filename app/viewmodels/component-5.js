@@ -39,33 +39,22 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                             if (c.type == "1") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
-                            if (c.type == "4") {
+                            else if (c.type == "4") {
                                 var t = value % 3600;
                                 var h = (value - t) / 3600;
                                 var m = (t - (t % 60))/ 60;
                                 c.value(Math.round(h) + ":" + Math.round(m));
                             }
-                            if (c.type == "6") {
+                            else if (c.type == "6") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
-                        }
-                        else if (value != undefined) {
-                            c.type = 0;
-                            //c.value(Math.round(value * 10) / 10);
-							
-							if(value == 0){
-								//c.value("<img src='images/icon/off.png' style='height: 56px'/>");
-							}
-							else if(value == 1){
-								//c.value("<img src='images/icon/on.png' style='height: 56px'/>");
-							}
-							else{
+							else {
 								c.value((Math.round(value * 10) / 10));
 							}
-							
-                        } else {
-							//c.value("<img src='images/icon/trip.png' style='height: 56px'/>");
-						}
+                        }
+                        else {
+                            c.value((Math.round(value * 10) / 10));
+                        }
                     }
                     if (Soc.connected())
                         if (c.channelName != 'xxx')
