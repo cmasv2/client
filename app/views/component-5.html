@@ -49,6 +49,19 @@
 					<!-- /ko -->
 					<!-- /ko -->
 					
+					<!-- ko if: divspd -->
+					<!-- ko foreach: divspd -->
+					<div data-bind="css:class3">
+						<!-- ko if : value() == 1 -->
+							<span style="color:red">OFF</span>
+						<!-- /ko -->
+						<!-- ko if : value() == 0 || value() == 'NaN' -->
+							<span style="color:green">ON</span>
+						<!-- /ko -->
+					</div>
+					<!-- /ko -->
+					<!-- /ko -->
+					
 					<!-- ko foreach: divc -->
 					<div data-bind="css : classc" style="width:126px">
 						<table style="/*margin-top: 15px;*/" class="table table-parameter">
