@@ -6,6 +6,1391 @@
 a{
  cursor: pointer;
 }
+
+.ACDB2Trip1 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 140px;
+}
+.ACDB2Trip2 {
+	left: 235px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip3 {
+	left: 320px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip4 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip5 {
+	left: 480px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip6 {
+	left: 560px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Trip7 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB2Class1 {
+	left: 368px;
+    position: absolute;
+    text-align: center;
+    top: 103px;
+}
+.ACDB2Class2 {
+	left: 268px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class3 {
+	left: 347px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class4 {
+	left: 426px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class5 {
+	left: 506px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class6 {
+	left: 585px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+.ACDB2Class7 {
+	left: 664px;
+    position: absolute;
+    text-align: center;
+    top: 177px;
+}
+
+.DB1Trip1 {
+	left: 78px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip2 {
+	left: 148px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip3 {
+	left: 222px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip4 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip5 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip6 {
+	left: 476px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip7 {
+	left: 550px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip8 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip9 {
+	left: 725px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB1Trip10 {
+	left: 820px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+
+.DB2Trip1 {
+	left: 78px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip2 {
+	left: 148px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip3 {
+	left: 222px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip4 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip5 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip6 {
+	left: 476px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip7 {
+	left: 550px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip8 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip9 {
+	left: 725px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+.DB2Trip10 {
+	left: 820px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+
+.EM1Trip1 {
+	left: 280px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+}
+.EM1Trip2 {
+	left: 580px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+}
+.EM1Trip3 {
+	left: 318px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.EM1Trip4 {
+	left: 220px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.EM1Trip5 {
+	left: 590px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.EM1Trip6 {
+	left: 385px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+}
+.EM1Trip7 {
+	left: 665px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+}
+.EM1Class1 {
+	left: 310px;
+    position: absolute;
+    text-align: center;
+    top: 116px;
+}
+.EM1Class2 {
+	left: 613px;
+    position: absolute;
+    text-align: center;
+    top: 116px;
+}
+.EM1Class3 {
+	left: 344px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.EM1Class4 {
+	left: 246px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.EM1Class5 {
+	left: 621px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+
+.AC2PM1_10Info{
+	top: 51px;
+	left: 213px;
+}
+.PM1_10 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 394px;
+	position: absolute;
+	text-align: center;
+	top: 50px;
+}
+.table-PM1_10{
+	top: 45px;
+	left: 460px;
+}
+
+
+.DB2Class1 {
+	left: 96px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class2 {
+	left: 170px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class3 {
+	left: 244px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class4 {
+	left: 318px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class5 {
+	left: 391px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class6 {
+	left: 507px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class7 {
+	left: 581px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class8 {
+	left: 671px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class9 {
+	left: 761px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Class10 {
+	left: 855px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+
+.UD2Trip1 {
+	left: 275px;
+    position: absolute;
+    text-align: center;
+    top: 165px;
+}
+.UD2Trip2 {
+	left: 345px;
+    position: absolute;
+    text-align: center;
+    top: 166px;
+}
+.UD2Trip3 {
+	left: 505px;
+    position: absolute;
+    text-align: center;
+    top: 166px;
+}
+.UD2Trip4 {
+	left: 645px;
+    position: absolute;
+    text-align: center;
+    top: 166px;
+}
+.UD2Trip5 {
+	left: 310px;
+    position: absolute;
+    text-align: center;
+    top: 245px;
+}
+.UD2Trip6 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 245px;
+}
+.UD2Trip7 {
+	left: 492px;
+    position: absolute;
+    text-align: center;
+    top: 245px;
+}
+.UD2Trip8 {
+	left: 590px;
+    position: absolute;
+    text-align: center;
+    top: 245px;
+}
+
+.UD2Class1 {
+	left: 300px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD2Class2 {
+	left: 368px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD2Class3 {
+	left: 534px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD2Class4 {
+	left: 672px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD2Class5 {
+	left: 335px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.UD2Class6 {
+	left: 428px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.UD2Class7 {
+	left: 519px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.UD2Class8 {
+	left: 612px;
+    position: absolute;
+    text-align: center;
+    top: 199px;
+}
+.UD2PM1_3Info{
+	top: 63px;
+	left: 218px;
+}
+.PM1_3 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 393px;
+	position: absolute;
+	text-align: center;
+	top: 67px;
+}
+.table-PM1_3{
+	top: 118px;
+	left: 387px;
+}
+.UD2PM1_4Info{
+	top: 64px;
+	left: 615px;
+}
+.PM1_4 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 560px;
+	position: absolute;
+	text-align: center;
+	top: 67px;
+}
+.table-PM1_4{
+	top: 55px;
+	left: 340px;
+}
+
+
+.UD1Trip1 {
+	left: 250px;
+    position: absolute;
+    text-align: center;
+    top: 165px;
+}
+.UD1Trip2 {
+	left: 323px;
+    position: absolute;
+    text-align: center;
+    top: 170px;
+}
+.UD1Trip3 {
+	left: 505px;
+    position: absolute;
+    text-align: center;
+    top: 166px;
+}
+.UD1Trip4 {
+	left: 655px;
+    position: absolute;
+    text-align: center;
+    top: 166px;
+}
+.UD1Trip5 {
+	left: 293px;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+}
+.UD1Trip6 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+}
+.UD1Trip7 {
+	left: 492px;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+}
+.UD1Trip8 {
+	left: 590px;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+}
+
+.UD1Class1 {
+	left: 278px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD1Class2 {
+	left: 348px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD1Class3 {
+	left: 530px;
+    position: absolute;
+    text-align: center;
+    top: 126px;
+}
+.UD1Class4 {
+	left: 686px;
+    position: absolute;
+    text-align: center;
+    top: 127px;
+}
+.UD1Class5 {
+	left: 322px;
+    position: absolute;
+    text-align: center;
+    top: 205px;
+}
+.UD1Class6 {
+	left: 422px;
+    position: absolute;
+    text-align: center;
+    top: 205px;
+}
+.UD1Class7 {
+	left: 521px;
+    position: absolute;
+    text-align: center;
+    top: 205px;
+}
+.UD1Class8 {
+	left: 619px;
+    position: absolute;
+    text-align: center;
+    top: 205px;
+}
+.UD1PM1_1Info{
+	top: 55px;
+	left: 197px;
+}
+.PM1_1 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 378px;
+	position: absolute;
+	text-align: center;
+	top: 67px;
+}
+.table-PM1_1{
+	top: 118px;
+	left: 387px;
+}
+.UD1PM1_2Info{
+	top: 64px;
+	left: 615px;
+}
+.PM1_2 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 560px;
+	position: absolute;
+	text-align: center;
+	top: 67px;
+}
+.table-PM1_2{
+	top: 55px;
+	left: 340px;
+}
+
+
+.EM1PM1_8Info{
+	top: 60px;
+	left: 390px;
+}
+.PM1_8 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 336px;
+	position: absolute;
+	text-align: center;
+	top: 62px;
+}
+.table-PM1_8{
+	top: 55px;
+	left: 105px;
+}
+.EM1PM1_9Info{
+	top: 60px;
+	left: 694px;
+}
+.PM1_9{
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 639px;
+	position: absolute;
+	text-align: center;
+	top: 62px;
+}
+.table-PM1_9{
+	top: 52px;
+	left: 409px;
+}
+
+
+.TC1Trip1 {
+	left: 310px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.TC1Trip2 {
+	left: 575px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.TC1Trip3 {
+	left: 180px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip4 {
+	left: 260px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip5 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip6 {
+	left: 425px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip7 {
+	left: 505px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip8 {
+	left: 590px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip9 {
+	left: 665px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Trip10 {
+	left: 750px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.TC1Class1 {
+	left: 336px;
+    position: absolute;
+    text-align: center;
+    top: 118px;
+}
+.TC1Class2 {
+	left: 601px;
+    position: absolute;
+    text-align: center;
+    top: 118px;
+}
+.TC1Class3 {
+	left: 205px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class4 {
+	left: 287px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class5 {
+	left: 369px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class8 {
+	left: 613px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class6 {
+	left: 450px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class7 {
+	left: 532px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class9 {
+	left: 694px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1Class10 {
+	left: 776px;
+    position: absolute;
+    text-align: center;
+    top: 196px;
+}
+.TC1PM1_15Info{
+	top: 64px;
+	left: 425px;
+}
+.PM1_15 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 364px;
+	position: absolute;
+	text-align: center;
+	top: 62px;
+}
+.table-PM1_15{
+	top: 58px;
+	left: 123px;
+}
+
+.TC1PM1_16Info{
+	top: 64px;
+	left: 692px;
+}
+.PM1_16 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 629px;
+	position: absolute;
+	text-align: center;
+	top: 62px;
+}
+.table-PM1_16{
+	top: 45px;
+	left: 395px;
+}
+
+.BU2Trip1 {
+	left: 490px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+}
+.BU2Class1 {
+	left: 516px;
+    position: absolute;
+    text-align: center;
+    top: 114px;
+}
+.BU2PM1_14Info{
+	top: 50px;
+	left: 363px;
+}
+.PM1_14 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 555px;
+	position: absolute;
+	text-align: center;
+	top: 55px;
+}
+.table-PM1_14{
+	top: 45px;
+	left: 603px;
+}
+
+.BU2PM1_14Info{
+	top: 50px;
+	left: 363px;
+}
+.PM1_14 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 555px;
+	position: absolute;
+	text-align: center;
+	top: 55px;
+}
+.table-PM1_14{
+	top: 45px;
+	left: 603px;
+}
+
+.BU1Trip1 {
+	left: 505px;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+}
+.BU1Class1 {
+	left: 529px;
+    position: absolute;
+    text-align: center;
+    top: 107px;
+}
+.BU1PM1_11Info{
+	top: 50px;
+	left: 375px;
+}
+.PM1_11 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 555px;
+	position: absolute;
+	text-align: center;
+	top: 55px;
+}
+.table-PM1_11{
+	top: 45px;
+	left: 615px;
+}
+
+.AT2Trip1 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.AT2Trip2 {
+	left: 570px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.AT2Trip3 {
+	left: 335px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT2Trip4 {
+	left: 435px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT2Trip5 {
+	left: 535px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT2Trip6 {
+	left: 635px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT2Class1 {
+	left: 427px;
+    position: absolute;
+    text-align: center;
+    top: 123px;
+}
+.AT2Class2 {
+	left: 598px;
+    position: absolute;
+    text-align: center;
+    top: 123px;
+}
+.AT2Class3 {
+	left: 361px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT2Class4 {
+	left: 461px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT2Class5 {
+	left: 561px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT2Class6 {
+	left: 661px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT2PM2_2Info{
+	top: 60px;
+	left: 685px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249)
+}
+.AT2PM1_13Info{
+	top: 83px;
+	left: 266px;
+	
+}
+.table-PM2_2{
+	top: 45px;
+	left: 505px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+	z-index: 1000;
+}
+.PM2_2 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 453px;
+  position: absolute;
+  text-align: center;
+  top: 62px;
+}
+.table-PM1_13{
+	top: 45px;
+	left: 686px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+	
+}
+.PM1_13 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 626px;
+  position: absolute;
+  text-align: center;
+  top: 62px;
+}
+
+.AT1Trip1 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.AT1Trip2 {
+	left: 570px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.AT1Trip3 {
+	left: 360px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT1Trip4 {
+	left: 460px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT1Trip5 {
+	left: 555px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT1Trip6 {
+	left: 657px;
+    position: absolute;
+    text-align: center;
+    top: 240px;
+}
+.AT1Class1 {
+	left: 427px;
+    position: absolute;
+    text-align: center;
+    top: 123px;
+}
+.AT1Class2 {
+	left: 598px;
+    position: absolute;
+    text-align: center;
+    top: 123px;
+}
+.AT1Class3 {
+	left: 385px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT1Class4 {
+	left: 485px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT1Class5 {
+	left: 586px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT1Class6 {
+	left: 686px;
+    position: absolute;
+    text-align: center;
+    top: 197px;
+}
+.AT1PM2_1Info{
+	top: 60px;
+	left: 685px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249)
+}
+.AT1PM1_12Info{
+	top: 83px;
+	left: 260px;
+	
+}
+.table-PM2_1{
+	top: 45px;
+	left: 505px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+	z-index: 1000;
+}
+.PM2_1 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 453px;
+  position: absolute;
+  text-align: center;
+  top: 62px;
+}
+.table-PM1_12{
+	top: 45px;
+	left: 686px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+	
+}
+.PM1_12 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 626px;
+  position: absolute;
+  text-align: center;
+  top: 62px;
+}
+
+.LV2Trip1 {
+	left: 415px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.LV2Class1 {
+	left: 448px;
+    position: absolute;
+    text-align: center;
+    top: 124px;
+}
+.LV2PM1_18Info{
+	top: 50px;
+	left: 297px;
+}
+.PM1_18 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 475px;
+	position: absolute;
+	text-align: center;
+	top: 55px;
+}
+.table-PM1_18{
+	top: 45px;
+	left: 527px;
+}
+
+.LV1Trip1 {
+	left: 415px;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+}
+.LV1Class1 {
+	left: 448px;
+    position: absolute;
+    text-align: center;
+    top: 124px;
+}
+.LV1PM1_17Info{
+	top: 50px;
+	left: 297px;
+}
+.PM1_17 {
+	width: 48px;
+	height: 50px;
+	float: left;
+	left: 475px;
+	position: absolute;
+	text-align: center;
+	top: 55px;
+}
+.table-PM1_17{
+	top: 45px;
+	left: 527px;
+}
+
+
+.AC1PM1_7Info{
+	top: 53px;
+	left: 200px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249)
+}
+.table-PM1_7{
+	top: 45px;
+	left: 445px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.PM1_7 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 395px;
+  position: absolute;
+  text-align: center;
+  top: 55px;
+}
+
+.ACDB1Trip1 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 145px;
+}
+.ACDB1Trip2 {
+	left: 230px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Trip3 {
+	left: 320px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Trip4 {
+	left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Trip5 {
+	left: 480px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Trip6 {
+	left: 560px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Trip7 {
+	left: 640px;
+    position: absolute;
+    text-align: center;
+    top: 222px;
+}
+.ACDB1Class1 {
+	left: 366px;
+    position: absolute;
+    text-align: center;
+    top: 104px;
+}
+.ACDB1Class2 {
+	left: 264px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class3 {
+	left: 344px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class4 {
+	left: 425px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class5 {
+	left: 506px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class6 {
+	left: 587px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.ACDB1Class7 {
+	left: 667px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+}
+.DB1Class1 {
+	left: 100px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class2 {
+	left: 173px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class3 {
+	left: 246px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class4 {
+	left: 319px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class5 {
+	left: 391px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class6 {
+	left: 503px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class7 {
+	left: 576px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class8 {
+	left: 664px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class9 {
+	left: 754px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB1Class10 {
+	left: 846px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+
+.DB1Classc1 {
+	left: 125px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.DB1Classc3 {
+	left: 265px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.DB1Classc5 {
+	left: 405px;
+    position: absolute;
+    text-align: center;
+    top: 260px;
+	
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+
 .formcontrol1{
     background-color: #fff;
     background-image: none;

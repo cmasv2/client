@@ -25,11 +25,162 @@
         <!-- ko foreach: cf-->
         <div id="Status" class="tab-pane" data-bind="css: $root.idc() ? '' : 'active'" role="tabpanel">
             <!-- status -->
-            <div style="height:333px;" class="row">
-                <div style="margin-top:10px" class="col-md-4">
-                    <img style="max-width:300px;max-height:280px;" src="images.png" data-bind="attr: {src:images}">
+            <div style="" class="row">
+                <div style="" class="col-md-12">
+					<!-- ko foreach: divs-->
+					<div data-bind="css : class1">
+						<!-- ko if: value() == 'NaN' || value() == '0' -->
+							<img src='images/icon/off.png' style='height: 56px'/>
+						<!-- /ko -->
+						<!-- ko if: value() == '1' -->
+							<img src='images/icon/on.png' style='height: 56px'/>
+						<!-- /ko -->
+						
+					</div>
+					<!-- /ko -->
+					
+					<!-- ko if: divt -->
+					<!-- ko foreach: divt -->
+					<div data-bind="css:class2">
+						<!-- ko if : value() == 1 -->
+							<span style="color:red">Trip</span>
+						<!-- /ko -->
+					</div>
+					<!-- /ko -->
+					<!-- /ko -->
+					
+					<!-- ko foreach: divc -->
+					<div data-bind="css : classc" style="width:126px">
+						<table style="/*margin-top: 15px;*/" class="table table-parameter">
+							<tbody>
+							<!-- ko foreach: values -->
+							<tr>
+								<td style="text-align:left; width:1%" data-bind="text:name "></td>
+								<td width="99%">
+                                   <span data-bind="text: value()" style ="  float: left;"></span>
+                                   <!-- ko if: unit-->
+                                   <span data-bind="text:'(' +  unit + ')'"></span>
+                                   <!-- /ko --> 
+								</td>
+							</tr>
+							<!-- /ko -->
+							</tbody>
+						</table>		
+					</div>		
+					<!-- /ko -->
+				
+					
+					<!-- ko if: Parameters-->
+					 <!-- ko foreach: Parameters-->
+					 <a data-bind="click: $root.pmclick" >
+					 <div data-bind="css:name">						
+					 </div>
+					 </a>
+					
+				 
+					 <table data-bind="attr: {id:name,class:'table-'+name}" 
+					 style="
+						margin-top: 5px;width: 220px;display: none;position: absolute;
+						background-color: beige;
+						border:  2px solid #86A9A2;
+						border-collapse: collapse;
+						text-align: center;
+						background-color: #DFECE1;
+						"
+					 class="table table-parameter">
+                      <tbody>
+                         <tr>
+                            <th style="text-align: center;" data-bind="text: name">name</th>
+                            <th style="text-align: center;">L1</th>
+                            <th style="text-align: center;">L2</th>
+                            <th style="text-align: center;">L3</th>
+                        </tr>
+
+                      </tbody>
+                     <tbody>
+                      <!-- ko foreach: data-->
+                       <tr>
+                        <td style="" data-bind="text: name + (unit?'(' + unit + ')':''+':')">Vd (V):</td>
+                        <!-- ko foreach: values-->
+                        <td  data-bind="text: value()">0</td>
+                        <!-- /ko -->
+                       </tr>
+                      <!-- /ko -->
+					  
+					  <tr class="detail-total">
+						<td colspan="4" style="text-align: left;padding-left: 15px;" ><b>TOTAL</b></td>
+					  </tr>
+					  <!-- ko foreach: values -->
+                       <tr>
+                        <td style="" data-bind="text: name ">Vd (V):</td>
+                     
+                        <td colspan="3" data-bind="text: value()">0</td>
+                       
+                       </tr>
+                      <!-- /ko -->
+					  
+                      </tbody>
+                     </table>
+					 
+					<table data-bind="attr: {id:name+'_info',class:classinfo}" 
+					style="
+						width: 160px;position: absolute;text-align: center;
+						background-color: beige;
+						border:  2px solid #86A9A2;
+						border-collapse: collapse;
+						background-color: #DFECE1;
+					" 
+					class="table table-parameter table-info">
+                     <tbody>
+						<!-- ko if: name == 'PM1_17' || name == 'PM1_18' -->
+							<!-- ko foreach: data -->
+								<!-- ko if: name == 'Vd' || name == 'Vp' || name == 'I' -->
+									<tr>
+										<td style="border-right:  2px solid #86A9A2;" data-bind="text: name"></td>
+										<!-- ko foreach: values-->
+										<td data-bind="text: value()">0</td>
+										<!-- /ko -->
+									</tr>
+								<!-- /ko -->
+								
+							<!-- /ko -->
+							
+							<!-- ko if: values -->
+								<!-- ko foreach:values -->
+									<!-- ko if: name == 'Freq' -->
+									<tr>
+										<td style="" data-bind="text: name"></td>
+										<td style="border-top:  2px solid #86A9A2;text-align: left;padding-left: 10px;"colspan="3" data-bind="text: value()">0</td>
+									</tr>
+									<!-- /ko -->
+								<!-- /ko -->
+							<!-- /ko -->
+							
+							
+						<!-- /ko -->
+						<!-- ko if : name != 'PM1_17' && name != 'PM1_18' -->
+							<!-- ko foreach: data -->
+								<!-- ko if:  name == 'Vd' || name == 'I' || name == 'kW' -->
+									<tr>
+										<td style="border-right:  2px solid #86A9A2;" data-bind="text: unit">:</td>
+										<!-- ko foreach: values-->
+										<td data-bind="text: value()">0</td>
+										<!-- /ko -->
+									</tr>
+								<!-- /ko -->
+							<!-- /ko -->	
+						<!-- /ko -->
+						
+                      
+                      </tbody>
+                     </table>
+					 
+					 <!-- /ko -->
+					<!-- /ko -->	
+					
+                    <img style="" src="images.png" data-bind="attr: {src:images}">
                 </div>
-                <div class="col-md-8" style="height: 333px; overflow: auto;">
+                <div class="col-md-0" style="height: 333px; overflow: auto;display:none">
                     <div class="row" style="width:97%;">
                         <!-- ko foreach: status-->
                         <div class="" data-bind="css: $root.colmd()">
@@ -606,8 +757,8 @@
 </div>
 <div class="col-md-12">
     <div class="panel panel-default footer-5px">
-        <div class="panel-heading panel-heading-sm">Alarm Summary</div>
-        <div class="panel-body" style="font-size:12px; padding-top:5px">
+        <div data-bind="click: $root.Alarmtoggle" class="panel-heading panel-heading-sm"><i class="i-icon fa fa-chevron-circle-right"></i>Alarm Summary</div>
+        <div class="panel-body" style="font-size:12px; padding-top:5px;display:none">
             <table class="table table-AlarmSummary  table-hover">
                 <head>
                     <tr>

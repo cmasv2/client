@@ -23,6 +23,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             }
 
             function Lis(c) {
+				
                 if(c.type == 5){
                     c.value = ko.observable('NaN');
                     Q.when(apis.ChannelDataByCode(c.channelName)).then(function(r){
@@ -38,19 +39,21 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                             if (c.type == "1") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
-                            if (c.type == "4") {
+                            else if (c.type == "4") {
                                 var t = value % 3600;
                                 var h = (value - t) / 3600;
                                 var m = (t - (t % 60))/ 60;
                                 c.value(Math.round(h) + ":" + Math.round(m));
                             }
-                            if (c.type == "6") {
+                            else if (c.type == "6") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
+							else {
+								c.value((Math.round(value * 10) / 10));
+							}
                         }
-                        else if (value != undefined) {
-                            c.type = 0;
-                            c.value(Math.round(value * 10) / 10);
+                        else {
+                            c.value((Math.round(value * 10) / 10));
                         }
                     }
                     if (Soc.connected())
@@ -268,6 +271,38 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 }
             }
             me.activate = function () {
+				
+				if (cf[0]['divs'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divs'].length ; i++ ){
+						 Lis(cf[0]['divs'][i]);
+					}
+				} else {
+					cf[0]['divs'] = 0;
+				}	
+				
+				if (cf[0]['divt'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divt'].length ; i++ ){
+						 Lis(cf[0]['divt'][i]);
+					}
+				} else {
+					cf[0]['divt'] = 0;
+				}	
+				
+				if (cf[0]['divc'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divc'].length ; i++ ){
+						Lis(cf[0]['divc'][i]);
+						for(var j = 0; j < cf[0]['divc'][i].values.length; j++){
+							
+							var info = inf(cf[0]['divc'][i].values[j].channelName);
+								
+								cf[0]['divc'][i].values[j].unit = info?info[0].unit:"NaN";
+								Lis(cf[0]['divc'][i].values[j]);
+						}
+					}
+				} else {
+					cf[0]['divc'] = 0;
+				}
+		
                 if (cf[0].Parameters != undefined) {
                     for (i = 0; i < cf[0].Parameters.length; i++) {
                         for (j = 0; j < cf[0].Parameters[i].data.length; j++) {
@@ -358,6 +393,17 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     setalarmWatcher(channels);
                 }
             }
+			
+			function pmclick(channel){
+				jQuery("#"+channel.name).toggle();
+				console.log(channel);
+			}	
+			
+			function Alarmtoggle() {
+			   jQuery(".panel-body").toggle("blind");
+			   jQuery(".i-icon").toggleClass("fa-chevron-circle-down");
+			}
+			
             var up = buff.find(buff.getByKey('DOCUMENT_ALL'), 'code', id);
             var documents = up ? up[0]._ : 0;
             var document = [];
@@ -373,6 +419,9 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             me.controls = ko.observableArray(controls);
             me.channels = ko.observableArray([{name: "channels", id: 0, sub: channels}]);
             me.cf = ko.observableArray(cf);
+			
+			me.Alarmtoggle = Alarmtoggle;
+			
             me.colmd = function(){
                 return cf[0].status.length > 1 ? 'col-md-6':'col-md-12';
             };
@@ -418,6 +467,10 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     //setalarmWatcher(me.channels().sub);
                 });
             });
+			me.pmclick = function (channel){
+				jQuery("#"+channel.name).toggle();
+				console.log(channel);
+			};
         };
     }
 );
