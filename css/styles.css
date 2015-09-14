@@ -180,10 +180,10 @@ a{
     top: 300px;
 }
 .AT1Spd1 {
-	left: 615px;
+	left: 295px;
     position: absolute;
     text-align: center;
-    top: 300px;
+    top: 510px;
 }
 
 .BU2Class2 {
@@ -1447,119 +1447,113 @@ a{
 }
 
 .AT1Trip1 {
-	left: 400px;
+	left: 315px;
     position: absolute;
     text-align: center;
-    top: 160px;
+    top: 373px;
 }
 .AT1Trip2 {
-	left: 570px;
+	left: 605px;
     position: absolute;
     text-align: center;
-    top: 160px;
+    top: 373px;
 }
 .AT1Trip3 {
-	left: 360px;
+	left: 295px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 470px;
 }
 .AT1Trip4 {
 	left: 460px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 470px;
 }
 .AT1Trip5 {
 	left: 555px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 470px;
 }
 .AT1Trip6 {
-	left: 657px;
+	left: 645px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 470px;
 }
 .AT1Class1 {
-	left: 427px;
+	left: 338px;
     position: absolute;
     text-align: center;
-    top: 123px;
+    top: 323px;
 }
 .AT1Class2 {
-	left: 598px;
+	left: 629px;
     position: absolute;
     text-align: center;
-    top: 123px;
+    top: 325px;
 }
 .AT1Class3 {
-	left: 385px;
+	left: 317px;
     position: absolute;
     text-align: center;
-    top: 197px;
+    top: 428px;
 }
 .AT1Class4 {
-	left: 485px;
+	left: 490px;
     position: absolute;
     text-align: center;
-    top: 197px;
+    top: 428px;;
 }
 .AT1Class5 {
-	left: 586px;
+	left: 580px;
     position: absolute;
     text-align: center;
-    top: 197px;
+    top: 428px;
 }
 .AT1Class6 {
-	left: 686px;
+	left: 666px;
     position: absolute;
     text-align: center;
-    top: 197px;
+    top: 428px;
 }
 .AT1PM2_1Info{
-	top: 60px;
-	left: 685px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249)
+	top: 300px;
+    left: 416px;
 }
 .AT1PM1_12Info{
-	top: 83px;
-	left: 260px;
+	top: 300px;
+    left: 695px;
 	
 }
 .table-PM2_1{
-	top: 45px;
-	left: 505px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249);
-	z-index: 1000;
+	top: 295px;
+    left: 415px;
+    z-index: 1000;
 }
 .PM2_1 {
-  width: 48px;
-  height: 50px;
-  float: left;
-  left: 453px;
-  position: absolute;
-  text-align: center;
-  top: 62px;
+    width: 48px;
+    height: 50px;
+    float: left;
+    left: 360px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
 }
 .table-PM1_12{
-	top: 45px;
-	left: 686px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249);
-	
+	top: 295px;
+    left: 694px;
+    z-index: 1000;
 }
 .PM1_12 {
-  width: 48px;
-  height: 50px;
-  float: left;
-  left: 626px;
-  position: absolute;
-  text-align: center;
-  top: 62px;
+    width: 48px;
+    height: 50px;
+    float: left;
+    left: 647px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
 }
 
 .LV2Trip1 {
@@ -1593,33 +1587,34 @@ a{
 }
 
 .LV1Trip1 {
-	left: 415px;
+	left: 350px;
     position: absolute;
     text-align: center;
-    top: 160px;
+    top: 180px;
 }
 .LV1Class1 {
-	left: 448px;
+	left: 374px;
     position: absolute;
     text-align: center;
-    top: 124px;
+    top: 146px;
 }
 .LV1PM1_17Info{
-	top: 50px;
-	left: 297px;
+	top: 115px;
+	left: 432px;
 }
 .PM1_17 {
 	width: 48px;
 	height: 50px;
 	float: left;
-	left: 475px;
+	left: 387px;
 	position: absolute;
 	text-align: center;
-	top: 55px;
+	top: 115px;
 }
 .table-PM1_17{
-	top: 45px;
-	left: 527px;
+	top: 110px;
+    left: 431px;
+    z-index: 1000;
 }
 
 
