@@ -16,7 +16,7 @@ define([], function () {
 						{"class1": "AT1Class3","channelName":"OTB13_I10"},
 						{"class1": "AT1Class4","channelName":"OTB13_I4"},
 						{"class1": "AT1Class5","channelName":"OTB13_I6"},
-						{"class1": "AT1Class6","channelName":"OTB13_I8"},
+						{"class1": "AT1Class6","channelName":"OTB13_I8"},					
 					],
 					"divt":[
 						{"class2": "LV1Trip1","channelName":"OTB21_I1"},
@@ -25,11 +25,11 @@ define([], function () {
 						{"class2": "AT1Trip3","channelName":"OTB13_I11"},
 						{"class2": "AT1Trip4","channelName":"OTB13_I5"},
 						{"class2": "AT1Trip5","channelName":"OTB13_I7"},
-						{"class2": "AT1Trip6","channelName":"OTB13_I9"},
+						{"class2": "AT1Trip6","channelName":"OTB13_I9"},						
 					],
 					"divspd":[
 						{"class3": "AT1Spd1","channelName":"OTB14_I10"},
-					],					
+					],								
 					"name": "LV 1",
                     "code": "DAR_PW_LV1",
                     "description": "",                    
@@ -57,8 +57,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_17_V1" },
-                                                { "channelName": "PM1_17_V1" },
-                                                { "channelName": "PM1_17_V1" }
+                                                { "channelName": "PM1_17_V2" },
+                                                { "channelName": "PM1_17_V3" }
                                             ]
                                         },
                                         {
@@ -230,7 +230,7 @@ define([], function () {
                                         
                                     ]
                                 }
-                            ],
+							],
 				}],
 				"DAR_PW_LV2": [	{
 					"divs":[
@@ -267,8 +267,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_18_V1" },
-                                                { "channelName": "PM1_18_V1" },
-                                                { "channelName": "PM1_18_V1" }
+                                                { "channelName": "PM1_18_V2" },
+                                                { "channelName": "PM1_18_V3" }
                                             ]
                                         },
                                         {
@@ -343,8 +343,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_11_V1" },
-                                                { "channelName": "PM1_11_V1" },
-                                                { "channelName": "PM1_11_V1" }
+                                                { "channelName": "PM1_11_V2" },
+                                                { "channelName": "PM1_11_V3" }
                                             ]
                                         },
                                         {
@@ -455,8 +455,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_14_V1" },
-                                                { "channelName": "PM1_14_V1" },
-                                                { "channelName": "PM1_14_V1" }
+                                                { "channelName": "PM1_14_V2" },
+                                                { "channelName": "PM1_14_V3" }
                                             ]
                                         },
                                         {
@@ -560,8 +560,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM2_1_V1" },
-                                                { "channelName": "PM2_1_V1" },
-                                                { "channelName": "PM2_1_V1" }
+                                                { "channelName": "PM2_1_V2" },
+                                                { "channelName": "PM2_1_V3" }
                                             ]
                                         },
                                         {
@@ -638,8 +638,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_12_V1" },
-                                                { "channelName": "PM1_12_V1" },
-                                                { "channelName": "PM1_12_V1" }
+                                                { "channelName": "PM1_12_V2" },
+                                                { "channelName": "PM1_12_V3" }
                                             ]
                                         },
                                         {
@@ -744,8 +744,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM2_2_V1" },
-                                                { "channelName": "PM2_2_V1" },
-                                                { "channelName": "PM2_2_V1" }
+                                                { "channelName": "PM2_2_V2" },
+                                                { "channelName": "PM2_2_V3" }
                                             ]
                                         },
                                         {
@@ -822,8 +822,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_13_V1" },
-                                                { "channelName": "PM1_13_V1" },
-                                                { "channelName": "PM1_13_V1" }
+                                                { "channelName": "PM1_13_V2" },
+                                                { "channelName": "PM1_13_V3" }
                                             ]
                                         },
                                         {
@@ -936,8 +936,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_15_V1" },
-                                                { "channelName": "PM1_15_V1" },
-                                                { "channelName": "PM1_15_V1" }
+                                                { "channelName": "PM1_15_V2" },
+                                                { "channelName": "PM1_15_V3" }
                                             ]
                                         },
                                         {
@@ -1014,8 +1014,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_16_V1" },
-                                                { "channelName": "PM1_16_V1" },
-                                                { "channelName": "PM1_16_V1" }
+                                                { "channelName": "PM1_16_V2" },
+                                                { "channelName": "PM1_16_V3" }
                                             ]
                                         },
                                         {
@@ -1158,8 +1158,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_7_V1" },
-                                                { "channelName": "PM1_7_V1" },
-                                                { "channelName": "PM1_7_V1" }
+                                                { "channelName": "PM1_7_V2" },
+                                                { "channelName": "PM1_7_V3" }
                                             ]
                                         },
                                         {
@@ -1266,8 +1266,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" }
+                                                { "channelName": "PM1_8_V2" },
+                                                { "channelName": "PM1_8_V3" }
                                             ]
                                         },
                                         {
@@ -1344,8 +1344,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" }
+                                                { "channelName": "PM1_9_V2" },
+                                                { "channelName": "PM1_9_V3" }
                                             ]
                                         },
                                         {
@@ -1450,8 +1450,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" }
+                                                { "channelName": "PM1_8_V2" },
+                                                { "channelName": "PM1_8_V3" }
                                             ]
                                         },
                                         {
@@ -1528,8 +1528,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" }
+                                                { "channelName": "PM1_9_V2" },
+                                                { "channelName": "PM1_9_V3" }
                                             ]
                                         },
                                         {
@@ -1637,8 +1637,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_1_V1" },
-                                                { "channelName": "PM1_1_V1" },
-                                                { "channelName": "PM1_1_V1" }
+                                                { "channelName": "PM1_1_V2" },
+                                                { "channelName": "PM1_1_V3" }
                                             ]
                                         },
                                         {
@@ -1715,8 +1715,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_2_V1" },
-                                                { "channelName": "PM1_2_V1" },
-                                                { "channelName": "PM1_2_V1" }
+                                                { "channelName": "PM1_2_V2" },
+                                                { "channelName": "PM1_2_V3" }
                                             ]
                                         },
                                         {
@@ -1824,8 +1824,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_3_V1" },
-                                                { "channelName": "PM1_3_V1" },
-                                                { "channelName": "PM1_3_V1" }
+                                                { "channelName": "PM1_3_V2" },
+                                                { "channelName": "PM1_3_V3" }
                                             ]
                                         },
                                         {
@@ -1902,8 +1902,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_4_V1" },
-                                                { "channelName": "PM1_4_V1" },
-                                                { "channelName": "PM1_4_V1" }
+                                                { "channelName": "PM1_4_V2" },
+                                                { "channelName": "PM1_4_V3" }
                                             ]
                                         },
                                         {
@@ -1999,8 +1999,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_5_V1" },
-                                                { "channelName": "PM1_5_V1" },
-                                                { "channelName": "PM1_5_V1" }
+                                                { "channelName": "PM1_5_V2" },
+                                                { "channelName": "PM1_5_V3" }
                                             ]
                                         },
                                         {
@@ -2096,8 +2096,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_6_V1" },
-                                                { "channelName": "PM1_6_V1" },
-                                                { "channelName": "PM1_6_V1" }
+                                                { "channelName": "PM1_6_V2" },
+                                                { "channelName": "PM1_6_V3" }
                                             ]
                                         },
                                         {
@@ -2272,8 +2272,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_10_V1" },
-                                                { "channelName": "PM1_10_V1" },
-                                                { "channelName": "PM1_10_V1" }
+                                                { "channelName": "PM1_10_V2" },
+                                                { "channelName": "PM1_10_V3" }
                                             ]
                                         },
                                         {
@@ -2415,8 +2415,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" },
-                                                { "channelName": "PM1_8_V1" }
+                                                { "channelName": "PM1_8_V2" },
+                                                { "channelName": "PM1_8_V3" }
                                             ]
                                         },
                                         {
@@ -2493,8 +2493,8 @@ define([], function () {
                                             "unit": "V",
                                             "values": [
                                                 { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" },
-                                                { "channelName": "PM1_9_V1" }
+                                                { "channelName": "PM1_9_V2" },
+                                                { "channelName": "PM1_9_V3" }
                                             ]
                                         },
                                         {

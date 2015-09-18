@@ -180,10 +180,10 @@ a{
     top: 300px;
 }
 .AT1Spd1 {
-	left: 295px;
+	left: 616px;
     position: absolute;
     text-align: center;
-    top: 510px;
+    top: 296px;
 }
 
 .BU2Class2 {
@@ -1447,113 +1447,113 @@ a{
 }
 
 .AT1Trip1 {
-	left: 315px;
+	left: 405px;
     position: absolute;
     text-align: center;
-    top: 373px;
+    top: 163px;
 }
 .AT1Trip2 {
-	left: 605px;
+	left: 578px;
     position: absolute;
     text-align: center;
-    top: 373px;
+    top: 162px;
 }
 .AT1Trip3 {
-	left: 295px;
+	left: 358px;
     position: absolute;
     text-align: center;
-    top: 470px;
+    top: 239px;
 }
 .AT1Trip4 {
-	left: 460px;
+	left: 463px;
     position: absolute;
     text-align: center;
-    top: 470px;
+    top: 240px;
 }
 .AT1Trip5 {
-	left: 555px;
+	left: 561px;
     position: absolute;
     text-align: center;
-    top: 470px;
+    top: 240px;
 }
 .AT1Trip6 {
-	left: 645px;
+	    left: 663px;
     position: absolute;
     text-align: center;
-    top: 470px;
+    top: 240px;
 }
 .AT1Class1 {
-	left: 338px;
+left: 426px;
     position: absolute;
     text-align: center;
-    top: 323px;
+    top: 122px;
 }
 .AT1Class2 {
-	left: 629px;
+	left: 597px;
     position: absolute;
     text-align: center;
-    top: 325px;
+    top: 122px;
 }
 .AT1Class3 {
-	left: 317px;
+	left: 384px;
     position: absolute;
     text-align: center;
-    top: 428px;
+    top: 197px;
 }
 .AT1Class4 {
-	left: 490px;
+	left: 484px;
     position: absolute;
     text-align: center;
-    top: 428px;;
+    top: 197px;
 }
 .AT1Class5 {
-	left: 580px;
+	left: 584px;
     position: absolute;
     text-align: center;
-    top: 428px;
+    top: 197px;
 }
 .AT1Class6 {
-	left: 666px;
+	left: 684px;
     position: absolute;
     text-align: center;
-    top: 428px;
+    top: 197px;
 }
 .AT1PM2_1Info{
-	top: 300px;
-    left: 416px;
+	top: 90px;
+    left: 254px;
 }
 .AT1PM1_12Info{
-	top: 300px;
+	top: 59px;
     left: 695px;
 	
 }
 .table-PM2_1{
-	top: 295px;
+	top: 125px;
     left: 415px;
     z-index: 1000;
 }
 .PM2_1 {
-    width: 48px;
+   width: 48px;
     height: 50px;
     float: left;
-    left: 360px;
+    left: 452px;
     position: absolute;
     text-align: center;
-    top: 300px;
+    top: 66px;
 }
 .table-PM1_12{
-	top: 295px;
-    left: 694px;
+	top: 132px;
+    left: 458px;
     z-index: 1000;
 }
 .PM1_12 {
     width: 48px;
     height: 50px;
     float: left;
-    left: 647px;
+    left: 625px;
     position: absolute;
     text-align: center;
-    top: 300px;
+    top: 62px;
 }
 
 .LV2Trip1 {
@@ -1587,24 +1587,24 @@ a{
 }
 
 .LV1Trip1 {
-	left: 350px;
+	left: 427px;
     position: absolute;
     text-align: center;
-    top: 180px;
+    top: 160px;
 }
 .LV1Class1 {
-	left: 374px;
+	    left: 448px;
     position: absolute;
     text-align: center;
-    top: 146px;
+    top: 124px;
 }
 .LV1PM1_17Info{
-	top: 115px;
-	left: 432px;
+    top: 47px;
+    left: 533px;
 }
 .PM1_17 {
-	width: 48px;
-	height: 50px;
+	//width: 48px;
+	//height: 50px;
 	float: left;
 	left: 387px;
 	position: absolute;
