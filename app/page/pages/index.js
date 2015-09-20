@@ -38,8 +38,7 @@ define(["durandal/app", "knockout", "plugins/router"], function (app, ko, router
                 a: app.buff.getByKey("ChannelsAll").length,
                 b: inf.ch
             }]);
-            //if (me.st())me.msg(msg); else router.navigate("page/dashboard")
-				router.navigate("page/dashboard");
+            if (me.st())me.msg(msg); else router.navigate("page/dashboard")
         };
         me.activate = function () {
         }

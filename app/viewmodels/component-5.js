@@ -31,11 +31,10 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                         c.id = r? r.id:0;
                     });
                 }
-				else 
+                else
                 {
                     c.value = ko.observable('NaN');
                     var cv = function (value) {
-						//console.log(c);
                         if (c.type && c.type != undefined) {
                             if (c.type == "1") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
@@ -49,29 +48,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                             else if (c.type == "6") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
-							else if (c.type == 10){
-								value = (Math.round(value * 10) / 10);
-								if(value == 1){
-								    c.value("<img src='images/icon/on.png' style='height: 56px'/>");
-								}
-								else {
-									c.value("<img src='images/icon/off.png' style='height: 56px'/>");
-								}
-							}else if (c.type == 11){
-								value = (Math.round(value * 10) / 10);
-								if(value == 1){
-								    c.value("<span style='color:red'>Trip</span>");
-								}else {
-									c.value("");
-								}
-							}else if (c.type == 12){
-								value = (Math.round(value * 10) / 10);
-								if(value == 1){
-								    c.value('<span style="color:red">OFF</span>');
-								}else {
-									c.value('<span style="color:red">ON</span>');
-								}
-							}else {	
+							else {
 								c.value((Math.round(value * 10) / 10));
 							}
                         }
@@ -294,21 +271,21 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 }
             }
             me.activate = function () {
-
+				
+				if (cf[0]['divs'] != undefined) {
+					for(var i = 0 ; i < cf[0]['divs'].length ; i++ ){
+						 Lis(cf[0]['divs'][i]);
+					}
+				} else {
+					cf[0]['divs'] = 0;
+				}	
+				
 				if (cf[0]['divt'] != undefined) {
 					for(var i = 0 ; i < cf[0]['divt'].length ; i++ ){
 						 Lis(cf[0]['divt'][i]);
 					}
 				} else {
 					cf[0]['divt'] = 0;
-				}
-					
-				if (cf[0]['divspd'] != undefined) {
-					for(var i = 0 ; i < cf[0]['divspd'].length ; i++ ){
-						 Lis(cf[0]['divspd'][i]);
-					}
-				} else {
-					cf[0]['divspd'] = 0;
 				}	
 				
 				if (cf[0]['divc'] != undefined) {
@@ -324,14 +301,6 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 					}
 				} else {
 					cf[0]['divc'] = 0;
-				}
-				
-				if (cf[0].divs != undefined){
-					for (i = 0 ; i< cf[0].divs.length; i++){	
-						Lis(cf[0].divs[i]);
-					}
-				}else {
-					cf[0].divs = 0;
 				}
 		
                 if (cf[0].Parameters != undefined) {
@@ -427,7 +396,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 			
 			function pmclick(channel){
 				jQuery("#"+channel.name).toggle();
-				//console.log(channel);
+				console.log(channel);
 			}	
 			
 			function Alarmtoggle() {
