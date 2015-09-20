@@ -4,7 +4,428 @@
 @import "../lib/durandal/css/durandal.css"; 
 @import "starterkit.css";
 a{
- cursor: pointer;
+ cursor: pointer;}
+
+.ACDB2Spd1 {
+	left: 697px;
+    position: absolute;
+    text-align: center;
+    top: 280px;
+} 
+ 
+.PU2Class1 {
+	left: 527px;
+    position: absolute;
+    text-align: center;
+    top: 113px;
+}
+.PU2Class2 {
+	left: 310px;
+    position: absolute;
+    text-align: center;
+    top: 188px;
+}
+.PU2Trip1 {
+	left: 507px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+}
+.PU2Trip2 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+}
+.PU2Spd1 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 280px;
+}
+ 
+.PU2PM1_6Info{
+	top: 50px;
+	left: 375px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249)
+}
+.table-PM1_6{
+	top: 45px;
+	left: 610px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.PM1_6 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 554px;
+  position: absolute;
+  text-align: center;
+  top: 53px;
+} 
+ 
+ 
+.PU1Class1 {
+	left: 527px;
+    position: absolute;
+    text-align: center;
+    top: 113px;
+}
+.PU1Class2 {
+	left: 310px;
+    position: absolute;
+    text-align: center;
+    top: 188px;
+}
+.PU1Trip1 {
+	left: 507px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+}
+.PU1Trip2 {
+	left: 290px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+}
+.PU1Spd1 {
+	left: 340px;
+    position: absolute;
+    text-align: center;
+    top: 280px;
+}
+ 
+.PU1PM1_5Info{
+	top: 50px;
+	left: 375px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249)
+}
+.table-PM1_5{
+	top: 45px;
+	left: 610px;
+	background-color: beige;
+	border: 1px solid rgb(249, 249, 249);
+}
+.PM1_5 {
+  width: 48px;
+  height: 50px;
+  float: left;
+  left: 554px;
+  position: absolute;
+  text-align: center;
+  top: 53px;
+}
+
+.UD2Spd1 {
+	left: 360px;
+    position: absolute;
+    text-align: center;
+    top: 290px;
+}
+.UD1Spd1 {
+	left: 335px;
+    position: absolute;
+    text-align: center;
+    top: 290px;
+}
+
+.EM1Spd1 {
+	left: 380px;
+    position: absolute;
+    text-align: center;
+    top: 290px;
+}
+.EM1Spd2 {
+	left: 655px;
+    position: absolute;
+    text-align: center;
+    top: 290px;
+}
+
+.ACDB1Spd1 {
+	left: 695px;
+    position: absolute;
+    text-align: center;
+    top: 290px;
+}
+
+.DB2Class11 {
+	left: 835px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
+.DB2Trip11 {
+	left: 815px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
+
+.TC1Spd1 {
+	left: 805px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+}
+
+.AT2Spd1 {
+	left: 590px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+}
+.AT1Spd1 {
+	left: 616px;
+    position: absolute;
+    text-align: center;
+    top: 296px;
+}
+
+.BU2Class2 {
+	left: 195px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class3 {
+	left: 265px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class4 {
+	left: 335px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class5 {
+	left: 404px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class6 {
+	left: 473px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class7 {
+	left: 543px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class8 {
+	left: 613px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class9 {
+	left: 682px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class10 {
+	left: 752px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Class11 {
+	left: 821px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+}
+.BU2Trip2 {
+	left: 177px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip3 {
+	left: 247px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip4 {
+	left: 315px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip5 {
+	left: 385px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip6 {
+	left: 455px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip7 {
+	left: 520px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip8 {
+	left: 589px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip9 {
+	left: 660px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip10 {
+	left: 730px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+.BU2Trip11 {
+	left: 800px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+
+.BU1Class2 {
+	left: 209px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class3 {
+	left: 276px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class4 {
+	left: 342px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class5 {
+	left: 408px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class6 {
+	left: 474px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class7 {
+	left: 540px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class8 {
+	left: 607px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class9 {
+	left: 673px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class10 {
+	left: 739px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Class11 {
+	left: 806px;
+    position: absolute;
+    text-align: center;
+    top: 179px;
+}
+.BU1Trip2 {
+	left: 190px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip3 {
+	left: 255px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip4 {
+	left: 320px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip5 {
+	left: 385px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip6 {
+	left: 455px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip7 {
+	left: 520px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip8 {
+	left: 585px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip9 {
+	left: 655px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip10 {
+	left: 720px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
+}
+.BU1Trip11 {
+	left: 785px;
+    position: absolute;
+    text-align: center;
+    top: 228px;
 }
 
 .ACDB2Trip1 {
@@ -117,42 +538,47 @@ a{
     top: 112px;
 }
 .DB1Trip5 {
-	left: 366px;
+	left: 373px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB1Trip6 {
-	left: 476px;
+	left: 470px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB1Trip7 {
-	left: 550px;
+	left: 540px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB1Trip8 {
-	left: 640px;
+	left: 608px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB1Trip9 {
-	left: 725px;
+	left: 684px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB1Trip10 {
-	left: 820px;
+	left: 767px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
-
+.DB1Trip11 {
+	left: 845px;
+    position: absolute;
+    text-align: center;
+    top: 112px;
+}
 .DB2Trip1 {
 	left: 78px;
     position: absolute;
@@ -160,68 +586,68 @@ a{
     top: 112px;
 }
 .DB2Trip2 {
-	left: 148px;
+	left: 140px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip3 {
-	left: 222px;
+	left: 205px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip4 {
-	left: 290px;
+	left: 275px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip5 {
-	left: 366px;
+	left: 343px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip6 {
-	left: 476px;
+	left: 432px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip7 {
-	left: 550px;
+	left: 495px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip8 {
-	left: 640px;
+	left: 570px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip9 {
-	left: 725px;
+	left: 640px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 .DB2Trip10 {
-	left: 820px;
+	left: 724px;
     position: absolute;
     text-align: center;
     top: 112px;
 }
 
 .EM1Trip1 {
-	left: 280px;
+	left: 290px;
     position: absolute;
     text-align: center;
     top: 155px;
 }
 .EM1Trip2 {
-	left: 580px;
+	left: 585px;
     position: absolute;
     text-align: center;
     top: 155px;
@@ -233,10 +659,10 @@ a{
     top: 240px;
 }
 .EM1Trip4 {
-	left: 220px;
+	left: 520px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 160px;
 }
 .EM1Trip5 {
 	left: 590px;
@@ -263,28 +689,29 @@ a{
     top: 116px;
 }
 .EM1Class2 {
-	left: 613px;
+	left: 609px;
     position: absolute;
     text-align: center;
-    top: 116px;
+    top: 115px;
 }
 .EM1Class3 {
-	left: 344px;
+	left: 345px;
     position: absolute;
     text-align: center;
-    top: 199px;
+    top: 195px;
 }
 .EM1Class4 {
-	left: 246px;
+	left: 500px;
     position: absolute;
     text-align: center;
-    top: 199px;
+    top: 155px;
+	-webkit-transform: rotate(90deg);
 }
 .EM1Class5 {
-	left: 621px;
+	left: 618px;
     position: absolute;
     text-align: center;
-    top: 199px;
+    top: 195px;
 }
 
 .AC2PM1_10Info{
@@ -313,55 +740,55 @@ a{
     top: 67px;
 }
 .DB2Class2 {
-	left: 170px;
+	left: 159px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class3 {
-	left: 244px;
+	left: 224px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class4 {
-	left: 318px;
+	left: 292px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class5 {
-	left: 391px;
+	left: 362px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class6 {
-	left: 507px;
+	left: 450px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class7 {
-	left: 581px;
+	left: 515px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class8 {
-	left: 671px;
+	left: 587px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class9 {
-	left: 761px;
+	left: 659px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB2Class10 {
-	left: 855px;
+	left: 745px;
     position: absolute;
     text-align: center;
     top: 67px;
@@ -417,49 +844,49 @@ a{
 }
 
 .UD2Class1 {
-	left: 300px;
+	left: 294px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD2Class2 {
-	left: 368px;
+	left: 363px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD2Class3 {
-	left: 534px;
+	left: 529px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD2Class4 {
-	left: 672px;
+	left: 667px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD2Class5 {
-	left: 335px;
+	left: 330px;
     position: absolute;
     text-align: center;
     top: 199px;
 }
 .UD2Class6 {
-	left: 428px;
+	left: 422px;
     position: absolute;
     text-align: center;
     top: 199px;
 }
 .UD2Class7 {
-	left: 519px;
+	left: 514px;
     position: absolute;
     text-align: center;
     top: 199px;
 }
 .UD2Class8 {
-	left: 612px;
+	left: 606px;
     position: absolute;
     text-align: center;
     top: 199px;
@@ -501,135 +928,135 @@ a{
 
 
 .UD1Trip1 {
-	left: 250px;
+	left: 238px;
     position: absolute;
     text-align: center;
     top: 165px;
 }
 .UD1Trip2 {
-	left: 323px;
+	left: 305px;
     position: absolute;
     text-align: center;
     top: 170px;
 }
 .UD1Trip3 {
-	left: 505px;
+	left: 490px;
     position: absolute;
     text-align: center;
     top: 166px;
 }
 .UD1Trip4 {
-	left: 655px;
+	left: 643px;
     position: absolute;
     text-align: center;
     top: 166px;
 }
 .UD1Trip5 {
-	left: 293px;
+	left: 280px;
     position: absolute;
     text-align: center;
     top: 250px;
 }
 .UD1Trip6 {
-	left: 400px;
+	left: 380px;
     position: absolute;
     text-align: center;
     top: 250px;
 }
 .UD1Trip7 {
-	left: 492px;
+	left: 480px;
     position: absolute;
     text-align: center;
     top: 250px;
 }
 .UD1Trip8 {
-	left: 590px;
+	left: 580px;
     position: absolute;
     text-align: center;
     top: 250px;
 }
 
 .UD1Class1 {
-	left: 278px;
+	left: 255px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD1Class2 {
-	left: 348px;
+	left: 324px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD1Class3 {
-	left: 530px;
+	left: 506px;
     position: absolute;
     text-align: center;
     top: 126px;
 }
 .UD1Class4 {
-	left: 686px;
+	left: 661px;
     position: absolute;
     text-align: center;
     top: 127px;
 }
 .UD1Class5 {
-	left: 322px;
+	left: 298px;
     position: absolute;
     text-align: center;
     top: 205px;
 }
 .UD1Class6 {
-	left: 422px;
+	left: 398px;
     position: absolute;
     text-align: center;
     top: 205px;
 }
 .UD1Class7 {
-	left: 521px;
+	left: 495px;
     position: absolute;
     text-align: center;
     top: 205px;
 }
 .UD1Class8 {
-	left: 619px;
+	left: 595px;
     position: absolute;
     text-align: center;
     top: 205px;
 }
 .UD1PM1_1Info{
 	top: 55px;
-	left: 197px;
+	left: 185px;
 }
 .PM1_1 {
 	width: 48px;
 	height: 50px;
 	float: left;
-	left: 378px;
+	left: 353px;
 	position: absolute;
 	text-align: center;
 	top: 67px;
 }
 .table-PM1_1{
-	top: 118px;
-	left: 387px;
+	top: 125px;
+	left: 395px;
 }
 .UD1PM1_2Info{
 	top: 64px;
-	left: 615px;
+	left: 588px;
 }
 .PM1_2 {
 	width: 48px;
 	height: 50px;
 	float: left;
-	left: 560px;
+	left: 535px;
 	position: absolute;
 	text-align: center;
 	top: 67px;
 }
 .table-PM1_2{
-	top: 55px;
-	left: 340px;
+	top: 125px;
+	left: 310px;
 }
 
 
@@ -976,15 +1403,14 @@ a{
     top: 197px;
 }
 .AT2PM2_2Info{
-	top: 60px;
-	left: 685px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249)
+	top: 83px;
+	left: 266px;
 }
 .AT2PM1_13Info{
 	top: 83px;
 	left: 266px;
-	
+	top: 60px;
+	left: 685px;
 }
 .table-PM2_2{
 	top: 45px;
@@ -1005,9 +1431,7 @@ a{
 .table-PM1_13{
 	top: 45px;
 	left: 686px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249);
-	
+	z-index: 1000;
 }
 .PM1_13 {
   width: 48px;
@@ -1020,119 +1444,113 @@ a{
 }
 
 .AT1Trip1 {
-	left: 400px;
+	left: 405px;
     position: absolute;
     text-align: center;
-    top: 160px;
+    top: 163px;
 }
 .AT1Trip2 {
-	left: 570px;
+	left: 578px;
     position: absolute;
     text-align: center;
-    top: 160px;
+    top: 162px;
 }
 .AT1Trip3 {
-	left: 360px;
+	left: 358px;
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 239px;
 }
 .AT1Trip4 {
-	left: 460px;
+	left: 463px;
     position: absolute;
     text-align: center;
     top: 240px;
 }
 .AT1Trip5 {
-	left: 555px;
+	left: 561px;
     position: absolute;
     text-align: center;
     top: 240px;
 }
 .AT1Trip6 {
-	left: 657px;
+	    left: 663px;
     position: absolute;
     text-align: center;
     top: 240px;
 }
 .AT1Class1 {
-	left: 427px;
+left: 426px;
     position: absolute;
     text-align: center;
-    top: 123px;
+    top: 122px;
 }
 .AT1Class2 {
-	left: 598px;
+	left: 597px;
     position: absolute;
     text-align: center;
-    top: 123px;
+    top: 122px;
 }
 .AT1Class3 {
-	left: 385px;
+	left: 384px;
     position: absolute;
     text-align: center;
     top: 197px;
 }
 .AT1Class4 {
-	left: 485px;
+	left: 484px;
     position: absolute;
     text-align: center;
     top: 197px;
 }
 .AT1Class5 {
-	left: 586px;
+	left: 584px;
     position: absolute;
     text-align: center;
     top: 197px;
 }
 .AT1Class6 {
-	left: 686px;
+	left: 684px;
     position: absolute;
     text-align: center;
     top: 197px;
 }
 .AT1PM2_1Info{
-	top: 60px;
-	left: 685px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249)
+	top: 90px;
+    left: 254px;
 }
 .AT1PM1_12Info{
-	top: 83px;
-	left: 260px;
+	top: 59px;
+    left: 695px;
 	
 }
 .table-PM2_1{
-	top: 45px;
-	left: 505px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249);
-	z-index: 1000;
+	top: 125px;
+    left: 415px;
+    z-index: 1000;
 }
 .PM2_1 {
-  width: 48px;
-  height: 50px;
-  float: left;
-  left: 453px;
-  position: absolute;
-  text-align: center;
-  top: 62px;
+   width: 48px;
+    height: 50px;
+    float: left;
+    left: 452px;
+    position: absolute;
+    text-align: center;
+    top: 66px;
 }
 .table-PM1_12{
-	top: 45px;
-	left: 686px;
-	background-color: beige;
-	border: 1px solid rgb(249, 249, 249);
-	
+	top: 132px;
+    left: 458px;
+    z-index: 1000;
 }
 .PM1_12 {
-  width: 48px;
-  height: 50px;
-  float: left;
-  left: 626px;
-  position: absolute;
-  text-align: center;
-  top: 62px;
+    width: 48px;
+    height: 50px;
+    float: left;
+    left: 625px;
+    position: absolute;
+    text-align: center;
+    top: 62px;
 }
 
 .LV2Trip1 {
@@ -1166,33 +1584,34 @@ a{
 }
 
 .LV1Trip1 {
-	left: 415px;
+	left: 427px;
     position: absolute;
     text-align: center;
     top: 160px;
 }
 .LV1Class1 {
-	left: 448px;
+	    left: 448px;
     position: absolute;
     text-align: center;
     top: 124px;
 }
 .LV1PM1_17Info{
-	top: 50px;
-	left: 297px;
+    top: 47px;
+    left: 533px;
 }
 .PM1_17 {
-	width: 48px;
-	height: 50px;
+	//width: 48px;
+	//height: 50px;
 	float: left;
-	left: 475px;
+	left: 387px;
 	position: absolute;
 	text-align: center;
-	top: 55px;
+	top: 115px;
 }
 .table-PM1_17{
-	top: 45px;
-	left: 527px;
+	top: 110px;
+    left: 431px;
+    z-index: 1000;
 }
 
 
@@ -1303,7 +1722,7 @@ a{
     top: 182px;
 }
 .DB1Class1 {
-	left: 100px;
+	left: 97px;
     position: absolute;
     text-align: center;
     top: 67px;
@@ -1321,48 +1740,53 @@ a{
     top: 67px;
 }
 .DB1Class4 {
-	left: 319px;
+	left: 320px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class5 {
-	left: 391px;
+	left: 395px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class6 {
-	left: 503px;
+	left: 487px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class7 {
-	left: 576px;
+	left: 557px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class8 {
-	left: 664px;
+	left: 628px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class9 {
-	left: 754px;
+	left: 704px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
 .DB1Class10 {
-	left: 846px;
+	left: 783px;
     position: absolute;
     text-align: center;
     top: 67px;
 }
-
+.DB1Class11 {
+	left: 864px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+}
 .DB1Classc1 {
 	left: 125px;
     position: absolute;
