@@ -74,6 +74,14 @@ define(["durandal/app", "plugins/router", "knockout"], function (app, router, ko
         nav: false,
         hash: "#page/explorer/:sys/:id/:idc"
     }, {
+        route: "floor1(/:sys)(/:id)(/:idc)",
+        title: "Floor1",
+        description: "Floor1",
+        icon: "fa-folder",
+        moduleId: "pages/floor1",
+        nav: false,
+        hash: "#page/floor1/:sys/:id/:idc"
+    }, {
         route: "trending",
         title: "Trending",
         description: "Trending",

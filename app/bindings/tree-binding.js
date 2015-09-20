@@ -8,7 +8,7 @@
     ko.bindingHandlers.myTree = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             $(element).on("changed.jstree", function (e, data) {
-                window.location.href = "/#page/explorer" + data.instance.get_node(data.selected[0]).original.url
+                window.location.href = "/#page/floor1" + data.instance.get_node(data.selected[0]).original.url
             }).jstree({"plugins": ["wholerow"], "core": {"data": valueAccessor()}})
         }, update: function (element, valueAccessor) {
         }
