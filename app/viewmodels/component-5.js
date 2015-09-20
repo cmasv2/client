@@ -286,6 +286,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 					}
 				} else {
 					cf[0]['divt'] = 0;
+<<<<<<< HEAD
 				}
 					
 				if (cf[0]['divspd'] != undefined) {
@@ -294,6 +295,8 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 					}
 				} else {
 					cf[0]['divspd'] = 0;
+=======
+>>>>>>> master
 				}	
 				
 				if (cf[0]['divc'] != undefined) {
@@ -404,7 +407,11 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
 			
 			function pmclick(channel){
 				jQuery("#"+channel.name).toggle();
+<<<<<<< HEAD
 				//console.log(channel);
+=======
+				console.log(channel);
+>>>>>>> master
 			}	
 			
 			function Alarmtoggle() {
