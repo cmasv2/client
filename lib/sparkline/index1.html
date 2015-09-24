@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Simple Toggle Switch</title>
+  <style>
+  .switch {
+  margin: 12px auto;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 30px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #eeeeee, white 25px);
+  background-image: -moz-linear-gradient(top, #eeeeee, white 25px);
+  background-image: -o-linear-gradient(top, #eeeeee, white 25px);
+  background-image: linear-gradient(to bottom, #eeeeee, white 25px);
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+  background: #47a8d8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 13px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+.switch-handle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9px 0 0 -9px;
+  width: 18px;
+  height: 18px;
+  background: #f9f9f9;
+  border-radius: 9px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+  background-image: -webkit-linear-gradient(top, #eeeeee, white);
+  background-image: -moz-linear-gradient(top, #eeeeee, white);
+  background-image: -o-linear-gradient(top, #eeeeee, white);
+  background-image: linear-gradient(to bottom, #eeeeee, white);
+}
+.switch-input:checked ~ .switch-handle {
+  left: 55px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-green > .switch-input:checked ~ .switch-label {
+  background: #4fb845;
+}
+
+  </style>
+    <script type="text/javascript" src="../jquery/jquery-1.9.1.min.js""></script>
+    <script type="text/javascript" src="jquery.sparkline.min.js""></script>
+    <script type="text/javascript">
+        $(function() {
+            /** This code runs when everything has been loaded on the page */
+            /* Inline sparklines take their values from the contents of the tag */
+            $('.inlinesparkline').sparkline([1,2,3,4,5,6,7], {
+                    type: 'pie',
+                    width: '200 px',
+                    height: '200 px'});
+
+            /* Sparklines can also take their values from the first argument
+             passed to the sparkline() function */
+            var myvalues = [10,8,5,7,4,4,1];
+            $('.dynamicsparkline').sparkline(myvalues);
+
+            /* The second argument gives options such as chart type */
+            $('.dynamicbar').sparkline(myvalues, {type: 'bar', barColor: 'green'} );
+
+            /* Use 'html' instead of an array of values to pass options
+             to a sparkline with data in the tag */
+            $('.inlinebar').sparkline('html', {type: 'bar', barColor: 'red'} );
+        });
+    </script>
+</head>
+<body>
+  <div>
+    <label class="switch">
+      <input type="checkbox" class="switch-input">
+      <span class="switch-label" data-on="AUTO" data-off="MAN"></span>
+      <span class="switch-handle"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" class="switch-input" checked>
+      <span class="switch-label" data-on="On" data-off="Off"></span>
+      <span class="switch-handle"></span>
+    </label>
+
+    <label class="switch switch-green">
+      <input type="checkbox" class="switch-input" checked>
+      <span class="switch-label" data-on="On" data-off="Off"></span>
+      <span class="switch-handle"></span>
+    </label>
+  </div>
+  <p>
+      Inline Sparkline: <span class="inlinesparkline"></span>.
+	  <span style="background:#3366cc">test màu 3366cc</span>
+	  <span style="background:#dc3912">test màu dc3912</span>
+	  <span style="background:#ff9900">test màu ff9900</span>
+	  <span style="background:#109618">test màu 109618</span>
+	  <span style="background:#66aa00">test màu 66aa00</span>
+	  <span style="background:#dd4477">test màu dd4477</span>
+	  <span style="background:#0099c6">test màu 0099c6</span>
+	  <span style="background:#99f099">test màu 99f099</span>
+  </p>
+  <p>
+      Sparkline with dynamic data: <span class="dynamicsparkline">Loading..</span>
+  </p>
+  <p>
+      Bar chart with dynamic data: <span class="dynamicbar">Loading..</span>
+  </p>
+  <p>
+      Bar chart with inline data: <span class="inlinebar">1,3,4,5,3,5</span>
+  </p>
+<textarea id="log"></textarea>
+  <script type="text/javascript">
+      (function () {
+          var old = console.log;
+          var logger = document.getElementById('log');
+          console.log = function (message) {
+              if (typeof message == 'object') {
+                  logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message);
+              } else {
+                  logger.innerHTML += message;
+              }
+          }
+      })();
+      function base64_encode(data) {
+          var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+          var o1, o2, o3, h1, h2, h3, h4, bits, i = 0,
+                  ac = 0,
+                  enc = '',
+                  tmp_arr = [];
+
+          if (!data) {
+              return data;
+          }
+          var data = encodeURIComponent(data);
+          do { // pack three octets into four hexets
+              o1 = data.charCodeAt(i++);
+              o2 = data.charCodeAt(i++);
+              o3 = data.charCodeAt(i++);
+
+              bits = o1 << 16 | o2 << 8 | o3;
+
+              h1 = bits >> 18 & 0x3f;
+              h2 = bits >> 12 & 0x3f;
+              h3 = bits >> 6 & 0x3f;
+              h4 = bits & 0x3f;
+
+              // use hexets to index into b64, and append result to encoded string
+              tmp_arr[ac++] = b64.charAt(h1) + b64.charAt(h2) + b64.charAt(h3) + b64.charAt(h4);
+          } while (i < data.length);
+
+          enc = tmp_arr.join('');
+
+          var r = data.length % 3;
+
+          return (r ? enc.slice(0, r - 3) : enc) + '==='.slice(r || 3);
+      }
+      function base64_decode(data) {
+          var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+          var o1, o2, o3, h1, h2, h3, h4, bits, i = 0,
+                  ac = 0,
+                  dec = '',
+                  tmp_arr = [];
+
+          if (!data) {
+              return data;
+          }
+
+          data += '';
+          do { // unpack four hexets into three octets using index points in b64
+              h1 = b64.indexOf(data.charAt(i++));
+              h2 = b64.indexOf(data.charAt(i++));
+              h3 = b64.indexOf(data.charAt(i++));
+              h4 = b64.indexOf(data.charAt(i++));
+
+              bits = h1 << 18 | h2 << 12 | h3 << 6 | h4;
+
+              o1 = bits >> 16 & 0xff;
+              o2 = bits >> 8 & 0xff;
+              o3 = bits & 0xff;
+
+              if (h3 == 64) {
+                  tmp_arr[ac++] = String.fromCharCode(o1);
+              } else if (h4 == 64) {
+                  tmp_arr[ac++] = String.fromCharCode(o1, o2);
+              } else {
+                  tmp_arr[ac++] = String.fromCharCode(o1, o2, o3);
+              }
+          } while (i < data.length);
+
+          dec = tmp_arr.join('');
+
+          return decodeURIComponent(dec.replace(/\0+$/, ''));
+      }
+      console.log('{"key":"c8554bed03ab93e5951e3b5d916bea5e","info":{"info_name":"CMAS V2"},"configView":[{"value":"');
+      console.log(base64_encode('{"CMAS_UP":[{"status":{"value":0},"url":"detail/CMAS_UP","code":"CMAS_UPS1","progress":0,"logo":0,"value":[{"channelName":"UPS1_I1out","type":"2","text":"L1:"},{"channelName":"UPS1_I2out","type":"2","text":"L2:"},{"channelName":"UPS1_I3out","type":"2","text":"L3:"},{"channelName":"UPS1_BatteryRemainsTime","type":4}]},{"status":{"value":0},"url":"detail/CMAS_UP","code":"CMAS_UPS2","progress":0,"logo":0,"value":[{"channelName":"UPS2_I1out","type":"2","text":"L1:"},{"channelName":"UPS2_I2out","type":"2","text":"L2:"},{"channelName":"UPS2_I3out","type":"2","text":"L3:"},{"channelName":"UPS2_BatteryRemainsTime","type":4}]},{"status":{"value":0},"url":"detail/CMAS_UP","code":"CMAS_UPS3","progress":0,"logo":0,"value":[{"channelName":"UPS3_I1out","type":"2","text":"L1:"},{"channelName":"UPS3_I2out","type":"2","text":"L2:"},{"channelName":"UPS3_I3out","type":"2","text":"L3:"},{"channelName":"UPS3_BatteryRemainsTime","type":4}]}],' +
+      '"CMAS_UPS1":[{"code":"CMAS_UPS1","status":[{"name":" ","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"UPS1_UnitStatus","type":"6","_1":"unknown","_2":"onLine","_3":"on Battery","_4":"onSmartBoost","_5":"timedSleeping","_6":"softwareBypass","_7":"off","_8":"rebooting","_9":"switchedBypass","_10":"hardwareFailureBypass","_11":"sleepingUntilPowerReturn","_12":"onSmartTrim"}},{"icon":"fa fa-check-square-o","value":{"channelName":"UPS1_BatteryStatus","type":"6","_1":"unknown","_2":"batteryNormal ","_3":"batteryLow "}}]},{"Parameters":[{"name":"Input","values":[{"name":"Hz","channelName":"UPS1_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1in"},{"channelName":"UPS1_V2in"},{"channelName":"UPS1_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS1_V12in"},{"channelName":"UPS1_V23in"},{"channelName":"UPS1_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1in"},{"channelName":"UPS1_I2in"},{"channelName":"UPS1_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS1_p1in"},{"channelName":"UPS1_p2in"},{"channelName":"UPS1_p3in"}]}]}]}],"Parameters":[{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS1_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS1_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS1_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS1_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS1_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS1_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS1_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS1_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS1_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS1_BatteryTemperature"}],"data":0},{"name":"Output","values":[{"name":"Hz","channelName":"UPS1_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1out"},{"channelName":"UPS1_V2out"},{"channelName":"UPS1_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1out"},{"channelName":"UPS1_I2out"},{"channelName":"UPS1_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS1_kVA1out"},{"channelName":"UPS1_kVA2out"},{"channelName":"UPS1_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS1_kW1out"},{"channelName":"UPS1_kW2out"},{"channelName":"UPS1_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS1_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1bypass"},{"channelName":"UPS1_I2bypass"},{"channelName":"UPS1_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1bypass"},{"channelName":"UPS1_V2bypass"},{"channelName":"UPS1_V3bypass"}]}]}],"Battery":0}],' +
+      '"CMAS_UPS2":[{"code":"CMAS_UPS2","status":[{"name":" ","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"UPS2_UnitStatus","type":"6","_1":"unknown","_2":"onLine","_3":"on Battery","_4":"onSmartBoost","_5":"timedSleeping","_6":"softwareBypass","_7":"off","_8":"rebooting","_9":"switchedBypass","_10":"hardwareFailureBypass","_11":"sleepingUntilPowerReturn","_12":"onSmartTrim"}},{"icon":"fa fa-check-square-o","value":{"channelName":"UPS2_BatteryStatus","type":"6","_1":"unknown","_2":"batteryNormal ","_3":"batteryLow "}}]},{"Parameters":[{"name":"Input","values":[{"name":"Hz","channelName":"UPS2_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1in"},{"channelName":"UPS2_V2in"},{"channelName":"UPS2_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS2_V12in"},{"channelName":"UPS2_V23in"},{"channelName":"UPS2_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1in"},{"channelName":"UPS2_I2in"},{"channelName":"UPS2_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS2_p1in"},{"channelName":"UPS2_p2in"},{"channelName":"UPS2_p3in"}]}]}]}],"Parameters":[{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS2_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS2_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS2_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS2_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS2_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS2_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS2_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS2_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS2_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS2_BatteryTemperature"}],"data":0},{"name":"Output","values":[{"name":"Hz","channelName":"UPS2_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1out"},{"channelName":"UPS2_V2out"},{"channelName":"UPS2_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1out"},{"channelName":"UPS2_I2out"},{"channelName":"UPS2_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS2_kVA1out"},{"channelName":"UPS2_kVA2out"},{"channelName":"UPS2_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS2_kW1out"},{"channelName":"UPS2_kW2out"},{"channelName":"UPS2_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS2_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1bypass"},{"channelName":"UPS2_I2bypass"},{"channelName":"UPS2_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1bypass"},{"channelName":"UPS2_V2bypass"},{"channelName":"UPS2_V3bypass"}]}]}],"Battery":0}],' +
+      '"CMAS_UPS3":[{"code":"CMAS_UPS3","status":[{"name":" ","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"UPS1_UnitStatus","type":"6","_1":"unknown","_2":"onLine","_3":"on Battery","_4":"onSmartBoost","_5":"timedSleeping","_6":"softwareBypass","_7":"off","_8":"rebooting","_9":"switchedBypass","_10":"hardwareFailureBypass","_11":"sleepingUntilPowerReturn","_12":"onSmartTrim"}},{"icon":"fa fa-check-square-o","value":{"channelName":"UPS1_BatteryStatus","type":"6","_1":"unknown","_2":"batteryNormal ","_3":"batteryLow "}}]},{"Parameters":[{"name":"Input","values":[{"name":"Hz","channelName":"UPS3_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1in"},{"channelName":"UPS3_V2in"},{"channelName":"UPS3_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS3_V12in"},{"channelName":"UPS3_V23in"},{"channelName":"UPS3_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1in"},{"channelName":"UPS3_I2in"},{"channelName":"UPS3_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS3_p1in"},{"channelName":"UPS3_p2in"},{"channelName":"UPS3_p3in"}]}]}]}],"Parameters":[{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS3_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS3_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS3_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS3_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS3_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS3_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS3_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS3_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS3_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS3_BatteryTemperature"}],"data":0},{"name":"Output","values":[{"name":"Hz","channelName":"UPS3_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1out"},{"channelName":"UPS3_V2out"},{"channelName":"UPS3_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1out"},{"channelName":"UPS3_I2out"},{"channelName":"UPS3_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS3_kVA1out"},{"channelName":"UPS3_kVA2out"},{"channelName":"UPS3_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS3_kW1out"},{"channelName":"UPS3_kW2out"},{"channelName":"UPS3_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS3_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1bypass"},{"channelName":"UPS3_I2bypass"},{"channelName":"UPS3_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1bypass"},{"channelName":"UPS3_V2bypass"},{"channelName":"UPS3_V3bypass"}]}]}],"Battery":0}],' +
+      '"CMAS_PW":[{"url":"detail/CMAS_PW","code":"CMAS_PW_DBIT","status":{"value":0},"progress":0,"logo":0,"value":[{"channelName":"DPMA_I1","type":"2","text":"SA L1:"},{"channelName":"DPMA_I2","type":"2","text":"L2:"},{"channelName":"DPMA_I3","type":"2","text":"L3:"},{"channelName":"DPMA_kVA"},{"channelName":"DPMB_I1","type":"2","text":"<br/>SB L1:"},{"channelName":"DPMB_I2","type":"2","text":"L2:"},{"channelName":"DPMB_I3","type":"2","text":"L3:"},{"channelName":"DPMB_kVA"},{"channelName":"DPMAC_I1","type":"2","text":"<br/>AC L1:"},{"channelName":"DPMAC_I2","type":"2","text":"L2:"},{"channelName":"DPMAC_I3","type":"2","text":"L3:"},{"channelName":"DPMAC_kVA"}]},{"url":"detail/CMAS_PW","code":"CMAS_PW_PDU","status":{"value":0},"progress":0,"logo":0,"value":[{"channelName":"PDU_Coupler","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"},{"channelName":"PDU_MbsCb","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}]}],' +
+      '"CMAS_PW_DBIT":[{"code":"CMAS_PW_DBIT","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"DBIT_MainCb1","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DBIT_MainCb2","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DBIT_MbsCb","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DBIT_SpdCB","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DBIT_Coupler","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMA_Min"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMA_Hour"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMB_Min"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMB_Hour"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMAC_Min"}},{"icon":"fa fa-check-square-o","value":{"channelName":"DPMAC_Hour"}}]},{"Parameters":[{"name":"AC","values":[{"name":"Freq(Hz)","channelName":"DPMAC_F"},{"name":"pf","channelName":"DPMAC_pf"},{"name":"kW","channelName":"DPMAC_kW"},{"name":"kVA","channelName":"DPMAC_kVA"},{"name":"kWh","channelName":"DPMAC_kWh"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMAC_V1"},{"channelName":"DPMAC_V2"},{"channelName":"DPMAC_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMAC_V12"},{"channelName":"DPMAC_V23"},{"channelName":"DPMAC_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMAC_I1"},{"channelName":"DPMAC_I2"},{"channelName":"DPMAC_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMAC_kVA1"},{"channelName":"DPMAC_kVA2"},{"channelName":"DPMAC_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMAC_kW1"},{"channelName":"DPMAC_kW2"},{"channelName":"DPMAC_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMAC_THD_V1"},{"channelName":"DPMAC_THD_V2"},{"channelName":"DPMAC_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMAC_THD_V12"},{"channelName":"DPMAC_THD_V23"},{"channelName":"DPMAC_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMAC_THD_I1"},{"channelName":"DPMAC_THD_I2"},{"channelName":"DPMAC_THD_I3"}]}]}]}],"Parameters":[{"name":"Source A","values":[{"name":"Freq(Hz)","channelName":"DPMA_F"},{"name":"pf","channelName":"DPMA_pf"},{"name":"kW","channelName":"DPMA_kW"},{"name":"kVA","channelName":"DPMA_kVA"},{"name":"kWh","channelName":"DPMA_kWh"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMA_V1"},{"channelName":"DPMA_V2"},{"channelName":"DPMA_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMA_V12"},{"channelName":"DPMA_V23"},{"channelName":"DPMA_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMA_I1"},{"channelName":"DPMA_I2"},{"channelName":"DPMA_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMA_kVA1"},{"channelName":"DPMA_kVA2"},{"channelName":"DPMA_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMA_kW1"},{"channelName":"DPMA_kW2"},{"channelName":"DPMA_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMA_THD_V1"},{"channelName":"DPMA_THD_V2"},{"channelName":"DPMA_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMA_THD_V12"},{"channelName":"DPMA_THD_V23"},{"channelName":"DPMA_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMA_THD_I1"},{"channelName":"DPMA_THD_I2"},{"channelName":"DPMA_THD_I3"}]}]},{"name":"Source B","values":[{"name":"Freq(Hz)","channelName":"DPMB_F"},{"name":"pf","channelName":"DPMB_pf"},{"name":"kW","channelName":"DPMB_kW"},{"name":"kVA","channelName":"DPMB_kVA"},{"name":"kWh","channelName":"DPMB_kWh"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMB_V1"},{"channelName":"DPMB_V2"},{"channelName":"DPMB_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMB_V12"},{"channelName":"DPMB_V23"},{"channelName":"DPMB_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMB_I1"},{"channelName":"DPMB_I2"},{"channelName":"DPMB_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMB_kVA1"},{"channelName":"DPMB_kVA2"},{"channelName":"DPMB_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMB_kW1"},{"channelName":"DPMB_kW2"},{"channelName":"DPMB_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMB_THD_V1"},{"channelName":"DPMB_THD_V2"},{"channelName":"DPMB_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMB_THD_V12"},{"channelName":"DPMB_THD_V23"},{"channelName":"DPMB_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMB_THD_I1"},{"channelName":"DPMB_THD_I2"},{"channelName":"DPMB_THD_I3"}]}]}]}],' +
+      '"CMAS_PW_PDU":[{"code":"CMAS_PW_PDU","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"PDU_Coupler","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}},{"icon":"fa fa-check-square-o","value":{"channelName":"PDU_MbsCb","type":"1","_0":"<span class=\'text-danger\'><i class=\'fa fa-toggle-off\'></i> OFF</span>","_1":"<span class=\'text-success\'><i class=\'fa fa-toggle-on\'></i> ON</span>"}}]}],"Parameters":0}],' +
+      '"CMAS_FF":[{"url":"detail/CMAS_FF","code":"CMAS_FF_FM200SV","status":{"value":0},"progress":0,"logo":"fa fa-fire-extinguisher text-danger","value":[{"channelName":"FM200_ServerTrouble","type":"1","_0":"Trouble: Normal","_1":"Trouble: Alarm"},{"channelName":"FM200_ServerFire","type":"1","_0":"Fire: No","_1":"Fire: Alarm"}]}],' +
+      '"CMAS_FF_FM200SV":[{"code":"CMAS_FF_FM200SV","status":[{"name":" ","datas":[{"icon":"glyphicon glyphicon-fire warningh","value":{"channelName":"FM200_ServerFire","type":"1","_0":"No","_1":"Alarm"}},{"icon":"fa fa-exclamation-triangle warningh","value":{"channelName":"FM200_ServerTrouble","type":"1","_0":"Normal","_1":"Alarm"}}]}],"Parameters":0}],' +
+      '"CMAS_EV":[{"url":"detail/CMAS_EV","code":"CMAS_EV_TH","status":{"value":0},"progress":0,"logo":"glyphicon glyphicon-leaf","value":[{"channelName":"ENV_ServerTemp1"},{"channelName":"ENV_ServerHum1"}]},{"url":"detail/CMAS_EV","code":"CMAS_LL_SI1","status":{"value":0},"progress":0,"logo":"glyphicon glyphicon-tint","value":[{"channelName":"LLD_Leak","type":"1","_0":"<span class=\'text-success\'><i class=\'fa fa-check\'></i> No leak</span>","_1":"<span class=\'text-danger\'><i class=\'fa fa-chain-broken\'></i> Leak</span>"}]}],' +
+      '"CMAS_LL":[{"url":"detail/CMAS_LL","code":"CMAS_LL_SI1","status":{"value":0},"progress":0,"logo":"glyphicon glyphicon-tint","value":[{"channelName":"LLD_Leak","type":"1","_0":"<span class=\'text-success\'><i class=\'fa fa-check\'></i> No leak</span>","_1":"<span class=\'text-danger\'><i class=\'fa fa-chain-broken\'></i> Leak</span>"}]}],' +
+      '"CMAS_EV_TH":[{"code":"CMAS_EV_TH","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"ENV_ServerTemp1"}},{"icon":"fa fa-check-square-o","value":{"channelName":"ENV_ServerHum1"}}]}],"Parameters":0}],' +
+      '"CMAS_LL_SI1":[{"code":"CMAS_LL_SI1","status":[{"name":" ","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"LLD_Leak","type":"1","_0":"<span class=\'text-success\'><i class=\'fa fa-check\'></i> No leak</span>","_1":"<span class=\'text-danger\'><i class=\'fa fa-chain-broken\'></i> Leak</span>"}}]}],"Parameters":0}],' +
+      '"CMAS_AI":[{"url":"detail/CMAS_AI","code":"CMAS_AC1","status":1,"progress":0,"logo":"glyphicon glyphicon-retweet","value":[{"channelName":"AC_ServerRunTime1","type":"4"},{"channelName":"AC_ServerCtrl1","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}]},{"url":"detail/CMAS_AI","code":"CMAS_AC2","status":1,"progress":0,"logo":"glyphicon glyphicon-retweet","value":[{"channelName":"AC_ServerRunTime2","type":"4"},{"channelName":"AC_ServerCtrl2","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}]},{"url":"detail/CMAS_AI","code":"CMAS_AC3","status":1,"progress":0,"logo":"glyphicon glyphicon-retweet","value":[{"channelName":"AC_ServerRunTime3","type":"4"},{"channelName":"AC_ServerCtrl3","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}]}],' +
+      '"CMAS_AC1":[{"code":"CMAS_AC1","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"AC_ServerRunTime1","type":"4"}},{"icon":"fa fa-tag","value":{"channelName":"AC_ServerCtrl1","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerManEnable","_0":"MAN","_1":"AUTO"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerMan1","_0":"ON","_1":"OFF"}}]}],"Parameters":0}],' +
+      '"CMAS_AC2":[{"code":"CMAS_AC2","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"AC_ServerRunTime2","type":"4"}},{"icon":"fa fa-tag","value":{"channelName":"AC_ServerCtrl2","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerManEnable","_0":"MAN","_1":"AUTO"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerMan2","_0":"ON","_1":"OFF"}}]}],"Parameters":0}],' +
+      '"CMAS_AC3":[{"code":"CMAS_AC3","status":[{"name":"","datas":[{"icon":"fa fa-check-square-o","value":{"channelName":"AC_ServerRunTime3","type":"4"}},{"icon":"fa fa-tag","value":{"channelName":"AC_ServerCtrl3","type":"1","_1":"<span class=\'text-success\'><i class=\'fa fa-spinner fa-spin\'></i> Running</span>","_0":"<span class=\'text-danger\'><i class=\'fa fa-stop\'></i> Stop</span>"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerManEnable","_0":"MAN","_1":"AUTO"}},{"icon":"fa fa-check-square-o","value":{"type":"5","channelName":"AC_ServerMan3","_0":"ON","_1":"OFF"}}]}],"Parameters":0}],' +
+      //'"CMAS_PW_DETAIL":[{"Parameters":[{"name":"Source A","values":[{"name":"Freq(Hz)","channelName":"DPMA_F"},{"name":"Hz","channelName":"DPMA_pf"},{"name":"kW","channelName":"DPMA_kW"},{"name":"kVA","channelName":"DPMA_kVA"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMA_V1"},{"channelName":"DPMA_V2"},{"channelName":"DPMA_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMA_V12"},{"channelName":"DPMA_V23"},{"channelName":"DPMA_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMA_I1"},{"channelName":"DPMA_I2"},{"channelName":"DPMA_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMA_kVA1"},{"channelName":"DPMA_kVA2"},{"channelName":"DPMA_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMA_kW1"},{"channelName":"DPMA_kW2"},{"channelName":"DPMA_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMA_THD_V1"},{"channelName":"DPMA_THD_V2"},{"channelName":"DPMA_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMA_THD_V12"},{"channelName":"DPMA_THD_V23"},{"channelName":"DPMA_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMA_THD_I1"},{"channelName":"DPMA_THD_I2"},{"channelName":"DPMA_THD_I3"}]}]},{"name":"Source B","values":[{"name":"Freq(Hz)","channelName":"DPMB_F"},{"name":"Hz","channelName":"DPMB_pf"},{"name":"kW","channelName":"DPMB_kW"},{"name":"kVA","channelName":"DPMB_kVA"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMB_V1"},{"channelName":"DPMB_V2"},{"channelName":"DPMB_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMB_V12"},{"channelName":"DPMB_V23"},{"channelName":"DPMB_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMB_I1"},{"channelName":"DPMB_I2"},{"channelName":"DPMB_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMB_kVA1"},{"channelName":"DPMB_kVA2"},{"channelName":"DPMB_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMB_kW1"},{"channelName":"DPMB_kW2"},{"channelName":"DPMB_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMB_THD_V1"},{"channelName":"DPMB_THD_V2"},{"channelName":"DPMB_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMB_THD_V12"},{"channelName":"DPMB_THD_V23"},{"channelName":"DPMB_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMB_THD_I1"},{"channelName":"DPMB_THD_I2"},{"channelName":"DPMB_THD_I3"}]}]},{"name":"AC","values":[{"name":"Freq(Hz)","channelName":"DPMAC_F"},{"name":"Hz","channelName":"DPMAC_pf"},{"name":"kW","channelName":"DPMAC_kW"},{"name":"kVA","channelName":"DPMAC_kVA"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"DPMAC_V1"},{"channelName":"DPMAC_V2"},{"channelName":"DPMAC_V3"}]},{"name":"Vp","unit":"V","values":[{"channelName":"DPMAC_V12"},{"channelName":"DPMAC_V23"},{"channelName":"DPMAC_V31"}]},{"name":"I","unit":"A","values":[{"channelName":"DPMAC_I1"},{"channelName":"DPMAC_I2"},{"channelName":"DPMAC_I3"}]},{"name":"kVA","unit":"","values":[{"channelName":"DPMAC_kVA1"},{"channelName":"DPMAC_kVA2"},{"channelName":"DPMAC_kVA3"}]},{"name":"kW","unit":"","values":[{"channelName":"DPMAC_kW1"},{"channelName":"DPMAC_kW2"},{"channelName":"DPMAC_kW3"}]},{"name":"TDH Vd","unit":"V","values":[{"channelName":"DPMAC_THD_V1"},{"channelName":"DPMAC_THD_V2"},{"channelName":"DPMAC_THD_V3"}]},{"name":"TDH Vp","unit":"V","values":[{"channelName":"DPMAC_THD_V12"},{"channelName":"DPMAC_THD_V23"},{"channelName":"DPMAC_THD_V31"}]},{"name":"THD I","unit":"A","values":[{"channelName":"DPMAC_THD_I1"},{"channelName":"DPMAC_THD_I2"},{"channelName":"DPMAC_THD_I3"}]}]}]}],' +
+      '"DOCUMENT_ALL":[{"code":"CMAS_PW_DBIT","_":[{"name":"User Manual","id":0,"icon":"jstree-folder","sub":[{"name":"Hướng dẫn vận hành tủ điện DBIT","id":1,"path":"UserManual/DBIT.pdf","icon":"icon-pdf","sub":0}]},{"name":"As-built drawings","id":0,"icon":"jstree-folder","sub":[{"name":"Hệ thống tủ điện DBIT","id":1,"path":"drawings/DBIT.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_PW_PDU","_":[{"name":"User Manual","id":0,"icon":"jstree-folder","sub":[{"name":"Hướng dẫn vận hành","id":1,"path":"UserManual/PDU.pdf","icon":"icon-pdf","sub":0}]},{"name":"As-built drawings","id":0,"icon":"jstree-folder","sub":[{"name":"Hệ thống tủ điện PDU","id":1,"path":"drawings/PDU.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_UPS1","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Galaxy 3500 10-40kVA","id":1,"path":"catalogues/Galaxy 3500 10-40kVA.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_UPS2","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Galaxy 3500 10-40kVA","id":1,"path":"catalogues/Galaxy 3500 10-40kVA.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_UPS3","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Galaxy 3500 10-40kVA","id":1,"path":"catalogues/Galaxy 3500 10-40kVA.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_LL_SI1","_":[{"name":"User Manual","id":0,"icon":"jstree-folder","sub":[{"name":"Hướng dẫn vận hành LLD","id":1,"path":"UserManual/LLD.pdf","icon":"icon-pdf","sub":0}]},{"name":"As-built drawings","id":0,"icon":"jstree-folder","sub":[{"name":"Hệ thống Báo Dập cháy","id":1,"path":"drawings/LLD.pdf","icon":"icon-pdf","sub":0}]},{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Carel Flooding sensor dectector","id":1,"path":"catalogues/Carel Flooding sensor dectector.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_FF_FM200SV","_":[{"name":"User Manual","id":0,"icon":"jstree-folder","sub":[{"name":"Hướng dẫn vận hành PYROSHIELD","id":1,"path":"UserManual/FM200.pdf","icon":"icon-pdf","sub":0}]},{"name":"As-built drawings","id":0,"icon":"jstree-folder","sub":[{"name":"Hệ thống Báo Dập cháy","id":1,"path":"drawings/FM200.pdf","icon":"icon-pdf","sub":0}]},{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"IG55 Technical manual - design, installation and maintenance","id":1,"path":"catalogues/IG55.pdf","icon":"icon-pdf","sub":0},{"name":"Protec 3000-Electronic sounder","id":1,"path":"Protec3000-Electronicsounder.pdf","icon":"icon-pdf","sub":0},{"name":"Protec 3000-Optical smoke detector","id":1,"path":"Protec3000-Opticalsmokedetector.pdf","icon":"icon-pdf","sub":0},{"name":"Protec 3000-temperature heat detector","id":1,"path":"Protec3000-temperatureheatdetector.pdf","icon":"icon-pdf","sub":0},{"name":"CME Gas release control panel","id":1,"path":"CMEGasreleasecontrolpanel.pdf","icon":"icon-pdf","sub":0},{"name":"Unique manual switch, bell, emergency box","id":1,"path":"Uniquemanualswitchbellemergencyboxl.pdf","icon":"icon-pdf","sub":0},{"name":"Unique flash light, fire panel","id":1,"path":"Uniqueflashlightfirepanel.pdf","icon":"icon-pdf","sub":0},{"name":"Unique Manual Call Point","id":1,"path":"UniqueManualCallPoint.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_AC1","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Trane Minisplit air conditioners","id":1,"path":"catalogues/Trane Minisplit air conditioners.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_AC2","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Trane Minisplit air conditioners","id":1,"path":"catalogues/Trane Minisplit air conditioners.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_AC3","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Trane Minisplit air conditioners","id":1,"path":"catalogues/Trane Minisplit air conditioners.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"ITW_FF_FM200SV","_":[{"name":"User Manual","id":0,"icon":"jstree-folder","sub":[{"name":"Hướng dẫn vận hành tủ chữa cháy","id":1,"path":"UserManual/PCCC.pdf","icon":"icon-pdf","sub":0}]},{"name":"As-built drawings","id":0,"icon":"jstree-folder","sub":[{"name":"Hệ thống Báo Dập cháy","id":1,"path":"UserManual/FIRE.pdf","icon":"icon-pdf","sub":0}]},{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"Janus FM200 Cylinder 40 - 130lbs","id":1,"path":"catalogues/FM200.pdf","icon":"icon-pdf","sub":0}]}]},{"code":"CMAS_EV_TH","_":[{"name":"Catalogues","id":0,"icon":"jstree-folder","sub":[{"name":"RS-04a_INSSXEN","id":1,"path":"catalogues/TRS-04a_INSSXEN_v.1.06.000.pdf","icon":"icon-pdf","sub":0}]}]}],' +
+      '"CMAS_DETAIL":[{"onpage":[{"_class":"Environmental1","values":[{"channelName":"ENV_ServerTemp1"},{"channelName":"ENV_ServerHum1"}]}]}],' +
+      '"CMAS_EV_DETAIL":[{"onpage":[{"_class":"Environmental1","values":[{"channelName":"ENV_ServerTemp1"},{"channelName":"ENV_ServerHum1"}]}]}],' +
+      //'"CMAS_UP_DETAIL":[{"Parameters":[{"name":"UPS 1"},{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS1_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS1_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS1_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS1_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS1_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS1_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS1_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS1_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS1_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS1_BatteryTemperature"}],"data":0},{"name":"Input","values":[{"name":"Hz","channelName":"UPS1_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1in"},{"channelName":"UPS1_V2in"},{"channelName":"UPS1_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS1_V12in"},{"channelName":"UPS1_V23in"},{"channelName":"UPS1_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1in"},{"channelName":"UPS1_I2in"},{"channelName":"UPS1_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS1_p1in"},{"channelName":"UPS1_p2in"},{"channelName":"UPS1_p3in"}]}]},{"name":"Output","values":[{"name":"Hz","channelName":"UPS1_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1out"},{"channelName":"UPS1_V2out"},{"channelName":"UPS1_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1out"},{"channelName":"UPS1_I2out"},{"channelName":"UPS1_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS1_kVA1out"},{"channelName":"UPS1_kVA2out"},{"channelName":"UPS1_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS1_kW1out"},{"channelName":"UPS1_kW2out"},{"channelName":"UPS1_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS1_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS1_I1bypass"},{"channelName":"UPS1_I2bypass"},{"channelName":"UPS1_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS1_V1bypass"},{"channelName":"UPS1_V2bypass"},{"channelName":"UPS1_V3bypass"}]}]},{"name":"UPS 2"},{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS2_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS2_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS2_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS2_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS2_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS2_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS2_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS2_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS2_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS2_BatteryTemperature"}],"data":0},{"name":"Input","values":[{"name":"Hz","channelName":"UPS2_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1in"},{"channelName":"UPS2_V2in"},{"channelName":"UPS2_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS2_V12in"},{"channelName":"UPS2_V23in"},{"channelName":"UPS2_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1in"},{"channelName":"UPS2_I2in"},{"channelName":"UPS2_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS2_p1in"},{"channelName":"UPS2_p2in"},{"channelName":"UPS2_p3in"}]}]},{"name":"Output","values":[{"name":"Hz","channelName":"UPS2_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1out"},{"channelName":"UPS2_V2out"},{"channelName":"UPS2_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1out"},{"channelName":"UPS2_I2out"},{"channelName":"UPS2_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS2_kVA1out"},{"channelName":"UPS2_kVA2out"},{"channelName":"UPS2_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS2_kW1out"},{"channelName":"UPS2_kW2out"},{"channelName":"UPS2_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS2_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS2_I1bypass"},{"channelName":"UPS2_I2bypass"},{"channelName":"UPS2_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS2_V1bypass"},{"channelName":"UPS2_V2bypass"},{"channelName":"UPS2_V3bypass"}]}]},{"name":"UPS 3"},{"name":"Battery","values":[{"name":"Volt (V)","channelName":"UPS3_BatteryVoltage"},{"name":"Volt N (V)","channelName":"UPS3_BatteryVoltageN"},{"name":"Volt (%)","channelName":"UPS3_BatteryVoltageP"},{"name":"Current (A)","channelName":"UPS3_BatteryCurrent"},{"name":"Current N (A)","channelName":"UPS3_BatteryCurrentN"},{"name":"Current (%)","channelName":"UPS3_BatteryCurrentP"},{"name":"Capacity","channelName":"UPS3_BatteryCapacity"},{"name":"Replace Indicator","channelName":"UPS3_BatteryReplaceIndicator"},{"name":"Backup Time (min)","channelName":"UPS3_BatteryRemainsTime"},{"name":"Temperature (oC)","channelName":"UPS3_BatteryTemperature"}],"data":0},{"name":"Input","values":[{"name":"Hz","channelName":"UPS3_Fin"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1in"},{"channelName":"UPS3_V2in"},{"channelName":"UPS3_V3in"}]},{"name":"Vp","unit":"V","values":[{"channelName":"UPS3_V12in"},{"channelName":"UPS3_V23in"},{"channelName":"UPS3_V31in"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1in"},{"channelName":"UPS3_I2in"},{"channelName":"UPS3_I3in"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS3_p1in"},{"channelName":"UPS3_p2in"},{"channelName":"UPS3_p3in"}]}]},{"name":"Output","values":[{"name":"Hz","channelName":"UPS3_Fout"}],"data":[{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1out"},{"channelName":"UPS3_V2out"},{"channelName":"UPS3_V3out"}]},{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1out"},{"channelName":"UPS3_I2out"},{"channelName":"UPS3_I3out"}]},{"name":"kVA","unit":"","values":[{"channelName":"UPS3_kVA1out"},{"channelName":"UPS3_kVA2out"},{"channelName":"UPS3_kVA3out"}]},{"name":"kW","unit":"","values":[{"channelName":"UPS3_kW1out"},{"channelName":"UPS3_kW2out"},{"channelName":"UPS3_kW3out"}]}]},{"name":"Bypass","values":[{"name":"Hz","channelName":"UPS3_Fbypass"}],"data":[{"name":"I","unit":"A","values":[{"channelName":"UPS3_I1bypass"},{"channelName":"UPS3_I2bypass"},{"channelName":"UPS3_I3bypass"}]},{"name":"Vd","unit":"V","values":[{"channelName":"UPS3_V1bypass"},{"channelName":"UPS3_V2bypass"},{"channelName":"UPS3_V3bypass"}]}]}]}],' +
+      '"CONFIG_INFO":{"l":1,"s":6,"u":11,"co":3,"ch":289}}'));
+      console.log('"}]}');
+
+  </script>
+
+</body>
+</html>

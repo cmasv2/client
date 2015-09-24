@@ -1,0 +1,158 @@
+﻿<div class="form-horizontal well">
+
+    <hr style="padding: 0px; margin: 0px;"/>
+    <div class="form-group" style="margin: 0">
+        <label class="col-sm-5 control-label" style="margin-top: 10px; font-size: 18px;">Server Room</label>
+        <div class="col-sm-4">
+            <!-- ko foreach: mode-->
+            <div style="line-height: 54px;">
+                <label class="switch">
+                    <input type="checkbox" class="switch-input" data-bind="checked:(value()*1)">
+                    <span class="switch-label" data-on="MAN" data-off="AUTO" data-bind="click: $root.ValueControl"></span>
+                    <span class="switch-handle" data-bind="click: $root.ValueControl"></span>
+                </label>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+    <table class="table table-striped" cellspacing="0" style="margin:0">
+        <tbody class="table table-hover">
+        <!-- ko if: !(modevl()*1)-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="line-height: 35px;">No. of Standby</td>
+            <td>
+                <select class="form-control" data-bind="value:ServerNumberStandby.value">
+                    <option value="0">n + 0</option>
+                    <option value="1">n + 1</option>
+                    <option value="2">n + 2</option>
+                </select>
+            </td>
+            <td style="line-height: 35px;">Rotate Time</td>
+            <td style="line-height: 35px;">
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.h"> h
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.m"> m
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.s"> s
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 35px;">Temp. High (&deg; C) </td>
+            <td>
+                <input type="number" placeholder="Temp. High" class="form-control" data-bind="value: ServerTempHigh.value">
+            </td>
+            <td style="line-height: 35px;">Temp. Reset (&deg; C)</td>
+            <td>
+                <input type="number" placeholder="Temp. Reset" class="form-control" data-bind="value: ServerTempReset.value">
+            </td>
+        </tr>
+        <!-- /ko -->
+        <!-- ko if: (modevl()*1)-->
+        <!-- ko foreach: control-->
+        <tr>
+            <td style="line-height: 54px;" data-bind="html:name">AC 1</td>
+            <td style="line-height: 54px;" data-bind="html:status.value()"></td>
+            <td><div>
+                <label class="switch">
+                    <input type="checkbox" class="switch-input" data-bind="checked:(control.value()*1)">
+                    <span class="switch-label" data-on="ON" data-off="OFF" data-bind="click: $root.ValueControl1"></span>
+                    <span class="switch-handle" data-bind="click: $root.ValueControl1"></span>
+                </label>
+            </div></td>
+            <td>&nbsp;</td>
+        </tr>
+        <!-- /ko -->
+        <!-- /ko -->
+        </tbody>
+    </table>
+    <!-- ko if: !(modevl()*1)-->
+    <div class="form-group" style="margin: 0">
+        <label class="col-sm-5 control-label"> </label>
+        <div class="col-sm-4">
+            <button class="btn btn-danger" type="submit" data-bind="click: $root.saveConfig">Save Config</button>
+        </div>
+    </div >
+    <!-- /ko -->
+
+    <hr style="padding: 0px; margin: 0px;"/>
+    <div class="form-group" style="margin: 0">
+        <label class="col-sm-5 control-label" style="margin-top: 10px; font-size: 18px;">M&E Room</label>
+        <div class="col-sm-4">
+            <!-- ko foreach: mode1-->
+            <div style="line-height: 54px;">
+                <label class="switch">
+                    <input type="checkbox" class="switch-input" data-bind="checked:(value()*1)">
+                    <span class="switch-label" data-on="MAN" data-off="AUTO" data-bind="click: $root.ValueControl2"></span>
+                    <span class="switch-handle" data-bind="click: $root.ValueControl2"></span>
+                </label>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+    <table class="table table-striped" cellspacing="0" style="margin:0">
+        <tbody class="table table-hover">
+        <!-- ko if: !(modevl1()*1)-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="line-height: 35px;">No. of Standby</td>
+            <td>
+                <select class="form-control" data-bind="value:ServerNumberStandby.value">
+                    <option value="0">n + 0</option>
+                    <option value="1">n + 1</option>
+                    <option value="2">n + 2</option>
+                </select>
+            </td>
+            <td style="line-height: 35px;">Rotate Time</td>
+            <td style="line-height: 35px;">
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.h"> h
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.m"> m
+                <input type="number" placeholder="Rotate Time" class="formcontrol1" data-bind="value: ServerRotateTime.s"> s
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 35px;">Temp. High (&deg; C) </td>
+            <td>
+                <input type="number" placeholder="Temp. High" class="form-control" data-bind="value: ServerTempHigh.value">
+            </td>
+            <td style="line-height: 35px;">Temp. Reset (&deg; C)</td>
+            <td>
+                <input type="number" placeholder="Temp. Reset" class="form-control" data-bind="value: ServerTempReset.value">
+            </td>
+        </tr>
+        <!-- /ko -->
+        <!-- ko if: (modevl1()*1)-->
+        <!-- ko foreach: control1-->
+        <tr>
+            <td style="line-height: 54px;" data-bind="html:name">AC 1</td>
+            <td style="line-height: 54px;" data-bind="html:status.value()"></td>
+            <td><div>
+                <label class="switch">
+                    <input type="checkbox" class="switch-input" data-bind="checked:(control.value()*1)">
+                    <span class="switch-label" data-on="ON" data-off="OFF" data-bind="click: $root.ValueControl1"></span>
+                    <span class="switch-handle" data-bind="click: $root.ValueControl1"></span>
+                </label>
+            </div></td>
+            <td>&nbsp;</td>
+        </tr>
+        <!-- /ko -->
+        <!-- /ko -->
+        </tbody>
+    </table>
+    <!-- ko if: !(modevl1()*1)-->
+    <div class="form-group" style="margin: 0">
+        <label class="col-sm-5 control-label"> </label>
+        <div class="col-sm-4">
+            <button class="btn btn-danger" type="submit" data-bind="click: $root.saveConfig">Save Config</button>
+        </div>
+    </div >
+    <!-- /ko -->
+</div>

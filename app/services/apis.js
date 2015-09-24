@@ -2,7 +2,7 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, Q) {
+define(["plugins/http", 'durandal/app', "jquery",'q'], function (http, app, $,Q) {
     return function () {
         var apis = this;
         apis.key = 0;
@@ -18,7 +18,7 @@ define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, 
             $('#detailoading').append("<p>Api : get channels<br>Url:" + url + "</p>");
             return http.get(url);
         };
-        apis.AlarmAck = function (id) {
+        apis.AlarmAck = function(id){
             http.post("api/AlarmWatchers/" + id + "/acknowledge?access_token=" + apis.access_token());
         }
         apis.GetLocations = function () {
@@ -26,7 +26,7 @@ define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, 
             $('#detailoading').append("<p>Api : get locations<br>Url:" + url + "</p>");
             return http.get(url);
         }
-        apis.Controllables = function () {
+        apis.Controllables = function(){
             return http.get("api/Controllables?access_token=" + apis.access_token());
         }
         apis.GetLocationByParentID = function (parentID) {
@@ -37,10 +37,10 @@ define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, 
         apis.getHistories = function (id, f, t) {
             return http.get("api/ChannelHistories/" + id + "/findByTimeRange?limit=1000&startDate=" + encodeURIComponent(f) + "&endDate=" + encodeURIComponent(t) + "&access_token=" + apis.access_token());
         }
-        apis.getHistories1 = function (id, f, t, lm) {
+        apis.getHistories1 = function (id, f, t,lm) {
             return http.get("api/ChannelHistories/" + id + "/findByTimeRange?limit=" + lm + "&startDate=" + encodeURIComponent(f) + "&endDate=" + encodeURIComponent(t) + "&access_token=" + apis.access_token());
         }
-        apis.averageByTimeRange = function (id, f, t) {
+        apis.averageByTimeRange  = function(id, f, t) {
             return http.get("api/ChannelHistories/" + id + "/averageByTimeRange?startDate=" + encodeURIComponent(f) + "&endDate=" + encodeURIComponent(t) + "&access_token=" + apis.access_token());
         }
         apis.getAlarmLog = function (id, f, t) {
@@ -74,30 +74,33 @@ define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, 
         apis.AlarmWatchersExists = function (id) {
             return http.get("api/AlarmWatchers/" + id + "/exists?access_token=" + apis.access_token());
         }
-        apis.AlarmWatchersAll = function () {
+        apis.AlarmWatchersAll = function(){
             return http.get("api/AlarmWatchers?filter[where][enable]=true&access_token=" + apis.access_token());
         }
-        apis.AlarmWatchers = function () {
+        apis.AlarmWatchers = function(){
             return http.get("api/AlarmWatchers?access_token=" + apis.access_token());
         }
-        apis.ChannelDataCode = function (c) {
+        apis.ChannelDataCode = function(c){
             return http.get("api/Controllables?filter[where][channelName]=" + c + "&access_token=" + apis.access_token());
         }
-        apis.CMASUsers = function (u) {
-            return http.get("api/CMASUsers/" + u.userId + "?access_token=" + apis.access_token());
+        apis.CMASUsers = function(u){
+            return http.get("api/CMASUsers?access_token=" + apis.access_token());//" + u.userId + "
         }
-        apis.EscalationProfiles = function () {
+        apis.EscalationProfiles = function(){
             return http.get("api/EscalationProfiles/?access_token=" + apis.access_token());
+        }
+        apis.edituse = function(id, d){
+            return http.put("/api/CMASUsers/" + id + "?access_token=" + apis.access_token(), d);
         }
         apis.checkalarm = function (id) {
             apis.AlarmWatchersExists(id).then(function (r) {
                 return r.exists;
             });
         }
-        apis.ChannelDataByCode = function (c) {
-            return apis.ChannelDataCode(c).then(function (r) {
-                return r.length ? r[0] : 0;
-            }, function (e) {
+        apis.ChannelDataByCode = function(c){
+            return apis.ChannelDataCode(c).then(function(r){
+                return r.length?r[0]:0;
+            },function (e) {
                 app.showMessage("Url: api/ChannelData?filter[where][channelName]=" + c + "&access_token=" + apis.access_token() + '<br/>' + e.responseText, 'Error', ['Yes']);
             });
         }
@@ -166,8 +169,7 @@ define(["plugins/http", 'durandal/app', "jquery", 'q'], function (http, app, $, 
                     temp.name = getval(item.displayName);
                     temp.code = item.name;
                     temp.unitID = item.unitID;
-                    temp.type = getval(item.type);
-                    /* Analogue ,Digital(0,1)*/
+                    temp.type = getval(item.type); /* Analogue ,Digital(0,1)*/
                     temp.controllable = item.controllable;
                     temp.description = getval(item.description);
                     temp.unit = item.unit;

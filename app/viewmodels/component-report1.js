@@ -26,17 +26,17 @@ define(["durandal/app", "knockout", "knockback", "plugins/router", "../models/re
             apis.getAlarmLog(1, fromTime, toTime).then(function (r) {
                 me.count(r.result.length);
                 me.AlarmLog(sort(r.result));
-                apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_UP")[0].id, fromTime, toTime).then(function (r) {
+                apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_UP")[0].id, fromTime, toTime).then(function (r) {
                     me.ups(r.result.length);
-                    apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_PW")[0].id, fromTime, toTime).then(function (r) {
+                    apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_PW")[0].id, fromTime, toTime).then(function (r) {
                         me.dbit(r.result.length);
-                        apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_AI")[0].id, fromTime, toTime).then(function (r) {
+                        apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_AI")[0].id, fromTime, toTime).then(function (r) {
                             me.ai(r.result.length);
-                            apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_LL")[0].id, fromTime, toTime).then(function (r) {
+                            apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_LL")[0].id, fromTime, toTime).then(function (r) {
                                 me.rrn(r.result.length);
-                                apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_FF")[0].id, fromTime, toTime).then(function (r) {
+                                apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_FF")[0].id, fromTime, toTime).then(function (r) {
                                     me.fire(r.result.length);
-                                    apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "CMAS_EV")[0].id, fromTime, toTime).then(function (r) {
+                                    apis.getAlarmLog(buff.find(buff.getByKey("LocationAll"), "code", "ITW_EV")[0].id, fromTime, toTime).then(function (r) {
                                         me.env(r.result.length);
                                         deferred.resolve()
                                     })

@@ -39,6 +39,7 @@
             <table class="table table-AlarmSummary  table-hover">
                 <tbody style="">
                 <!-- ko foreach: cf-->
+                <!-- ko if: $data-->
                 <tr class="" data-bind="css: $root.colorAlarm($data)">
                     <td data-bind="html: $root.channelname(channelID(),msg())"></td>
                     <td width="130"
@@ -54,6 +55,7 @@
                         </button>
                     </td>
                 </tr>
+                <!-- /ko -->
                 <!-- /ko -->
                 </tbody>
             </table>
