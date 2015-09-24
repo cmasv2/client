@@ -2,7 +2,7 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(["durandal/app", "knockout", "knockback", "plugins/router", "q", "../models/report", "moment", "jqplot", "cursor", "dateAxisRenderer", "canvasTextRenderer", "canvasAxisLabelRenderer", "../bindings/datetime.picker", "bootstrap-datepicker", "css!../../lib/nqhlib/css/jquery.jqplot.min.css"], function (app, ko, kb, router, Q, Report, Moment) {
+define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q", "../models/report", "moment", "jqplot", "cursor", "dateAxisRenderer", "canvasTextRenderer", "canvasAxisLabelRenderer", "../bindings/datetime.picker", "bootstrap-datepicker", "css!../../lib/nqhlib/css/jquery.jqplot.min.css"], function (app,$ ,ko, kb, router, Q, Report, Moment) {
     return function () {
         var me = this;
         me.Temps = [], me.Hums = [], apis = app.services.getService("apis"), buff = app.buff;
@@ -21,80 +21,63 @@ define(["durandal/app", "knockout", "knockback", "plugins/router", "q", "../mode
             var toTime = moment(report.get("toTime")).format("YYYY-MM-DDTHH:mm:ss.SSSZ");
             console.log(fromTime);
             console.log(toTime);
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMA_kW")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_MSBDC_DPM_kW")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.DPMA_kW(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMB_kW")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kW")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.DPMB_kW(Math.round(rs.result * 10) / 10);
                     me.csd(me.DPMA_kW() + Math.round(rs.result * 10) / 10)
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMA_kWh")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kWh")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.DPMA_kWh(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMB_kWh")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kWh")[0].id, fromTime, toTime).then(function (rs) {
                     me.nld(me.DPMA_kWh() + Math.round(rs.result * 10) / 10)
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_kW1out")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW1out")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.UPS1_kW1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_kW2out")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS1_kW2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_kW3out")[0].id, fromTime, toTime).then(function (rs) {
+                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW3out")[0].id, fromTime, toTime).then(function (rs) {
                         me.UPS1_kW((me.UPS1_kW1out() + me.UPS1_kW2out() + Math.round(rs.result * 10) / 10) / 3)
                     })
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_kW1out")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_kW1out")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.UPS2_kW1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_kW2out")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_kW2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS2_kW2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_kW3out")[0].id, fromTime, toTime).then(function (rs) {
+                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_kW3out")[0].id, fromTime, toTime).then(function (rs) {
                         me.UPS2_kW((me.UPS2_kW1out() + me.UPS2_kW2out() + Math.round(rs.result * 10) / 10) / 3)
                     })
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_kW1out")[0].id, fromTime, toTime).then(function (rs) {
-                if (rs.result)me.UPS3_kW1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_kW2out")[0].id, fromTime, toTime).then(function (rs) {
-                    if (rs.result)me.UPS3_kW2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_kW3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS3_kW((me.UPS3_kW1out() + me.UPS3_kW2out() + Math.round(rs.result * 10) / 10) / 3)
-                    })
-                })
-            });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_I1out")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_I1out")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.UPS1_I1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_I2out")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_I2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS1_I2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS1_I3out")[0].id, fromTime, toTime).then(function (rs) {
+                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_I3out")[0].id, fromTime, toTime).then(function (rs) {
                         me.UPS1_I((me.UPS1_I1out() + me.UPS1_I2out() + Math.round(rs.result * 10) / 10) / 3)
                     })
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_I1out")[0].id, fromTime, toTime).then(function (rs) {
+            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_I1out")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.UPS2_I1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_I2out")[0].id, fromTime, toTime).then(function (rs) {
+                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_I2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS2_I2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS2_I3out")[0].id, fromTime, toTime).then(function (rs) {
+                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_I3out")[0].id, fromTime, toTime).then(function (rs) {
                         me.UPS2_I((me.UPS2_I1out() + me.UPS2_I2out() + Math.round(rs.result * 10) / 10) / 3)
                     })
                 })
             });
-            apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_I1out")[0].id, fromTime, toTime).then(function (rs) {
-                if (rs.result)me.UPS3_I1out(Math.round(rs.result * 10) / 10);
-                apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_I2out")[0].id, fromTime, toTime).then(function (rs) {
-                    if (rs.result)me.UPS3_I2out(Math.round(rs.result * 10) / 10);
-                    apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "UPS3_I3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS3_I((me.UPS3_I1out() + me.UPS3_I2out() + Math.round(rs.result * 10) / 10) / 3)
-                    })
-                })
-            });
+            /*
             apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMA_In")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.DPMA_I(Math.round(rs.result * 10) / 10)
             });
             apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "DPMB_In")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.DPMB_I(Math.round(rs.result * 10) / 10)
-            });
-            var idtemp = buff.find(buff.getByKey("ChannelsAll"), "code", "ENV_ServerTemp1")[0].id;
+            });*/
+            var idtemp = buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_ENV_ServerTemp1")[0].id;
             apis.getHistories1(idtemp, fromTime, toTime, 1E3).then(function (r) {
                 response = r.result.sort(function (a, b) {
                     return a.createdAt < b.createdAt ? 1 : a.createdAt > b.createdAt ? -1 : 0
@@ -103,7 +86,7 @@ define(["durandal/app", "knockout", "knockback", "plugins/router", "q", "../mode
                     if (rs.result)me.Temp(Math.round(rs.result * 10) / 10)
                 });
                 if (response != undefined)for (var i in response)me.Temps.push([Moment(response[i]["createdAt"]).format("MM/DD/YYYY hh:mm:ss"), response[i]["value"]]);
-                var idhum = buff.find(buff.getByKey("ChannelsAll"), "code", "ENV_ServerHum1")[0].id;
+                var idhum = buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_ENV_ServerHum1")[0].id;
                 apis.getHistories1(idhum, fromTime, toTime, 1E3).then(function (r) {
                     response = r.result.sort(function (a, b) {
                         return a.createdAt < b.createdAt ? 1 : a.createdAt > b.createdAt ? -1 : 0
@@ -119,6 +102,10 @@ define(["durandal/app", "knockout", "knockback", "plugins/router", "q", "../mode
         }
 
         function renderChart() {
+            $('#waitload').show();
+            $('#offwaitload').click(function () {
+                $('#waitload').hide();
+            });
             getHistories().then(function () {
                 var plot1 = $.jqplot("chart123", [me.Temps, me.Hums], {
                     title: "Environmental",
@@ -141,7 +128,8 @@ define(["durandal/app", "knockout", "knockback", "plugins/router", "q", "../mode
                         yaxis: {labelRenderer: $.jqplot.CanvasAxisLabelRenderer, label: "Temperature"},
                         y2axis: {labelRenderer: $.jqplot.CanvasAxisLabelRenderer, label: "Humidity"}
                     }
-                })
+                });
+                $('#waitload').hide();
             })
         }
 

@@ -2,7 +2,7 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(["durandal/app", "plugins/router", "knockout"], function (app, router, ko) {
+define(["durandal/app", "plugins/router", "knockout","moment"], function (app, router, ko, Moment) {
     if (!app.buff)window.location = "http://" + window.location.host;
     function getT(c) {
         var u = app.buff.find(app.buff.getByKey("LocationAll"), "code", c);
@@ -25,46 +25,46 @@ define(["durandal/app", "plugins/router", "knockout"], function (app, router, ko
         nav: false
     }, {
         route: "ups",
-        title: getT("CMAS_UP").name,
-        description: getT("CMAS_UP").description,
+        title: getT("ITW_UP").name,
+        description: getT("ITW_UP").description,
         icon: "fa-power-off",
         nav: true,
-        hash: "#page/detail/CMAS_UP"
+        hash: "#page/detail/ITW_UP"
     }, {
         route: "power",
-        title: getT("CMAS_PW").name,
-        description: getT("CMAS_PW").description,
+        title: getT("ITW_PW").name,
+        description: getT("ITW_PW").description,
         icon: "fa-wrench",
         nav: true,
-        hash: "#page/detail/CMAS_PW"
+        hash: "#page/detail/ITW_PW"
     }, {
         route: "transformer",
-        title: getT("CMAS_FF").name,
-        description: getT("CMAS_FF").description,
+        title: getT("ITW_FF").name,
+        description: getT("ITW_FF").description,
         icon: "fa-magic",
         nav: true,
-        hash: "#page/detail/CMAS_FF"
+        hash: "#page/detail/ITW_FF"
     }, {
         route: "Environmental",
-        title: getT("CMAS_EV").name,
-        description: getT("CMAS_EV").description,
+        title: getT("ITW_EV").name,
+        description: getT("ITW_EV").description,
         icon: "fa-magic",
         nav: true,
-        hash: "#page/detail/CMAS_EV"
+        hash: "#page/detail/ITW_EV"
     }, {
         route: "conditioning",
-        title: getT("CMAS_AI").name,
-        description: getT("CMAS_AI").description,
+        title: getT("ITW_AI").name,
+        description: getT("ITW_AI").description,
         icon: "fa-magic",
         nav: true,
-        hash: "#page/detail/CMAS_AI"
+        hash: "#page/detail/ITW_AI"
     }, {
         route: "Liquidleakdetection",
-        title: getT("CMAS_LL").name,
-        description: getT("CMAS_LL").description,
+        title: getT("ITW_LL").name,
+        description: getT("ITW_LL").description,
         icon: "fa-fire",
         nav: true,
-        hash: "#page/detail/CMAS_LL"
+        hash: "#page/detail/ITW_LL"
     }, {
         route: "explorer(/:sys)(/:id)(/:idc)",
         title: "Explorer",

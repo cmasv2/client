@@ -7,7 +7,6 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
         var me = this, conf = conF(), a = app.services.getService("apis");
         app.buff = $.buff(conf.info);
         localStorage.setItem("keyview", conf.key);
-        localStorage.setItem("keyview", conf.key);
         me.username = ko.observable("admin@cmas.com");
         me.password = ko.observable("admin");
         me.showok = ko.observable(0);
@@ -30,7 +29,6 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
                 }
             });
             $("#detailoading").append("<p>Init cmas buffer</p>");
-            var ch;
             var inf = app.buff.getByKey("CONFIG_INFO");
             a.AlarmWatchersAll().then(function (re) {
                 app.buff.setByKey("AlarmWatchers", re)
@@ -50,11 +48,11 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
             a.Controllables().then(function (ch) {
                 app.buff.setByKey("Controllables", ch)
             });
-            a.CMASUsers(u).then(function (ch) {
-                app.buff.setByKey("infoUser", ch)
-            });
             a.AlarmWatchers().then(function (ch) {
                 app.buff.setByKey("AlarmWatchersAll", ch)
+            });
+            a.CMASUsers().then(function (ch) {
+                app.buff.setByKey("CMASUsers", ch)
             });
             a.countchannel().then(function (r) {
                 $("#detailoading").append("<p>Buffer : set channels (" + inf.ch + "/" + r.count + ")</p>")
@@ -99,10 +97,6 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
             for (var i = 0; i < conf.configView.length; i++) {
                 var val = conf.configView[i];
                 app.buff.setByCode(conf.configView[i].value)
-            }
-            for (var i = 0; i < conf.configView.length; i++) {
-                var val = conf.configView[i];
-                app.buff.setByKey(conf.configView[i].value)
             }
         };
         me.login = login
