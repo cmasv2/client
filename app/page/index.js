@@ -101,6 +101,13 @@ define(["durandal/app", "plugins/router", "knockout","moment"], function (app, r
         icon: "fa-cog",
         moduleId: "pages/config",
         nav: false
+    },  {
+        route: "acm",
+        title: "Access Controll Logs",
+        description: "Access Controll Logs",
+        icon: "fa-cog",
+        moduleId: "pages/acm",
+        nav: false
     }, {
         route: "detail(/:sys)(/:id)(/:idc)",
         title: "System",

@@ -25,13 +25,13 @@ define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q",
                 if (rs.result)me.DPMA_kW(Math.round(rs.result * 10) / 10);
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kW")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.DPMB_kW(Math.round(rs.result * 10) / 10);
-                    me.csd(me.DPMA_kW() + Math.round(rs.result * 10) / 10)
+                    me.csd(Math.round((me.DPMA_kW() + rs.result) * 10) / 10)
                 })
             });
             apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kWh")[0].id, fromTime, toTime).then(function (rs) {
                 if (rs.result)me.DPMA_kWh(Math.round(rs.result * 10) / 10);
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_DBAC_DPM_kWh")[0].id, fromTime, toTime).then(function (rs) {
-                    me.nld(me.DPMA_kWh() + Math.round(rs.result * 10) / 10)
+                    me.nld(Math.round((me.DPMA_kWh() + rs.result) * 10) / 10)
                 })
             });
             apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW1out")[0].id, fromTime, toTime).then(function (rs) {
@@ -39,7 +39,7 @@ define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q",
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS1_kW2out(Math.round(rs.result * 10) / 10);
                     apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_kW3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS1_kW((me.UPS1_kW1out() + me.UPS1_kW2out() + Math.round(rs.result * 10) / 10) / 3)
+                        me.UPS1_kW(Math.round(((me.UPS1_kW1out() + me.UPS1_kW2out() + Math.round(rs.result * 10) / 10) / 3)* 10) / 10)
                     })
                 })
             });
@@ -48,7 +48,7 @@ define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q",
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_kW2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS2_kW2out(Math.round(rs.result * 10) / 10);
                     apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_kW3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS2_kW((me.UPS2_kW1out() + me.UPS2_kW2out() + Math.round(rs.result * 10) / 10) / 3)
+                        me.UPS2_kW(Math.round(((me.UPS2_kW1out() + me.UPS2_kW2out() + Math.round(rs.result * 10) / 10) / 3)* 10) / 10)
                     })
                 })
             });
@@ -57,7 +57,7 @@ define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q",
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_I2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS1_I2out(Math.round(rs.result * 10) / 10);
                     apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS1_I3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS1_I((me.UPS1_I1out() + me.UPS1_I2out() + Math.round(rs.result * 10) / 10) / 3)
+                        me.UPS1_I(Math.round(((me.UPS1_I1out() + me.UPS1_I2out() + Math.round(rs.result * 10) / 10) / 3)* 10) / 10)
                     })
                 })
             });
@@ -66,7 +66,7 @@ define(["durandal/app","jquery", "knockout", "knockback", "plugins/router", "q",
                 apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_I2out")[0].id, fromTime, toTime).then(function (rs) {
                     if (rs.result)me.UPS2_I2out(Math.round(rs.result * 10) / 10);
                     apis.averageByTimeRange(buff.find(buff.getByKey("ChannelsAll"), "code", "CMAS_UPS2_I3out")[0].id, fromTime, toTime).then(function (rs) {
-                        me.UPS2_I((me.UPS2_I1out() + me.UPS2_I2out() + Math.round(rs.result * 10) / 10) / 3)
+                        me.UPS2_I(Math.round(((me.UPS2_I1out() + me.UPS2_I2out() + Math.round(rs.result * 10) / 10) / 3)* 10) / 10)
                     })
                 })
             });
