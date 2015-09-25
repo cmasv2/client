@@ -232,7 +232,9 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
         }
 
         function dateRangeUpdated() {
+            /*
             function updateData(channelName, fromTimeInUnix, toTimeInUnix) {
+
 
                 return apis.getDataByTimeRange(channelName, fromTimeInUnix, toTimeInUnix).then(
                     function (response) {
@@ -257,7 +259,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                 }
 
                 Q.all(callBack).done(renderData);
-            }
+            }*/
         }
 
         function markAsIssue(viewModel) {
@@ -291,7 +293,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                 var value = series.data[dataIndex] == undefined ? null : series.data[dataIndex][1];
                 snapShotDatas.push(series.label.replace(/=.*[(]/, "= " + (value !== null ? value.toFixed(2) : "null") + "("));
             }
-            var date = moment(dataItem.datapoint[0] - 25200000).format(app.CMASConfig.DateTimeFormat.GLOBAL);
+            var date = moment(dataItem.datapoint[0]).format(app.CMASConfig.DateTimeFormat.GLOBAL);
             var note = {date: date, comment: "", data: snapShotDatas, status: ko.observable("-----")};
             me.notes.push(note);
 
@@ -425,7 +427,9 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
             if (graph)
                 chartOptions = graph.getOptions();
             var fromTime = (new Date(trending.get("fromTime"))).getTime();
+            console.log(fromTime);
             var toTime =(new Date(trending.get("toTime"))).getTime();
+            console.log(toTime);
             chartOptions.xaxes[0].min = fromTime;
             chartOptions.xaxes[0].max = toTime;
             graph = $.plot(chartWrapperID, getDataChartFormTrending(trending), chartOptions);
@@ -579,7 +583,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                     //color: "#545454",
                     yaxis: yaxisn//Math.floor((Math.random() * 100) + 1)
                 };*/
-                renderData();
+                //renderData();
             }
         };
         function showSub1() {
