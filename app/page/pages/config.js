@@ -8,7 +8,7 @@ define(["durandal/app", "knockout", "bootstrap", "viewmodels/component-user", "v
         me.compoment1 = ko.observable();
         var buff = app.buff;
         me.activate = function () {
-            me.Conditioning()
+            me.user()
         };
         me.user = function () {
             me.compoment1(new componentUser)
