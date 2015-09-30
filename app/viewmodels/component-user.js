@@ -13,7 +13,7 @@
                     app.showMessage("Incorrect password", 'Error', ['Yes']);
                 }
                 else{
-                    apis.edituse(u.id,{"email": u.username, "password": me.pass1()}).then(function(){
+                    apis.edituse(u.id,{"email": u.email, "password": me.pass1()}).then(function(){
                         app.showMessage('Save successful ', 'Successful', ['Yes']);
                     });
                 }
@@ -25,7 +25,7 @@
                 me.user.push({"email": "","id":0});
             }
             me.saveConfig = saveConfig;
-            me.title = ko.observable('User managare');
+            me.title = ko.observable('User Information');
             me.pass1 = ko.observable('');
             me.pass2 = ko.observable('');
             me.showUser = showUser;
