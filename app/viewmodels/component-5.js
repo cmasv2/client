@@ -34,21 +34,26 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 {
                     c.value = ko.observable('NaN');
                     var cv = function (value) {
-                        if (c.type && c.type != undefined) {
+                        if (c.type != undefined) {
                             if (c.type == "1") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
-                            if (c.type == "4") {
+                            else if (c.type == "4") {
                                 var t = value % 3600;
                                 var h = (value - t) / 3600;
                                 var m = (t - (t % 60))/ 60;
-                                c.value(Math.round(h) + ":" + Math.round(m));
+                                var s = (t - (t % 60))% 60;
+                                c.value(Math.round(h) + ":" + Math.round(m)+":" + Math.round(s));
                             }
-                            if (c.type == "6") {
+                            else if (c.type == "6") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
+                            else{
+                                c.type = 0;
+                                c.value(Math.round(value * 10) / 10);
+                            }
                         }
-                        else if (value != undefined) {
+                        else{
                             c.type = 0;
                             c.value(Math.round(value * 10) / 10);
                         }
@@ -77,13 +82,12 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 return buff.find(buff.getByKey('AlarmWatchersAll'), 'channelID', id);
             }
             function channelSelectf(cc,flag) {
-                Q.when(me.channelSelect.removeAll()).then(function(){
-                    cc.data = {channelName: cc.code, value: 0};
-                    Lis(cc.data);
-                    flag ? false : cc.alarmWatcher = 0;
-                    cc.alarmWatchers = infa(cc.id);
-                    me.channelSelect.push(cc);
-                });
+                me.channelSelect.removeAll();
+                cc.data = {channelName: cc.code, value: 0};
+                Lis(cc.data);
+                flag ? false : cc.alarmWatcher = 0;
+                cc.alarmWatchers = infa(cc.id);
+                me.channelSelect.push(cc);
             }
             function viewdetail(c) {
                 if (c != undefined){
@@ -222,8 +226,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     return "NaN";
             };
             me.AlarmAck = function(c){
-                apis.AlarmAck(c.id);
-                setalarmWatcher(me.channels()[0].sub);
+                console.log(c);
             };
             me.colorAlarm = function (c) {
                 /*

@@ -232,7 +232,9 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
         }
 
         function dateRangeUpdated() {
+            /*
             function updateData(channelName, fromTimeInUnix, toTimeInUnix) {
+
 
                 return apis.getDataByTimeRange(channelName, fromTimeInUnix, toTimeInUnix).then(
                     function (response) {
@@ -257,7 +259,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                 }
 
                 Q.all(callBack).done(renderData);
-            }
+            }*/
         }
 
         function markAsIssue(viewModel) {
@@ -291,7 +293,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                 var value = series.data[dataIndex] == undefined ? null : series.data[dataIndex][1];
                 snapShotDatas.push(series.label.replace(/=.*[(]/, "= " + (value !== null ? value.toFixed(2) : "null") + "("));
             }
-            var date = moment(dataItem.datapoint[0] - 25200000).format(app.CMASConfig.DateTimeFormat.GLOBAL);
+            var date = moment(dataItem.datapoint[0]).format(app.CMASConfig.DateTimeFormat.GLOBAL);
             var note = {date: date, comment: "", data: snapShotDatas, status: ko.observable("-----")};
             me.notes.push(note);
 
@@ -424,8 +426,12 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
         function renderData() {
             if (graph)
                 chartOptions = graph.getOptions();
-            var fromTime = (new Date(trending.get("fromTime"))).getTime();
-            var toTime =(new Date(trending.get("toTime"))).getTime();
+            var fromTime = Moment(trending.get("fromTime")).unix() * 1000 + 25200;
+                //(new Date(trending.get("fromTime"))).getTime();
+            console.log(fromTime);
+            var toTime = Moment(trending.get("toTime")).unix() * 1000 + 25200;
+                //(new Date(trending.get("toTime"))).getTime();
+            console.log(toTime);
             chartOptions.xaxes[0].min = fromTime;
             chartOptions.xaxes[0].max = toTime;
             graph = $.plot(chartWrapperID, getDataChartFormTrending(trending), chartOptions);
@@ -510,6 +516,10 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
 
         function addChannelTrending(channel, i) {
             if (channel) {
+                $('#waitload').show();
+                $('#offwaitload').click(function () {
+                    $('#waitload').hide();
+                });
                 var channelName = channel.id;
                 var channelDisplayName = channel.name;
                 var channelUnit = channel.unit;
@@ -530,9 +540,10 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                          //{
                             //Moment
                             //console.log(response[i]);
-                            var D = new Date(response[i]["createdAt"]);
+                            //var D = new Date(response[i]["createdAt"]);
                             //console.log(D);
-                            var theUnixTime = D.getTime();
+                            var theUnixTime = Moment(response[i]["createdAt"]).unix() * 1000;
+                                //D.getTime();
                             //console.log(theUnixTime);
                             data.push([theUnixTime, response[i]["value"]]);
                          //}
@@ -563,6 +574,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                      yaxis:yaxisn//Math.floor((Math.random() * 100) + 1)
                      };
                      renderData();
+                     $('#waitload').hide();
                  }
                  },function (e){app.showMessage("Url: api/ChannelHistories/" + channelName + "?filter[where][createdAt][gt]=" + fromTime + "&filter[where][updatedAt][lt]=" + toTime + "&access_token=" + localStorage.getItem('swagger_accessToken') + "<br/>"+ e.responseText, "Error", ['Yes']);});
                  
@@ -574,7 +586,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                     //color: "#545454",
                     yaxis: yaxisn//Math.floor((Math.random() * 100) + 1)
                 };*/
-                renderData();
+                //renderData();
             }
         };
         function showSub1() {
