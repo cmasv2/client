@@ -426,9 +426,11 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
         function renderData() {
             if (graph)
                 chartOptions = graph.getOptions();
-            var fromTime = (new Date(trending.get("fromTime"))).getTime();
+            var fromTime = Moment(trending.get("fromTime")).unix() * 1000 + 25200;
+                //(new Date(trending.get("fromTime"))).getTime();
             console.log(fromTime);
-            var toTime =(new Date(trending.get("toTime"))).getTime();
+            var toTime = Moment(trending.get("toTime")).unix() * 1000 + 25200;
+                //(new Date(trending.get("toTime"))).getTime();
             console.log(toTime);
             chartOptions.xaxes[0].min = fromTime;
             chartOptions.xaxes[0].max = toTime;
@@ -538,9 +540,10 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                          //{
                             //Moment
                             //console.log(response[i]);
-                            var D = new Date(response[i]["createdAt"]);
+                            //var D = new Date(response[i]["createdAt"]);
                             //console.log(D);
-                            var theUnixTime = D.getTime();
+                            var theUnixTime = Moment(response[i]["createdAt"]).unix() * 1000;
+                                //D.getTime();
                             //console.log(theUnixTime);
                             data.push([theUnixTime, response[i]["value"]]);
                          //}
