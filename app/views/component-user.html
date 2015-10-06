@@ -1,45 +1,45 @@
 ﻿<div class="row">
-    <div class="col-md-3" style="display: none">
+    <div class="col-md-3" style="">
         <div class="panel panel-default">
             <div class="list-group" style="max-height:500px;overflow:auto">
+                <a data-bind="click: $root.addUser" class="list-group-item" href="#">
+                    <span>Add user</span>
+                    <div class="clearfix"></div>
+                </a>
                 <!-- ko foreach: users-->
                 <a data-bind="click: $root.showUser" class="list-group-item" href="#">
                     <span data-bind="text:email">User 1</span>
-
                     <div class="clearfix"></div>
                 </a>
                 <!-- /ko -->
             </div>
         </div>
     </div>
-    <div class="col-md-12" style="">
+    <div class="col-md-9" style="">
         <form class="form-horizontal well" style="margin:0;padding:0;">
-            <h3 style="text-align:center" data-bind="text:title">Add</h3>
+            <h3 style="text-align:center" data-bind="text:title">User Information</h3>
+            <h4 style="text-align:center;color: red" data-bind="text:showError">error</h4>
             <!-- ko foreach: user-->
             <div class="form-group">
                 <label class="col-sm-5 control-label">Username :</label>
-
                 <div class="col-sm-4">
                     <input type="text" placeholder="Username" class="form-control" data-bind="value:email">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-5 control-label">New Password : </label>
-
                 <div class="col-sm-4">
                     <input type="password" class="form-control" value="" data-bind="value:$root.pass1">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-5 control-label">New Password : </label>
-
+                <label class="col-sm-5 control-label">Retype New Password : </label>
                 <div class="col-sm-4">
                     <input type="password" class="form-control" value="" data-bind="value:$root.pass2">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-5 control-label"> </label>
-
                 <div class="col-sm-4">
                     <button class="btn btn-danger" data-bind="click: $root.saveConfig" type="submit">Submit</button>
                 </div>

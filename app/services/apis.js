@@ -84,10 +84,18 @@ define(["plugins/http", 'durandal/app', "jquery",'q'], function (http, app, $,Q)
             return http.get("api/Controllables?filter[where][channelName]=" + c + "&access_token=" + apis.access_token());
         }
         apis.CMASUsers = function(u){
-            return http.get("api/CMASUsers/" + u.userId + "?access_token=" + apis.access_token());
+            //return http.get("api/CMASUsers/" + u.userId + "?access_token=" + apis.access_token());
+			return http.get("api/CMASUsers?access_token=" + apis.access_token());
         }
         apis.EscalationProfiles = function(){
             return http.get("api/EscalationProfiles/?access_token=" + apis.access_token());
+        }
+        apis.edituse = function(id, d){
+			if (id == 0) {
+				return http.post("/api/CMASUsers?access_token=" + apis.access_token(), d);
+			} else {
+				return http.put("/api/CMASUsers/" + id + "?access_token=" + apis.access_token(), d);
+			}
         }
         apis.checkalarm = function (id) {
             apis.AlarmWatchersExists(id).then(function (r) {
