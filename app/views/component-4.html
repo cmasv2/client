@@ -22,43 +22,38 @@
             </div>
             <div class="clearfix"></div>
         </form>
-        <table class="table table-AlarmSummary  table-hover">
-            <head>
+        <table class="table table-AlarmSummary  table-hover" data-bind="sortTable: true">
+            <thead>
                 <tr>
-                    <th>Description</th>
-                    <th width="130">Alarm Time</th>
-                    <th width="130">Reset Time</th>
-                    <th width="130">Ack Time</th>
-                    <th width="100">Status</th>
-                    <th width="100">Priority</th>
-                    <th width="75">Ack</th>
+                    <th style="cursor:pointer;">Description</th>
+                    <th width="130" style="cursor:pointer;">Alarm Time</th>
+                    <th width="130" style="cursor:pointer;">Reset Time</th>
+                    <th width="130" style="cursor:pointer;">Ack Time</th>
+                    <th width="100" style="cursor:pointer;">Status</th>
+                    <th width="100" style="cursor:pointer;">Priority</th>
+                    <th width="75" class="filter-false"></th>
                 </tr>
-            </head>
+            </thead>
+			<tbody>
+			<!-- ko foreach: cf-->
+			<!-- ko if: $data-->
+			<tr class="" data-bind="css: $root.colorAlarm($data)">
+				<td data-bind="html: $root.channelname(channelID(),msg())"></td>
+				<td width="130"
+					data-bind="text: alarmAt() ? $root.Moment(alarmAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
+				<td width="130"
+					data-bind="text: resetAt() ? $root.Moment(resetAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
+				<td width="130"
+					data-bind="text: acknowledgeAt() ? $root.Moment(acknowledgeAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
+				<td width="100" data-bind="text: status() ? status() : '---'"></td>
+				<td width="100" data-bind="text: type() ? type() : '---'"></td>
+				<td width="60">
+					<button type="button" class="btn btn-ack btn-warning" data-bind="click: $root.AlarmAck">ACK</button>
+				</td>
+			</tr>
+			<!-- /ko -->
+			<!-- /ko -->
+			</tbody>
         </table>
-        <div class="scroll-hover" data-bind="style: {height: heighth ? '80px': '500px'}">
-            <table class="table table-AlarmSummary  table-hover">
-                <tbody style="">
-                <!-- ko foreach: cf-->
-                <!-- ko if: $data-->
-                <tr class="" data-bind="css: $root.colorAlarm($data)">
-                    <td data-bind="html: $root.channelname(channelID(),msg())"></td>
-                    <td width="130"
-                        data-bind="text: alarmAt() ? $root.Moment(alarmAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
-                    <td width="130"
-                        data-bind="text: resetAt() ? $root.Moment(resetAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
-                    <td width="130"
-                        data-bind="text: acknowledgeAt() ? $root.Moment(acknowledgeAt()).format('DD/MM/YYYY hh:mm:ss') : '--/--/-- --:--:--'"></td>
-                    <td width="100" data-bind="text: status() ? status() : '---'"></td>
-                    <td width="100" data-bind="text: type() ? type() : '---'"></td>
-                    <td width="60">
-                        <button type="button" class="btn btn-ack btn-warning" data-bind="click: $root.AlarmAck">Ack
-                        </button>
-                    </td>
-                </tr>
-                <!-- /ko -->
-                <!-- /ko -->
-                </tbody>
-            </table>
-        </div>
     </div>
 </div>

@@ -2,8 +2,8 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(['durandal/app', "knockout", "knockback", "../collections/alarm-watcher-collection", "moment"],
-    function (app, ko, kb, AlarmWatcherCollection, Moment) {
+define(['durandal/app', "knockout", "knockback", "../collections/alarm-watcher-collection", "moment", "jquery", "../../lib/tablesorter/jquery.tablesorter", "../../lib/tablesorter/jquery.tablesorter.widgets", "css!../../lib/tablesorter/custom.css"],
+    function (app, ko, kb, AlarmWatcherCollection, Moment, $) {
         return function (heighth) {
             var alarmCollection = new AlarmWatcherCollection();
             var me = this, buff = app.buff;
@@ -100,6 +100,40 @@ define(['durandal/app', "knockout", "knockback", "../collections/alarm-watcher-c
                     }return 0;
                 }
             );
+			ko.bindingHandlers.sortTable = {
+				init: function(element, valueAccessor) {
+					setTimeout( function() {
+						$(element).addClass('tablesorter');
+						$(element).tablesorter({
+							widgets: ['zebra', 'filter'],
+							widgetOptions : {
+								  // If there are child rows in the table (rows with class name from "cssChildRow" option)
+								  // and this option is true and a match is found anywhere in the child row, then it will make that row
+								  // visible; default is false
+								  filter_childRows : false,
+
+								  // extra css class name(s) applied to the table row containing the filters & the inputs within that row
+								  // this option can either be a string (class applied to all filters) or an array (class applied to indexed filter)
+								  filter_cssFilter : 'tablesorter-filter', // or []
+
+								  // Set this option to false to make the searches case sensitive
+								  filter_ignoreCase : true,
+
+								  // if true, search column content while the user types (with a delay)
+								  filter_liveSearch : true,
+
+								  // Delay in milliseconds before the filter widget starts searching; This option prevents searching for
+								  // every character while typing and should make searching large tables faster.
+								  filter_searchDelay : 300,
+
+								  // Set this option to true to use the filter to find text from the start of the column
+								  // So typing in "a" will find "albert" but not "frank", both have a's; default is false
+								  filter_startsWith : false
+								}
+						});
+					}, 0);
+				}
+			};
             //me.cf.sortAttribute('lastUpdated');
             //console.log(me.cf());
             me.heighth = heighth != undefined ? heighth : 0;

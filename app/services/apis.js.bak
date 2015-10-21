@@ -13,9 +13,6 @@ define(["plugins/http", 'durandal/app', "jquery",'q'], function (http, app, $,Q)
         apis.login = function (a) {
             return http.post("api/CMASUsers/login", a);
         }
-        apis.logout = function () {
-            return http.post("api/CMASUsers/logout?access_token=" + apis.access_token());
-        }
         apis.Channels = function () {
             var url = "api/Channels?filter[include][alarmWatcher]&access_token=" + apis.access_token();
             $('#detailoading').append("<p>Api : get channels<br>Url:" + url + "</p>");
@@ -87,18 +84,13 @@ define(["plugins/http", 'durandal/app', "jquery",'q'], function (http, app, $,Q)
             return http.get("api/Controllables?filter[where][channelName]=" + c + "&access_token=" + apis.access_token());
         }
         apis.CMASUsers = function(u){
-			if (u != undefined && u.userId !== 0) return http.get("api/CMASUsers/" + u.userId + "?access_token=" + apis.access_token());
-			return http.get("api/CMASUsers?access_token=" + apis.access_token());
+            return http.get("api/CMASUsers?access_token=" + apis.access_token());//" + u.userId + "
         }
         apis.EscalationProfiles = function(){
             return http.get("api/EscalationProfiles/?access_token=" + apis.access_token());
         }
         apis.edituse = function(id, d){
-			if (id == 0) {
-				return http.post("/api/CMASUsers?access_token=" + apis.access_token(), d);
-			} else {
             return http.put("/api/CMASUsers/" + id + "?access_token=" + apis.access_token(), d);
-        }
         }
         apis.checkalarm = function (id) {
             apis.AlarmWatchersExists(id).then(function (r) {
