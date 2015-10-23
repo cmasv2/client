@@ -17,6 +17,7 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
                     mode: "time",
                     minTickSize: [1, "minute"],
                     timeformat: "%d/%m/%y %H:%M:%S",
+					timezone: "browser",
                     show: true
                 }],
                 yaxes: [
@@ -209,9 +210,6 @@ define(['durandal/app', "jquery", "q", "knockout", "knockback", "../../helper/sc
 
         function getBuffer(key) {
             return buff ? buff.getByKey(key) : false;
-        }
-
-        function dateRangeUpdated() {
         }
 
         function myUpdateLegend(item) {

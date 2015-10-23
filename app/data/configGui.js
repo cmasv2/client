@@ -701,7 +701,7 @@ define([],function(){return function(){
                     "status": 1,
                     "progress": 0,
                     "logo": "glyphicon glyphicon-retweet",
-                    "value": [{"channelName": "CMAS_AC_ServerRunTime1", "type": "4"}, {
+                    "value": [{
                         "channelName": "CMAS_AC_ServerCtrl1",
                         "type": "1",
                         "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
@@ -713,7 +713,7 @@ define([],function(){return function(){
                     "status": 1,
                     "progress": 0,
                     "logo": "glyphicon glyphicon-retweet",
-                    "value": [{"channelName": "CMAS_AC_ServerRunTime2", "type": "4"}, {
+                    "value": [{
                         "channelName": "CMAS_AC_ServerCtrl2",
                         "type": "1",
                         "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
@@ -725,7 +725,7 @@ define([],function(){return function(){
                     "status": 1,
                     "progress": 0,
                     "logo": "glyphicon glyphicon-retweet",
-                    "value": [{"channelName": "CMAS_AC_MeRunTime1", "type": "4"}, {
+                    "value": [{
                         "channelName": "CMAS_AC_MeCtrl1",
                         "type": "1",
                         "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
@@ -737,7 +737,7 @@ define([],function(){return function(){
                     "status": 1,
                     "progress": 0,
                     "logo": "glyphicon glyphicon-retweet",
-                    "value": [{"channelName": "CMAS_AC_MeRunTime2", "type": "4"}, {
+                    "value": [{
                         "channelName": "CMAS_AC_MeCtrl2",
                         "type": "1",
                         "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
@@ -761,10 +761,13 @@ define([],function(){return function(){
                         }
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManEnable", "_0": "AUTO", "_1": "MAN"}
+                        "value": {"channelName": "CMAS_AC_ServerNextSchedule", "type": "7"}
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManCtrl1", "_0": "ON", "_1": "OFF"}
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerAutoMan", "_0": "AUTO", "_1": "MAN"}
+                    }, {
+                        "icon": "fa fa-check-square-o",
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerMan1", "_0": "ON", "_1": "OFF"}
                     }]
                 }],
                 "Parameters": 0
@@ -786,10 +789,13 @@ define([],function(){return function(){
                         }
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManEnable", "_0": "AUTO", "_1": "MAN"}
+                        "value": {"channelName": "CMAS_AC_ServerNextSchedule", "type": "7"}
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManCtrl2", "_0": "ON", "_1": "OFF"}
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerAutoMan", "_0": "AUTO", "_1": "MAN"}
+                    }, {
+                        "icon": "fa fa-check-square-o",
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerMan2", "_0": "ON", "_1": "OFF"}
                     }]
                 }],
                 "Parameters": 0
@@ -811,10 +817,13 @@ define([],function(){return function(){
                         }
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManEnable", "_0": "AUTO", "_1": "MAN"}
+                        "value": {"channelName": "CMAS_AC_ServerNextSchedule", "type": "7"}
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_ServerManCtrl3", "_0": "ON", "_1": "OFF"}
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerAutoMan", "_0": "AUTO", "_1": "MAN"}
+                    }, {
+                        "icon": "fa fa-check-square-o",
+                        "value": {"type": "5", "channelName": "CMAS_AC_ServerMan3", "_0": "ON", "_1": "OFF"}
                     }]
                 }],
                 "Parameters": 0
@@ -829,17 +838,20 @@ define([],function(){return function(){
                     }, {
                         "icon": "fa fa-tag",
                         "value": {
-                            "channelName": "AC_MeCtrl1",
+                            "channelName": "CMAS_AC_MeCtrl1",
                             "type": "1",
                             "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
                             "_1": "<span class='text-danger'><i class='fa fa-stop'></i> Stop</span>"
                         }
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_MeManEnable", "_0": "AUTO", "_1": "MAN"}
+                        "value": {"channelName": "CMAS_AC_MeNextSchedule", "type": "7"}
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_MeManCtrl1", "_0": "ON", "_1": "OFF"}
+                        "value": {"type": "5", "channelName": "CMAS_AC_MeAutoMan", "_0": "AUTO", "_1": "MAN"}
+                    }, {
+                        "icon": "fa fa-check-square-o",
+                        "value": {"type": "5", "channelName": "CMAS_AC_MeMan1", "_0": "ON", "_1": "OFF"}
                     }]
                 }],
                 "Parameters": 0
@@ -854,17 +866,20 @@ define([],function(){return function(){
                     }, {
                         "icon": "fa fa-tag",
                         "value": {
-                            "channelName": "AC_MeCtrl2",
+                            "channelName": "CMAS_AC_MeCtrl2",
                             "type": "1",
                             "_0": "<span class='text-success'><i class='fa fa-spinner fa-spin'></i> Running</span>",
                             "_1": "<span class='text-danger'><i class='fa fa-stop'></i> Stop</span>"
                         }
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_MeManEnable", "_0": "AUTO", "_1": "MAN"}
+                        "value": {"channelName": "CMAS_AC_MeNextSchedule", "type": "7"}
                     }, {
                         "icon": "fa fa-check-square-o",
-                        "value": {"type": "5", "channelName": "AC_MeManCtrl2", "_0": "ON", "_1": "OFF"}
+                        "value": {"type": "5", "channelName": "CMAS_AC_MeAutoMan", "_0": "AUTO", "_1": "MAN"}
+                    }, {
+                        "icon": "fa fa-check-square-o",
+                        "value": {"type": "5", "channelName": "CMAS_AC_MeMan2", "_0": "ON", "_1": "OFF"}
                     }]
                 }],
                 "Parameters": 0
