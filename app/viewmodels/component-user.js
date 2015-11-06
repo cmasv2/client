@@ -21,26 +21,26 @@
                 } else {
 					if (me.pass1() == "") {
 						if (u.id == 0) { //add new user
-							apis.edituse(u.id, {"username": u.username, "email": u.email, "password": "123456", "fullname": u.fullname, "cellphone": u.cellphone}).then(function(){
-								app.showMessage('Save successful ', 'Successful', ['Yes']);
-							})
+							apis.edituse(u.id, {"username": u.username, "email": u.email, "password": "123456", "fullname": u.fullname, "cellphone": u.cellphone, "group": u.group}).then(function(){
+							});
 						} else { //edit old user without changing password
-							apis.edituse(u.id, {"username": u.username, "email": u.email, "fullname": u.fullname, "cellphone": u.cellphone}).then(function(){
-								app.showMessage('Save successful ', 'Successful', ['Yes']);
-							})
+							apis.edituse(u.id, {"username": u.username, "email": u.email, "fullname": u.fullname, "cellphone": u.cellphone, "group": u.group}).then(function(){
+							});
 						}
 					} else { //edit all user info.
-						apis.edituse(u.id, {"username": u.username, "email": u.email, "password": me.pass1(), "fullname": u.fullname, "cellphone": u.cellphone}).then(function(){
-							app.showMessage('Save successful ', 'Successful', ['Yes']);
+						apis.edituse(u.id, {"username": u.username, "email": u.email, "password": me.pass1(), "fullname": u.fullname, "cellphone": u.cellphone, "group": u.group}).then(function(){
 						});
 					}
+					app.showMessage('Save successful', 'Successful', ['Yes']);
+					me.user.removeAll();
+					me.user.push({"username":"","email":"","id":0,"fullname":"","cellphone":"","group":0});
                 }
             }
 
             me.activate = function () {};
             me.addUser = function(){
                 me.user.removeAll();
-                me.user.push({"username":"user","email":"user@cmas.com","id":0,"fullname":"","cellphone":""});
+                me.user.push({"username":"user","email":"user@cmas.com","id":0,"fullname":"","cellphone":"","group":0});
             }
             me.saveConfig = saveConfig;
             //me.title = ko.observable('User Information');

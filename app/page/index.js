@@ -2,8 +2,10 @@
  Create by Huy: codocmm@gmail.com ~ nqhuy2k6@gmail.com
  07/31/2015
  */
-define(["durandal/app", "plugins/router", "knockout","moment"], function (app, router, ko, Moment) {
-    if (!app.buff)window.location = "http://" + window.location.host;
+define(["durandal/app", "plugins/router", "knockout", "moment"], function (app, router, ko, Moment) {
+    if (!app.buff) window.location = "http://" + window.location.host;
+	this.currentusername = app.services.getService("authentication").getcurrentUser();
+	
     function getT(c) {
         var u = app.buff.find(app.buff.getByKey("LocationAll"), "code", c);
         return u ? u[0] : {name: "NaN", description: "NaN"}
@@ -108,6 +110,12 @@ define(["durandal/app", "plugins/router", "knockout","moment"], function (app, r
         icon: "fa-cog",
         moduleId: "pages/acm",
         nav: false
+	}, {
+		route: "logout",
+		title: "Logout",
+		description: "Logout",
+		moduleId: "pages/page-logout",
+		nav: false
     }, {
         route: "detail(/:sys)(/:id)(/:idc)",
         title: "System",
@@ -119,7 +127,7 @@ define(["durandal/app", "plugins/router", "knockout","moment"], function (app, r
     }]).buildNavigationModel();
     return {
         router: childRouter, childRouterModel: ko.computed(function () {
-            return childRouter.navigationModel()
+            return childRouter.navigationModel();
         })
     }
 });

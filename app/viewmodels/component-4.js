@@ -105,7 +105,7 @@ define(['durandal/app', "knockout", "knockback", "../collections/alarm-watcher-c
 					setTimeout( function() {
 						$(element).addClass('tablesorter');
 						$(element).tablesorter({
-							widgets: ['zebra', 'filter'],
+							widgets: ['filter'],
 							widgetOptions : {
 								  // If there are child rows in the table (rows with class name from "cssChildRow" option)
 								  // and this option is true and a match is found anywhere in the child row, then it will make that row

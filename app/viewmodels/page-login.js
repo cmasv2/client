@@ -79,8 +79,14 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
         function login() {
             if (me.act()) {
                 me.act(0);
-                a.login({"email": me.username(), "password": me.password()}).then(function (r) {
+                a.login({"username": me.username(), "password": me.password()}).then(function (r) {
+					//console.log("After login: " + r);
                     localStorage.setItem("swagger_accessToken", r.id);
+					localStorage.setItem("user", JSON.stringify(r));
+					a.CMASUsers({"userId":r.userId}).then(function (r2) {
+						//console.log(r2);
+						localStorage.setItem("user_fullname", r2.fullname);
+					});
                     me.showok("login successful");
                     init(r, function (val) {
                         router.navigate(val)
@@ -93,11 +99,20 @@ define(["durandal/app", "knockout", "plugins/router", "jquery", "q", "./../data/
         }
 
         me.activate = function () {
-            localStorage.setItem("swagger_accessToken", "");
-            for (var i = 0; i < conf.configView.length; i++) {
-                var val = conf.configView[i];
-                app.buff.setByCode(conf.configView[i].value)
-            }
+			if (localStorage.getItem("swagger_accessToken") && localStorage.getItem("user")) {
+				for (var i = 0; i < conf.configView.length; i++) {
+					var val = conf.configView[i];
+					app.buff.setByCode(conf.configView[i].value)
+				}
+				var r = JSON.parse(localStorage.getItem("user"));
+				a.CMASUsers({"userId":r.userId}).then(function (r2) {
+					localStorage.setItem("user_fullname", r2.fullname);
+				});
+				me.showok("login successful");
+				init(r, function (val) {
+					router.navigate(val)
+				});
+			}
         };
         me.login = login
     }

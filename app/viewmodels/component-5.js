@@ -47,6 +47,9 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                             if (c.type == "6") {
                                 c.value(c["_" + (Math.round(value * 10) / 10)]);
                             }
+                            if (c.type == "7") {
+								c.value(moment(value*1000).format("DD-MM-YYYY HH:mm"));
+                            }
                         }
                         else if (value != undefined) {
                             c.type = 0;
@@ -132,6 +135,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                                 channelSelectf(c,0);
                             });
                         });
+						//me.alarmWatcher.valueHasMutated();
                     }, function (e) {
                         app.showMessage('Save failed <br/>' + e.responseText, 'Error', ['Yes']);
                     });
@@ -148,6 +152,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                                 channelSelectf(c,0);
                             });
                         });
+						//me.alarmWatcher.valueHasMutated();
                     }, function (e) {
                         app.showMessage('Save failed <br/>' + e.responseText, 'Error', ['Yes']);
                     });
@@ -223,7 +228,9 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             };
             me.AlarmAck = function(c){
                 apis.AlarmAck(c.id);
-                setalarmWatcher(me.channels()[0].sub);
+                //setalarmWatcher(me.channels()[0].sub);
+				var d = me.channels().slice(0);
+				setalarmWatcher(d[0].sub);
             };
             me.colorAlarm = function (c) {
                 /*
@@ -413,10 +420,15 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                 channelSelectf(c,1);
             }
             app.on('update-alarm', function (data) {
+				var d = me.channels().slice(0);
+				me.channels.removeAll();
+				me.channels(d);
                 apis.AlarmWatchers().then(function(ch){
-                    app.buff.setByKey('AlarmWatchersAll', ch);
-                    //setalarmWatcher(me.channels().sub);
-                });
+					app.buff.setByKey('AlarmWatchersAll', ch);
+					Q.when(setalarmWatcher(d[0].sub)).then(function(){
+						channelSelectf(c,0);
+					});
+				});
             });
         };
     }
