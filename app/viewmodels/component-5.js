@@ -8,7 +8,8 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             var Soc = app.services.getService("socket");
             var channels = buff.find(infid(cf[0].id), "controllable",false);
             me.EscalationProfiles = ko.observableArray(buff.getByKey('opEscalationProfiles'));
-            me.alarmWatcher = ko.observableArray([]);
+			me.escalationProfilesOptions = ko.observableArray(buff.getByKey('EscalationProfiles'));
+			me.alarmWatcher = ko.observableArray([]);
             me.channelSelect = ko.observableArray([]);
             me.idc =  ko.observable(idc != undefined?idc:0);
             var controls = [];//buff.find(infid(cf[0].id), "controllable",true);
@@ -114,9 +115,9 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
             }
             function escalationProfileID(a){
                 var type = channel.alarmWatcher.type;
-                console.log(type);
+                //console.log(type);
                 var temp = buff.find(buff.getByKey('EscalationProfiles'), 'displayName', type);
-                console.log(temp);
+                //console.log(temp);
                 channel.alarmWatcher.escalationProfileID = temp[0].id;
             }
             function saveAlarm(c) {
@@ -414,6 +415,7 @@ define(['durandal/app', "knockout", "moment",'q', "./../bindings/status-binding"
                     'alarmThreshold': 0,
                     'resetCondition': 'lessthan',
                     'resetThreshold': 0,
+					'escalationProfileId': 1,
                     "notificationMethod": {"sms": 0, "email": 0,"notifyWhen": "alarm"},
                     "msg":{"alarm":"Alarm !","reset":"Reset !"}
                 };

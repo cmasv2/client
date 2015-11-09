@@ -361,11 +361,7 @@
                         <div class="form-group form-group-sm">
                             <label class="col-sm-3 control-label">Alarm Priority :</label>
                             <div class="col-sm-2">
-                                <select class="form-control" data-bind="value: alarmWatcher.type">
-                                    <option value="Critical">Critical</option>
-                                    <option value="Warning">Warning</option>
-                                    <option value="Advisory">Advisory</option>
-                                    <option value="Log">Log</option>
+                                <select class="form-control" data-bind="value: alarmWatcher.type, options: $root.escalationProfilesOptions, optionsText: 'displayName', optionsValue: 'displayName'">
                                 </select>
                             </div>
                             <label class="col-sm-1 control-label">Reset msg:</label>
@@ -457,13 +453,8 @@
                         </div>
                         <div class="form-group form-group-sm">
                             <label class="col-sm-3 control-label">Alarm Priority :</label>
-
                             <div class="col-sm-2">
-                                <select class="form-control" data-bind="value: alarmWatcher.type">
-                                    <option value="Critical">Critical</option>
-                                    <option value="Warning">Warning</option>
-                                    <option value="Advisory">Advisory</option>
-                                    <option value="Log">Log</option>
+                                <select class="form-control" data-bind="value: alarmWatcher.type, options: $root.escalationProfilesOptions, optionsText: 'displayName', optionsValue: 'displayName'">
                                 </select>
                             </div>
                             <label class="col-sm-1 control-label">Reset msg:</label>

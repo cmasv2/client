@@ -101,7 +101,7 @@ define(['durandal/app', "knockout", "knockback", "../collections/alarm-watcher-c
                 }
             );
 			ko.bindingHandlers.sortTable = {
-				init: function(element, valueAccessor) {
+				update: function(element, valueAccessor) {
 					setTimeout( function() {
 						$(element).addClass('tablesorter');
 						$(element).tablesorter({
